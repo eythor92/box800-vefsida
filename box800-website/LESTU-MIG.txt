@@ -1,0 +1,11 @@
+BOX800 – FORSÍÐA v3
+
+1. Afþjappaðu ZIP.
+2. Opnaðu möppuna í VS Code.
+3. Opnaðu index.html með Live Server eða í vafra.
+4. Breyttu texta í index.html, litum og myndum í style.css.
+5. Myndir og lógó eru í images/.
+6. Lovelo er ekki innifalið. Settu þína leyfisskrá í fonts/ og virkjaðu @font-face í style.css.
+7. Tenglar á tímataflu/verðskrá/samband fara tímabundið á box800.is.
+8. Þetta er forsíða; undirsíður verða gerðar næst.
+9. Gakktu úr skugga um að þú hafir leyfi til að birta myndir af fólki, sérstaklega börnum.
