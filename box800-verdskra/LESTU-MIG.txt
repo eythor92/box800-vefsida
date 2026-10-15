@@ -1,6 +1,0 @@
-1. Afritaðu verdskra.html og verdskra.css í aðalmöppu vefsíðunnar (við hlið index.html).
-2. Settu tengil á verdskra.html í valmyndinni á index.html.
-3. Síðan notar núverandi style.css og script.js, en verdskra.css stjórnar verðskránni.
-4. Allir kauphnappar fara eins og er á sama Abler-verslunartengil. Skiptu þeim út fyrir sérstaka vörutengla þegar þeir liggja fyrir.
-5. Athugaðu verð og námskeiðstímabil áður en síðan er birt sem endanleg verðskrá.
-6. Git: git add . && git commit -m "Add pricing page" && git push
