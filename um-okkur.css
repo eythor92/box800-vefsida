@@ -1,0 +1,448 @@
+
+/* BOX800 - UM OKKUR */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #0b0b0b;
+  color: #fff;
+  font-family: "Inter", sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 900;
+  line-height: 0.98;
+  margin-top: 0;
+}
+
+h1 span, h2 span {
+  color: #c6ccd6;
+}
+
+p {
+  line-height: 1.8;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  max-width: 1350px;
+  margin: auto;
+  padding: 0 6%;
+}
+
+.kicker {
+  display: block;
+  color: #c6ccd6;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 25px;
+}
+
+.btn {
+  display: inline-block;
+  background: #c6ccd6;
+  color: #111;
+  padding: 18px 30px;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  background: white;
+  transform: translateY(-2px);
+}
+
+/* HEADER */
+
+.about-header {
+  padding: 22px 6%;
+  background: #0b0b0b;
+}
+
+.header-inner {
+  max-width: 1350px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.logo img {
+  width: 110px;
+  display: block;
+}
+
+.about-header nav {
+  display: flex;
+  gap: 25px;
+}
+
+.about-header nav a {
+  color: white;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.about-header nav a:hover {
+  color: #c6ccd6;
+}
+
+/* HERO */
+
+.about-hero {
+  min-height: 650px;
+  display: flex;
+  align-items: center;
+  padding: 110px 6%;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0,0,0,0.92),
+      rgba(0,0,0,0.35)
+    ),
+    url("images/team.webp") center/cover;
+}
+
+.hero-content {
+  max-width: 900px;
+}
+
+.about-hero h1 {
+  font-size: clamp(70px, 10vw, 140px);
+  margin-bottom: 30px;
+}
+
+.about-hero p {
+  max-width: 570px;
+  color: #e0e0e0;
+  font-size: 18px;
+  margin-bottom: 35px;
+}
+
+/* UM BOX800 */
+
+.about-intro {
+  padding: 120px 0;
+}
+
+.intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+}
+
+.intro-grid h2 {
+  font-size: clamp(55px, 7vw, 100px);
+}
+
+.intro-text p {
+  color: #bdbdbd;
+  font-size: 17px;
+  margin-bottom: 25px;
+}
+
+/* STÓR MYND */
+
+.wide-photo {
+  height: 600px;
+  position: relative;
+  overflow: hidden;
+}
+
+.wide-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.photo-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  padding: 6%;
+  background: linear-gradient(
+    transparent,
+    rgba(0,0,0,0.85)
+  );
+}
+
+.photo-content h2 {
+  font-size: clamp(70px, 10vw, 140px);
+  margin: 0;
+}
+
+/* ÁHERSLUR */
+
+.values-section {
+  padding: 120px 0;
+}
+
+.values-section h2 {
+  font-size: clamp(60px, 8vw, 110px);
+  margin-bottom: 50px;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.value-card {
+  background: #171717;
+  border: 1px solid #303030;
+  padding: 45px 30px;
+}
+
+.value-card .number {
+  color: #c6ccd6;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.value-card h3 {
+  font-size: 42px;
+  margin: 30px 0 20px;
+}
+
+.value-card p {
+  color: #bdbdbd;
+}
+
+/* ÞJÁLFUN */
+
+.training-section {
+  padding: 100px 0;
+  background: #151515;
+}
+
+.training-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.training-photo img {
+  width: 100%;
+  height: 550px;
+  object-fit: cover;
+  display: block;
+}
+
+.training-copy h2 {
+  font-size: clamp(60px, 7vw, 100px);
+  margin-bottom: 30px;
+}
+
+.training-copy p {
+  color: #bdbdbd;
+  margin-bottom: 25px;
+}
+
+.training-copy .btn {
+  margin-top: 15px;
+}
+
+/* SAMFÉLAG */
+
+.community-section {
+  padding: 120px 0;
+}
+
+.community-section h2 {
+  font-size: clamp(60px, 8vw, 110px);
+  margin-bottom: 30px;
+}
+
+.community-intro {
+  color: #bdbdbd;
+  max-width: 600px;
+  margin-bottom: 50px;
+}
+
+.community-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.community-grid img {
+  width: 100%;
+  height: 370px;
+  object-fit: cover;
+}
+
+/* ÞJÁLFARAR */
+
+.coaches-section {
+  padding: 110px 0;
+  background: #171717;
+}
+
+.coaches-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.coaches-grid h2 {
+  font-size: clamp(60px, 7vw, 100px);
+  margin-bottom: 0;
+}
+
+.coaches-grid p {
+  color: #bdbdbd;
+  margin-bottom: 30px;
+}
+
+/* LOKAHLUTI */
+
+.about-contact {
+  padding: 130px 6%;
+  text-align: center;
+}
+
+.about-contact h2 {
+  font-size: clamp(65px, 9vw, 125px);
+  margin-bottom: 30px;
+}
+
+.about-contact p {
+  max-width: 600px;
+  margin: 0 auto 35px;
+  color: #bdbdbd;
+}
+
+/* FOOTER */
+
+.about-footer {
+  padding: 35px 6%;
+  border-top: 1px solid #303030;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.about-footer img {
+  width: 90px;
+}
+
+.about-footer p {
+  color: #bdbdbd;
+  font-size: 12px;
+}
+
+.about-footer a {
+  color: #c6ccd6;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+/* SPJALDTÖLVUR */
+
+@media (max-width: 1000px) {
+
+  .intro-grid,
+  .training-grid,
+  .coaches-grid {
+    gap: 35px;
+  }
+
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* SÍMAR */
+
+@media (max-width: 768px) {
+
+  .about-header {
+    padding: 20px 5%;
+  }
+
+  .about-header nav {
+    gap: 15px;
+  }
+
+  .about-header nav a {
+    font-size: 11px;
+  }
+
+  .about-hero {
+    min-height: 560px;
+    padding: 80px 6%;
+  }
+
+  .about-hero p {
+    font-size: 16px;
+  }
+
+  .about-intro,
+  .values-section,
+  .community-section {
+    padding: 80px 0;
+  }
+
+  .intro-grid,
+  .training-grid,
+  .coaches-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .values-grid,
+  .community-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .wide-photo {
+    height: 420px;
+  }
+
+  .training-section,
+  .coaches-section {
+    padding: 80px 0;
+  }
+
+  .training-photo img {
+    height: 350px;
+  }
+
+  .community-grid img {
+    height: 300px;
+  }
+
+  .about-contact {
+    padding: 90px 6%;
+  }
+
+  .about-footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}
