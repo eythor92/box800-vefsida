@@ -1,0 +1,168 @@
+
+/* BOX800 - TÍMATAFLA */
+
+.timetable-page {
+  margin: 0;
+  background: #0b0b0b;
+  color: white;
+}
+
+.timetable-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 6%;
+  background: #0b0b0b;
+}
+
+.timetable-header img {
+  width: 110px;
+  height: auto;
+}
+
+.back-link {
+  color: white;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* KYNNING */
+
+.timetable-hero {
+  background: #111;
+  padding: 90px 6%;
+  text-align: center;
+}
+
+.timetable-hero .eyebrow {
+  color: #c6ccd6;
+  letter-spacing: 4px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.timetable-hero h1 {
+  font-size: clamp(50px, 10vw, 110px);
+  line-height: 1;
+  margin: 20px 0;
+}
+
+.timetable-hero > p:last-child {
+  max-width: 600px;
+  margin: 20px auto;
+  color: #c6ccd6;
+  line-height: 1.7;
+}
+
+/* TÍMATAFLA */
+
+.timetable-section {
+  padding: 80px 5%;
+  background: #0b0b0b;
+}
+
+.timetable-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.timetable-container h2 {
+  font-size: clamp(30px, 5vw, 55px);
+  margin-bottom: 15px;
+}
+
+.timetable-container > p {
+  color: #c6ccd6;
+  margin-bottom: 35px;
+}
+
+.timetable-image {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid #393939;
+}
+
+.timetable-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* NEÐRI HLUTI */
+
+.timetable-bottom {
+  background: #171717;
+  text-align: center;
+  padding: 80px 6%;
+}
+
+.timetable-bottom h2 {
+  font-size: clamp(32px, 6vw, 65px);
+  margin-bottom: 15px;
+}
+
+.timetable-bottom p {
+  color: #c6ccd6;
+  margin-bottom: 30px;
+}
+
+.timetable-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.timetable-btn {
+  display: inline-block;
+  padding: 16px 25px;
+  background: #c6ccd6;
+  color: #111;
+  font-size: 13px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.timetable-btn-outline {
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+}
+
+/* FOOTER */
+
+.timetable-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 35px 6%;
+  background: #0b0b0b;
+}
+
+.timetable-footer a {
+  color: #c6ccd6;
+  text-decoration: none;
+}
+
+/* SÍMAR */
+
+@media (max-width: 600px) {
+  .timetable-hero {
+    padding: 65px 6%;
+  }
+
+  .timetable-section {
+    padding: 50px 4%;
+  }
+
+  .timetable-bottom {
+    padding: 60px 6%;
+  }
+
+  .timetable-footer {
+    flex-direction: column;
+  }
+}
