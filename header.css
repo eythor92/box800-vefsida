@@ -1,13 +1,17 @@
 
-/* BOX800 – SAMEIGINLEG VALMYND */
+/* ==========================================
+   BOX800 - SAMEIGINLEG VALMYND
+   ========================================== */
 
 .site-header {
   position: sticky;
   top: 0;
   z-index: 1000;
+  width: 100%;
   background: rgba(9, 11, 13, 0.96);
   border-bottom: 1px solid #343b42;
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .site-header *,
@@ -16,48 +20,77 @@
   box-sizing: border-box;
 }
 
+/* HEADER */
+
 .site-header .nav-wrap {
-  width: min(calc(100% - 44px), 1200px);
+  width: calc(100% - 32px);
+  max-width: 1200px;
   min-height: 80px;
   margin: 0 auto;
+
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  gap: 20px;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+/* LOGO */
+
+.site-header .brand {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
 }
 
 .site-header .brand-logo {
   display: block;
-  width: 126px;
+  width: 110px;
   height: auto;
   max-height: 62px;
   object-fit: contain;
 }
 
+/* VALMYND */
+
 .site-header .main-nav {
   display: flex;
   align-items: center;
-  gap: 25px;
+  justify-content: flex-end;
+  flex-wrap: nowrap;
+  gap: 12px;
+  min-width: 0;
 }
 
 .site-header .main-nav a {
-  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #ffffff;
   text-decoration: none;
+
   font-family: Inter, Arial, sans-serif;
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: 0.3px;
   text-transform: uppercase;
-  letter-spacing: 0.8px;
+
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .site-header .main-nav a:hover {
   color: #c6ccd6;
 }
 
+/* HAFA SAMBAND */
+
 .site-header .main-nav .nav-cta {
   background: #c6ccd6;
   color: #090b0d;
-  padding: 14px 18px;
+  padding: 14px 15px;
+  white-space: nowrap;
 }
 
 .site-header .main-nav .nav-cta:hover {
@@ -65,23 +98,45 @@
   color: #090b0d;
 }
 
+/* HAMBURGER FALINN Á TÖLVU */
+
 .site-header .menu-toggle {
   display: none;
 }
 
-@media (max-width: 1050px) {
+/* MINNI TÖLVUSKJÁIR */
+
+@media (max-width: 900px) and (min-width: 761px) {
+
+  .site-header .nav-wrap {
+    width: calc(100% - 24px);
+    gap: 8px;
+  }
+
+  .site-header .brand-logo {
+    width: 90px;
+  }
+
   .site-header .main-nav {
-    gap: 12px;
+    gap: 7px;
   }
 
   .site-header .main-nav a {
-    font-size: 10px;
+    font-size: 9px;
+    letter-spacing: 0;
+  }
+
+  .site-header .main-nav .nav-cta {
+    padding: 12px 10px;
   }
 }
 
+/* FARSÍMAR */
+
 @media (max-width: 760px) {
+
   .site-header .nav-wrap {
-    width: min(calc(100% - 32px), 1200px);
+    width: calc(100% - 32px);
     min-height: 70px;
   }
 
@@ -89,37 +144,50 @@
     width: 102px;
   }
 
+  /* HAMBURGER */
+
   .site-header .menu-toggle {
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 5px;
-    width: 43px;
-    height: 43px;
+
+    width: 44px;
+    height: 44px;
     padding: 10px;
-    background: none;
+
+    background: transparent;
     border: 1px solid #65707a;
     cursor: pointer;
+    flex-shrink: 0;
   }
 
   .site-header .menu-toggle span {
     display: block;
-    height: 2px;
     width: 100%;
-    background: #fff;
+    height: 2px;
+    background: #ffffff;
   }
+
+  /* FELLIVALMYND */
 
   .site-header .main-nav {
     display: none;
     position: absolute;
-    top: 70px;
+
+    top: 100%;
     left: 0;
     right: 0;
+
+    width: 100%;
+    padding: 22px 20px;
+
     background: #101419;
-    padding: 24px 18px;
+    border-bottom: 1px solid #343b42;
+
     flex-direction: column;
     align-items: stretch;
-    gap: 18px;
+    gap: 0;
   }
 
   .site-header .main-nav.is-open {
@@ -127,10 +195,55 @@
   }
 
   .site-header .main-nav a {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 14px 10px;
+
     font-size: 14px;
+    letter-spacing: 0.6px;
+    white-space: normal;
   }
 
   .site-header .main-nav .nav-cta {
+    justify-content: center;
+    margin-top: 12px;
+    padding: 16px 20px;
     text-align: center;
+  }
+}
+
+/* LITLIR FARSÍMAR */
+
+@media (max-width: 480px) {
+
+  .site-header .nav-wrap {
+    width: calc(100% - 28px);
+  }
+
+  .site-header .brand-logo {
+    width: 100px;
+  }
+}
+/* SAMEIGINLEG STAÐSETNING HEADER Á ÖLLUM SÍÐUM */
+
+.site-header .nav-wrap {
+  width: min(calc(100% - 44px), 1200px);
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+@media (max-width: 760px) {
+  .site-header .nav-wrap {
+    width: calc(100% - 32px);
+  }
+}
+
+@media (max-width: 480px) {
+  .site-header .nav-wrap {
+    width: calc(100% - 28px);
   }
 }

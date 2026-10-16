@@ -1,34 +1,36 @@
 
 <!DOCTYPE html>
 <html lang="is">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
   <title>Tímatafla | BOX800</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="timatafla.css">
+  <link rel="stylesheet" href="header.css">
+
+  <script src="header.js" defer></script>
+
 </head>
 
 <body class="timetable-page">
 
-  <!-- HAUS -->
-  <header class="timetable-header">
-
-    <a href="index.html">
-      <img
-        src="images/box800-logo-white.png"
-        alt="BOX800"
-      >
-    </a>
-
-    <a href="index.html" class="back-link">
-      ← FORSÍÐA
-    </a>
-
-  </header>
+  <!-- SAMEIGINLEG BOX800 VALMYND -->
+  <header id="box800-header"></header>
 
   <main>
 
@@ -87,12 +89,17 @@
 
       <div class="timetable-buttons">
 
-        <a href="namskeid.html" class="timetable-btn">
+        <a
+          href="namskeid.html"
+          class="timetable-btn"
+        >
           SKOÐA NÁMSKEIÐ ↗
         </a>
 
-        <a href="verdskra.html"
-           class="timetable-btn timetable-btn-outline">
+        <a
+          href="verdskra.html"
+          class="timetable-btn timetable-btn-outline"
+        >
           SKOÐA VERÐSKRÁ ↗
         </a>
 
@@ -102,6 +109,7 @@
 
   </main>
 
+  <!-- FÓTUR -->
   <footer class="timetable-footer">
 
     <p>BOX800 · SELFOSS · ÍSLAND</p>

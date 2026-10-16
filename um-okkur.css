@@ -1,5 +1,7 @@
 
-/* BOX800 - UM OKKUR */
+/* ==========================================
+   BOX800 - UM OKKUR
+   ========================================== */
 
 * {
   box-sizing: border-box;
@@ -70,57 +72,23 @@ img {
   transform: translateY(-2px);
 }
 
-/* HEADER */
-
-.about-header {
-  padding: 22px 6%;
-  background: #0b0b0b;
-}
-
-.header-inner {
-  max-width: 1350px;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-}
-
-.logo img {
-  width: 110px;
-  display: block;
-}
-
-.about-header nav {
-  display: flex;
-  gap: 25px;
-}
-
-.about-header nav a {
-  color: white;
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 1px;
-}
-
-.about-header nav a:hover {
-  color: #c6ccd6;
-}
-
-/* HERO */
+/* ==========================================
+   HERO
+   ========================================== */
 
 .about-hero {
   min-height: 650px;
   display: flex;
   align-items: center;
   padding: 110px 6%;
+
   background:
     linear-gradient(
       90deg,
-      rgba(0,0,0,0.92),
-      rgba(0,0,0,0.35)
+      rgba(0, 0, 0, 0.92),
+      rgba(0, 0, 0, 0.35)
     ),
-    url("images/team.webp") center/cover;
+    url("images/team.webp") center / cover;
 }
 
 .hero-content {
@@ -139,7 +107,9 @@ img {
   margin-bottom: 35px;
 }
 
-/* UM BOX800 */
+/* ==========================================
+   UM BOX800
+   ========================================== */
 
 .about-intro {
   padding: 120px 0;
@@ -161,7 +131,9 @@ img {
   margin-bottom: 25px;
 }
 
-/* STÓR MYND */
+/* ==========================================
+   STÓR MYND
+   ========================================== */
 
 .wide-photo {
   height: 600px;
@@ -181,9 +153,10 @@ img {
   display: flex;
   align-items: flex-end;
   padding: 6%;
+
   background: linear-gradient(
     transparent,
-    rgba(0,0,0,0.85)
+    rgba(0, 0, 0, 0.85)
   );
 }
 
@@ -192,7 +165,9 @@ img {
   margin: 0;
 }
 
-/* ÁHERSLUR */
+/* ==========================================
+   ÁHERSLUR
+   ========================================== */
 
 .values-section {
   padding: 120px 0;
@@ -230,7 +205,9 @@ img {
   color: #bdbdbd;
 }
 
-/* ÞJÁLFUN */
+/* ==========================================
+   ÞJÁLFUN
+   ========================================== */
 
 .training-section {
   padding: 100px 0;
@@ -265,7 +242,9 @@ img {
   margin-top: 15px;
 }
 
-/* SAMFÉLAG */
+/* ==========================================
+   SAMFÉLAG
+   ========================================== */
 
 .community-section {
   padding: 120px 0;
@@ -294,7 +273,9 @@ img {
   object-fit: cover;
 }
 
-/* ÞJÁLFARAR */
+/* ==========================================
+   ÞJÁLFARAR
+   ========================================== */
 
 .coaches-section {
   padding: 110px 0;
@@ -318,7 +299,9 @@ img {
   margin-bottom: 30px;
 }
 
-/* LOKAHLUTI */
+/* ==========================================
+   LOKAHLUTI
+   ========================================== */
 
 .about-contact {
   padding: 130px 6%;
@@ -336,7 +319,9 @@ img {
   color: #bdbdbd;
 }
 
-/* FOOTER */
+/* ==========================================
+   FOOTER
+   ========================================== */
 
 .about-footer {
   padding: 35px 6%;
@@ -362,7 +347,9 @@ img {
   font-weight: 800;
 }
 
-/* SPJALDTÖLVUR */
+/* ==========================================
+   SPJALDTÖLVUR
+   ========================================== */
 
 @media (max-width: 1000px) {
 
@@ -377,21 +364,11 @@ img {
   }
 }
 
-/* SÍMAR */
+/* ==========================================
+   FARSÍMAR
+   ========================================== */
 
 @media (max-width: 768px) {
-
-  .about-header {
-    padding: 20px 5%;
-  }
-
-  .about-header nav {
-    gap: 15px;
-  }
-
-  .about-header nav a {
-    font-size: 11px;
-  }
 
   .about-hero {
     min-height: 560px;
