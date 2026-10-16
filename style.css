@@ -103,14 +103,17 @@ h2 span {
 .hero-photo {
   position: absolute;
   inset: 0;
-  background:
+  background-image:
     linear-gradient(
       90deg,
       rgba(4, 6, 8, 0.94) 0%,
       rgba(4, 6, 8, 0.75) 38%,
       rgba(4, 6, 8, 0.20) 100%
     ),
-    url("images/group.jpeg") 65% center / cover no-repeat;
+    url("images/group.jpeg");
+  background-position: center, 65% center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .hero-content {
@@ -306,8 +309,6 @@ h2 span {
   gap: 13px;
 }
 
-/* ÖLL KORT MEÐ SÖMU HÆÐ */
-
 .program-card {
   position: relative;
   height: 470px;
@@ -316,8 +317,6 @@ h2 span {
   isolation: isolate;
   background: #23282d;
 }
-
-/* MYNDIR */
 
 .program-card > img {
   position: absolute;
@@ -330,11 +329,15 @@ h2 span {
   transition: transform 0.4s ease;
 }
 
+/* SÉRSTÖK STAÐSETNING HYROX MYNDAR */
+
+.program-card-hyrox > img {
+  object-position: 50% 35%;
+}
+
 .program-card:hover > img {
   transform: scale(1.06);
 }
-
-/* DÖKK FILMA */
 
 .program-shade {
   position: absolute;
@@ -348,8 +351,6 @@ h2 span {
     rgba(0, 0, 0, 0.05) 100%
   );
 }
-
-/* TEXTI NEÐST Á KORTUM */
 
 .program-content {
   position: absolute;
@@ -393,7 +394,7 @@ h2 span {
 }
 
 /* ==========================================
-   5. MYNDASAFN - ÞJÁLFUN
+   5. MYNDASAFN
 ========================================== */
 
 .training-gallery {
@@ -485,7 +486,7 @@ h2 span {
 }
 
 /* ==========================================
-   8. SAMBAND
+   8. SKRÁNING / SAMBAND
 ========================================== */
 
 .contact {
@@ -549,20 +550,25 @@ h2 span {
     padding: 70px 0;
   }
 
-  /* FORSÍÐA */
+  /* FORSÍÐUMYND */
 
   .hero {
     min-height: 690px;
   }
 
   .hero-photo {
-    background:
+    background-image:
       linear-gradient(
-        90deg,
-        rgba(4, 6, 8, 0.86),
-        rgba(4, 6, 8, 0.45)
+        180deg,
+        rgba(4, 6, 8, 0.30) 0%,
+        rgba(4, 6, 8, 0.58) 45%,
+        rgba(4, 6, 8, 0.88) 100%
       ),
-      url("images/group.jpeg") center / cover no-repeat;
+      url("images/group.jpeg");
+
+    background-size: cover;
+    background-position: center, center bottom;
+    background-repeat: no-repeat;
   }
 
   .hero-content {
@@ -576,6 +582,8 @@ h2 span {
   .hero p {
     font-size: 15px;
   }
+
+  /* UM OKKUR */
 
   .about-grid,
   .detail-grid {
@@ -595,7 +603,7 @@ h2 span {
     display: block;
   }
 
-  /* ÖLL ÆFINGAKORT Í EINUM DÁLKI */
+  /* ÆFINGAKORT */
 
   .program-grid {
     grid-template-columns: minmax(0, 1fr);
@@ -616,6 +624,12 @@ h2 span {
     height: 100%;
     object-fit: cover;
     object-position: center;
+  }
+
+  /* HYROX MYND Í SÍMA */
+
+  .program-card-hyrox > img {
+    object-position: 50% 25%;
   }
 
   .program-shade {
