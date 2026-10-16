@@ -88,7 +88,7 @@ img {
       rgba(0, 0, 0, 0.92),
       rgba(0, 0, 0, 0.35)
     ),
-    url("images/team.webp") center / cover;
+    url("images/dropin.jpeg") center / cover;
 }
 
 .hero-content {
@@ -421,5 +421,79 @@ img {
   .about-footer {
     flex-direction: column;
     text-align: center;
+  }
+}
+/* ==========================================
+   BOX800 - SAMRÆMD LETURGERÐ
+   UM OKKUR
+   ========================================== */
+
+/* Allar fyrirsagnir á síðunni */
+
+.about-hero h1,
+.about-intro h2,
+.photo-content h2,
+.values-section h2,
+.value-card h3,
+.training-copy h2,
+.community-section h2,
+.coaches-grid h2,
+.about-contact h2 {
+  font-family: "Barlow Condensed", Impact, sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.015em;
+  line-height: 1.08;
+  overflow-wrap: normal;
+}
+
+/* Aðalfyrirsögn */
+
+.about-hero h1 {
+  font-size: clamp(52px, 7.5vw, 105px);
+  max-width: 850px;
+  margin: 0 0 30px;
+}
+
+/* Passa að efnið fari ekki út fyrir skjáinn */
+
+.about-hero .hero-content {
+  width: 100%;
+  max-width: 900px;
+  min-width: 0;
+}
+
+/* Minni fyrirsagnir */
+
+.value-card h3 {
+  font-size: clamp(30px, 3vw, 40px);
+}
+
+/* Spjaldtölvur */
+
+@media (max-width: 900px) {
+  .about-hero h1 {
+    font-size: clamp(50px, 8vw, 75px);
+  }
+}
+
+/* Farsímar */
+
+@media (max-width: 600px) {
+  .about-hero {
+    padding: 75px 20px;
+  }
+
+  .about-hero h1 {
+    font-size: clamp(42px, 9vw, 58px);
+    line-height: 1.1;
+  }
+
+  .about-hero p {
+    font-size: 16px;
+  }
+
+  .photo-content h2,
+  .about-contact h2 {
+    font-size: clamp(42px, 9vw, 70px);
   }
 }

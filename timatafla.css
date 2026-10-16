@@ -1,65 +1,68 @@
 
-/* BOX800 - TÍMATAFLA */
+/* ==========================================
+   BOX800 - TÍMATAFLA
+   SAMA ÚTLIT OG VERÐSKRÁ
+   ========================================== */
+
+/* GRUNNSTILLINGAR */
 
 .timetable-page {
   margin: 0;
-  background: #0b0b0b;
-  color: white;
+  background: #090b0d;
+  color: #f5f6f7;
+  font-family: "Inter", Arial, sans-serif;
 }
 
-.timetable-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 6%;
-  background: #0b0b0b;
-}
-
-.timetable-header img {
-  width: 110px;
-  height: auto;
-}
-
-.back-link {
-  color: white;
-  text-decoration: none;
-  font-size: 13px;
-  font-weight: 700;
-}
-
-/* KYNNING */
+/* ==========================================
+   HERO - EINS OG VERÐSKRÁ
+   ========================================== */
 
 .timetable-hero {
-  background: #111;
-  padding: 90px 6%;
+  padding: 85px 24px 70px;
   text-align: center;
+
+  background: radial-gradient(
+    ellipse at 50% 100%,
+    #303b47 0%,
+    #12171c 42%,
+    #090b0d 78%
+  );
 }
 
-.timetable-hero .eyebrow {
+.timetable-eyebrow {
   color: #c6ccd6;
-  letter-spacing: 4px;
-  font-size: 13px;
-  font-weight: 700;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  margin: 0;
 }
 
 .timetable-hero h1 {
-  font-size: clamp(50px, 10vw, 110px);
+  font-family: Lovelo, "Barlow Condensed", Impact, sans-serif;
+  font-size: clamp(54px, 11vw, 130px);
+  font-weight: 900;
+  letter-spacing: -0.06em;
   line-height: 1;
   margin: 20px 0;
 }
 
-.timetable-hero > p:last-child {
+.timetable-intro {
   max-width: 600px;
-  margin: 20px auto;
-  color: #c6ccd6;
-  line-height: 1.7;
+  margin: 0 auto;
+  color: #d3d7dd;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
 }
 
-/* TÍMATAFLA */
+/* ==========================================
+   TÍMATAFLA
+   ========================================== */
 
 .timetable-section {
-  padding: 80px 5%;
-  background: #0b0b0b;
+  padding: 80px 24px;
+  background: #090b0d;
 }
 
 .timetable-container {
@@ -68,21 +71,38 @@
   text-align: center;
 }
 
-.timetable-container h2 {
-  font-size: clamp(30px, 5vw, 55px);
+.timetable-section-eyebrow {
+  color: #c6ccd6;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 3px;
   margin-bottom: 15px;
 }
 
-.timetable-container > p {
-  color: #c6ccd6;
+.timetable-container h2 {
+  font-family: Lovelo, "Barlow Condensed", Impact, sans-serif;
+  font-size: clamp(32px, 5vw, 60px);
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+  margin: 10px 0 15px;
+}
+
+.timetable-description {
+  color: #a7afb8;
+  font-size: 16px;
+  line-height: 1.6;
   margin-bottom: 35px;
 }
+
+/* MYND AF TÍMATÖFLU */
 
 .timetable-image {
   display: block;
   width: 100%;
   overflow: hidden;
-  border: 1px solid #393939;
+  border: 1px solid #3a434d;
+  background: #171b20;
 }
 
 .timetable-image img {
@@ -91,23 +111,34 @@
   height: auto;
 }
 
-/* NEÐRI HLUTI */
+/* ==========================================
+   NEÐRI HLUTI
+   ========================================== */
 
 .timetable-bottom {
-  background: #171717;
+  background: #11161a;
   text-align: center;
-  padding: 80px 6%;
+  padding: 80px 24px;
 }
 
 .timetable-bottom h2 {
+  font-family: Lovelo, "Barlow Condensed", Impact, sans-serif;
   font-size: clamp(32px, 6vw, 65px);
-  margin-bottom: 15px;
+  font-weight: 900;
+  letter-spacing: -0.05em;
+  line-height: 1.05;
+  margin: 0 0 20px;
 }
 
 .timetable-bottom p {
-  color: #c6ccd6;
-  margin-bottom: 30px;
+  max-width: 600px;
+  margin: 0 auto 30px;
+  color: #a7afb8;
+  font-size: 18px;
+  line-height: 1.6;
 }
+
+/* HNAPPAR */
 
 .timetable-buttons {
   display: flex;
@@ -117,29 +148,63 @@
 }
 
 .timetable-btn {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
   padding: 16px 25px;
+
   background: #c6ccd6;
-  color: #111;
+  color: #11151a;
+
+  font-family: "Inter", Arial, sans-serif;
   font-size: 13px;
-  font-weight: 800;
+  font-weight: 900;
+  letter-spacing: 0.6px;
   text-decoration: none;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.timetable-btn:hover {
+  background: #ffffff;
 }
 
 .timetable-btn-outline {
   background: transparent;
-  color: white;
-  border: 1px solid white;
+  color: #ffffff;
+  border: 1px solid #c6ccd6;
 }
 
-/* FOOTER */
+.timetable-btn-outline:hover {
+  background: #c6ccd6;
+  color: #11151a;
+}
+
+/* ==========================================
+   FOOTER
+   ========================================== */
 
 .timetable-footer {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 32px 24px;
+
   display: flex;
   justify-content: space-between;
-  gap: 20px;
-  padding: 35px 6%;
-  background: #0b0b0b;
+  align-items: center;
+  gap: 18px;
+
+  color: #aeb6c0;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.timetable-footer p {
+  margin: 0;
 }
 
 .timetable-footer a {
@@ -147,22 +212,114 @@
   text-decoration: none;
 }
 
-/* SÍMAR */
+.timetable-footer a:hover {
+  color: #ffffff;
+}
+
+/* ==========================================
+   SPJALDTÖLVUR
+   ========================================== */
+
+@media (max-width: 900px) {
+
+  .timetable-section {
+    padding: 65px 24px;
+  }
+
+}
+
+/* ==========================================
+   SÍMAR
+   ========================================== */
 
 @media (max-width: 600px) {
+
   .timetable-hero {
-    padding: 65px 6%;
+    padding: 65px 18px 55px;
+  }
+
+  .timetable-hero h1 {
+    font-size: clamp(54px, 11vw, 130px);
+  }
+
+  .timetable-intro {
+    font-size: 16px;
   }
 
   .timetable-section {
-    padding: 50px 4%;
+    padding: 55px 18px;
+  }
+
+  .timetable-container h2 {
+    font-size: clamp(32px, 8vw, 50px);
   }
 
   .timetable-bottom {
-    padding: 60px 6%;
+    padding: 65px 18px;
+  }
+
+  .timetable-bottom p {
+    font-size: 16px;
+  }
+
+  .timetable-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .timetable-btn {
+    width: 100%;
   }
 
   .timetable-footer {
     flex-direction: column;
+    text-align: center;
   }
+
+}
+
+/* ==========================================
+   MINNI HREYFING
+   ========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .timetable-btn {
+    transition: none;
+  }
+
+}
+
+/* SAMRÆMDAR FYRIRSAGNIR - BOX800 */
+
+.trainers-hero h1,
+.course-hero h1,
+.timetable-hero h1 {
+  font-family: "Barlow Condensed", Impact, sans-serif;
+  font-weight: 800;
+  font-size: clamp(54px, 9vw, 115px);
+  letter-spacing: 0.015em;
+  line-height: 1.08;
+}
+
+/* Aðrar fyrirsagnir */
+
+.trainer-info h2,
+.courses-section h2,
+.course-content h3,
+.timetable-container h2,
+.timetable-bottom h2 {
+  font-family: "Barlow Condensed", Impact, sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.015em;
+  line-height: 1.12;
+}
+
+/* Lengri fyrirsögn á Þjálfarasíðunni */
+
+.trainers-hero h1 {
+  font-size: clamp(42px, 7vw, 90px);
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }

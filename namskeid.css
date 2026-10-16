@@ -1,137 +1,392 @@
 
-/* NÁMSKEIÐASÍÐA BOX800 */
+/* ==========================================
+   BOX800 - NÁMSKEIÐ
+   SAMRÆMT VIÐ VERÐSKRÁ
+   ========================================== */
 
-.course-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 6%;
-  background: #0b0b0b;
-}
-
-.course-logo img {
-  width: 110px;
-  height: auto;
-}
-
-.back-link {
-  color: white;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 13px;
-}
+/* ==========================================
+   KYNNING - SAMA ÚTLIT OG VERÐSKRÁ
+   ========================================== */
 
 .course-hero {
-  background: #111;
-  color: white;
+  padding: 85px 24px 70px;
   text-align: center;
-  padding: 100px 20px;
+  color: #f5f6f7;
+
+  background: radial-gradient(
+    ellipse at 50% 100%,
+    #303b47 0%,
+    #12171c 42%,
+    #090b0d 78%
+  );
 }
 
-.eyebrow {
-  letter-spacing: 4px;
+.course-eyebrow {
   color: #c6ccd6;
-  font-size: 13px;
-  font-weight: 700;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  margin: 0;
 }
 
 .course-hero h1 {
-  font-size: clamp(48px, 10vw, 110px);
-  margin: 20px 0;
+  font-family: Lovelo, "Barlow Condensed", Impact, sans-serif;
+  font-size: clamp(54px, 11vw, 130px);
+  font-weight: 900;
+  letter-spacing: -0.06em;
   line-height: 1;
+  margin: 20px 0;
 }
 
-.course-hero p {
-  max-width: 550px;
-  margin: 20px auto;
-  line-height: 1.7;
+.course-intro {
+  max-width: 600px;
+  margin: 0 auto;
+  color: #d3d7dd;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
 }
+
+/* ==========================================
+   NÁMSKEIÐAHLUTAR
+   ========================================== */
 
 .courses-section {
   background: #0b0b0b;
-  color: white;
-  padding: 70px 6%;
+  color: #ffffff;
+  padding: 75px 22px;
+}
+
+.courses-section-alt {
+  background: #121518;
+}
+
+.courses-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .courses-section h2 {
-  font-size: clamp(28px, 5vw, 48px);
-  margin-bottom: 35px;
+  font-family: Lovelo, "Barlow Condensed", Impact, sans-serif;
+  font-size: clamp(34px, 5vw, 52px);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+  margin: 0 0 35px;
+  color: #ffffff;
 }
+
+/* ==========================================
+   GRID
+   ========================================== */
 
 .courses-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 20px;
+  gap: 22px;
+  align-items: stretch;
 }
 
+/* ==========================================
+   NÁMSKEIÐASPJÖLD
+   ========================================== */
+
 .course-card {
-  background: #202124;
-  min-height: 290px;
   display: flex;
-  align-items: flex-end;
-  border: 1px solid #383838;
-  transition: transform 0.2s ease;
+  flex-direction: column;
+  min-width: 0;
+  height: 100%;
+  background: #202124;
+  border: 1px solid #383d42;
+  overflow: hidden;
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease;
 }
 
 .course-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-4px);
+  border-color: #c6ccd6;
 }
 
+/* ==========================================
+   MYNDIR
+   ========================================== */
+
+.course-image-wrap {
+  width: 100%;
+  height: 230px;
+  flex-shrink: 0;
+  overflow: hidden;
+  background: #15191d;
+}
+
+.course-image-wrap img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  object-position: center;
+
+  transition: transform 0.35s ease;
+}
+
+.course-card:hover .course-image-wrap img {
+  transform: scale(1.04);
+}
+
+/* ==========================================
+   TEXTI OG HNAPPAR
+   ========================================== */
+
 .course-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1;
+  width: 100%;
   padding: 28px;
 }
 
 .course-content h3 {
-  font-size: 25px;
-  margin: 0 0 12px;
+  font-family: Lovelo, "Barlow Condensed", Impact, sans-serif;
+  font-size: 34px;
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+  margin: 0 0 15px;
+  color: #ffffff;
 }
 
 .course-content p {
   color: #c6ccd6;
-  line-height: 1.6;
-  margin-bottom: 25px;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.7;
+  margin: 0 0 28px;
 }
 
 .course-content a {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: auto;
+  padding: 15px 20px;
   background: #c6ccd6;
-  color: #111;
-  padding: 14px 20px;
+  color: #111111;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  line-height: 1.3;
+  letter-spacing: 0.3px;
+  text-align: center;
+  text-decoration: none;
+
+  transition: background 0.2s ease;
+}
+
+.course-content a:hover {
+  background: #ffffff;
+}
+
+/* ==========================================
+   SPJÖLD ÁN MYNDA
+   ========================================== */
+
+.course-card.no-image {
+  justify-content: center;
+  background: #1b1e22;
+}
+
+.course-card.no-image .course-content {
+  justify-content: center;
+  min-height: 300px;
+  padding: 35px 28px;
+}
+
+.course-card.no-image .course-content a {
+  margin-top: 15px;
+}
+
+/* ==========================================
+   FOOTER
+   ========================================== */
+
+.course-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  background: #090b0d;
+  border-top: 1px solid #343b42;
+
+  padding: 35px max(22px, calc((100% - 1200px) / 2));
+
+  color: #ffffff;
+}
+
+.course-footer p {
+  margin: 0;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.course-footer a {
+  color: #c6ccd6;
+  font-family: "Inter", Arial, sans-serif;
   font-size: 12px;
   font-weight: 800;
   text-decoration: none;
 }
 
-.course-footer {
-  background: #111;
-  color: white;
-  padding: 35px 6%;
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
+.course-footer a:hover {
+  color: #ffffff;
 }
 
-.course-footer a {
-  color: #c6ccd6;
-  text-decoration: none;
-}
+/* ==========================================
+   SPJALDTÖLVUR
+   ========================================== */
 
 @media (max-width: 900px) {
+
   .courses-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-}
 
-@media (max-width: 600px) {
-  .courses-grid {
-    grid-template-columns: 1fr;
+  .course-image-wrap {
+    height: 220px;
   }
 
+}
+
+/* ==========================================
+   SÍMAR
+   ========================================== */
+
+@media (max-width: 600px) {
+
   .course-hero {
-    padding: 75px 20px;
+    padding: 65px 18px 55px;
+  }
+
+  .course-hero h1 {
+    font-size: clamp(54px, 11vw, 130px);
+  }
+
+  .course-intro {
+    font-size: 16px;
+  }
+
+  .courses-section {
+    padding: 55px 16px;
+  }
+
+  .courses-section h2 {
+    font-size: 38px;
+    margin-bottom: 25px;
+  }
+
+  .courses-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .course-image-wrap {
+    height: 230px;
+  }
+
+  .course-content {
+    padding: 25px;
+  }
+
+  .course-content h3 {
+    font-size: 32px;
+  }
+
+  .course-content p {
+    font-size: 14px;
+  }
+
+  .course-card.no-image .course-content {
+    min-height: 230px;
+    padding: 30px 25px;
   }
 
   .course-footer {
     flex-direction: column;
+    align-items: flex-start;
+    padding: 35px 20px;
   }
+
+}
+
+/* ==========================================
+   MINNI SÍMAR
+   ========================================== */
+
+@media (max-width: 380px) {
+
+  .course-content {
+    padding: 22px;
+  }
+
+  .course-content a {
+    width: 100%;
+    padding: 15px 12px;
+  }
+
+}
+
+/* ==========================================
+   MINNKA HREYFINGU EF ÓSKAÐ ER
+   ========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .course-card,
+  .course-image-wrap img,
+  .course-content a {
+    transition: none;
+  }
+
+}
+
+/* SAMRÆMDAR FYRIRSAGNIR - BOX800 */
+
+.trainers-hero h1,
+.course-hero h1,
+.timetable-hero h1 {
+  font-family: "Barlow Condensed", Impact, sans-serif;
+  font-weight: 800;
+  font-size: clamp(54px, 9vw, 115px);
+  letter-spacing: 0.015em;
+  line-height: 1.08;
+}
+
+/* Aðrar fyrirsagnir */
+
+.trainer-info h2,
+.courses-section h2,
+.course-content h3,
+.timetable-container h2,
+.timetable-bottom h2 {
+  font-family: "Barlow Condensed", Impact, sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.015em;
+  line-height: 1.12;
+}
+
+/* Lengri fyrirsögn á Þjálfarasíðunni */
+
+.trainers-hero h1 {
+  font-size: clamp(42px, 7vw, 90px);
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }

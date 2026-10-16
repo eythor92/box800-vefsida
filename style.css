@@ -41,3 +41,188 @@
   outline: 3px solid #fff;
   outline-offset: -3px;
 }
+
+/* ==========================================
+   BOX800 - NÝJAR FORSÍÐUMYNDIR
+   ========================================== */
+
+/* 1. NÝ FORSÍÐUMYND */
+
+.hero-photo {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(4, 6, 8, 0.94) 0%,
+      rgba(4, 6, 8, 0.75) 38%,
+      rgba(4, 6, 8, 0.20) 100%
+    ),
+    url("images/group.jpeg") 65% center / cover no-repeat;
+}
+
+/* 2. ÆFINGASPJÖLD */
+
+.program-card {
+  isolation: isolate;
+}
+
+.program-card > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.program-shade {
+  z-index: 1;
+  pointer-events: none;
+}
+
+.program-content {
+  z-index: 2;
+}
+
+.program-content a:hover {
+  color: #fff;
+}
+
+/* ==========================================
+   3. NÝR MYNDAHLUTI
+   ========================================== */
+
+.training-gallery {
+  background: #090b0d;
+}
+
+.gallery-heading {
+  margin-bottom: 40px;
+}
+
+.gallery-heading h2 {
+  font-size: clamp(48px, 7vw, 95px);
+  line-height: 1.02;
+  margin: 18px 0 25px;
+}
+
+.gallery-heading p {
+  color: #c3c7cc;
+  max-width: 560px;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.training-gallery-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 14px;
+}
+
+.gallery-photo {
+  position: relative;
+  height: 450px;
+  overflow: hidden;
+  background: #15191d;
+}
+
+.gallery-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.5s ease;
+}
+
+.gallery-photo:hover img {
+  transform: scale(1.05);
+}
+
+/* ==========================================
+   4. AFSLÁTTARBORÐI
+   ========================================== */
+
+.ticker {
+  display: block;
+  background: #c6ccd6;
+  color: #101215;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.ticker:hover {
+  background: #e6e9ef;
+}
+
+.ticker:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: -3px;
+}
+
+/* ==========================================
+   5. SPJALDTÖLVUR
+   ========================================== */
+
+@media (max-width: 900px) {
+
+  .training-gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery-photo {
+    height: 350px;
+  }
+
+  .gallery-photo-large {
+    grid-column: 1 / -1;
+    height: 420px;
+  }
+
+}
+
+/* ==========================================
+   6. FARSÍMAR
+   ========================================== */
+
+@media (max-width: 600px) {
+
+  .hero-photo {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(4, 6, 8, 0.86),
+        rgba(4, 6, 8, 0.45)
+      ),
+      url("images/group.jpeg") center center / cover no-repeat;
+  }
+
+  .gallery-heading h2 {
+    font-size: clamp(42px, 10vw, 65px);
+  }
+
+  .training-gallery-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .gallery-photo {
+    height: 230px;
+  }
+
+  .gallery-photo-large {
+    grid-column: 1 / -1;
+    height: 320px;
+  }
+
+}
+
+/* ==========================================
+   7. MINNKA HREYFINGU
+   ========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .gallery-photo img {
+    transition: none;
+  }
+
+}

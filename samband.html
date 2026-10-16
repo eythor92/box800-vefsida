@@ -1,36 +1,40 @@
 
 <!DOCTYPE html>
 <html lang="is">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Hafðu samband við BOX800 á Selfossi. Þú finnur okkur á Eyravegi 57, 800 Selfossi.">
+
+  <meta
+    name="description"
+    content="Hafðu samband við BOX800 á Selfossi. Þú finnur okkur á Eyravegi 57, 800 Selfossi."
+  >
+
   <title>Hafa samband | BOX800</title>
 
+  <!-- LETURGERÐIR -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- CSS -->
   <link rel="stylesheet" href="samband.css">
+  <link rel="stylesheet" href="header.css">
+
+  <!-- SAMEIGINLEG VALMYND -->
+  <script src="header.js" defer></script>
+
 </head>
 
 <body>
 
-  <!-- VALMYND -->
-  <header class="contact-header">
-    <div class="header-inner">
-
-      <a href="index.html" class="logo">
-        <img src="images/box800-logo-white.png" alt="BOX800">
-      </a>
-
-      <nav aria-label="Valmynd">
-        <a href="timatafla.html">TÍMATAFLA</a>
-        <a href="index.html">FORSÍÐA ↗</a>
-      </nav>
-
-    </div>
-  </header>
+  <!-- SAMEIGINLEG BOX800 VALMYND -->
+  <header id="box800-header"></header>
 
   <main>
 
@@ -57,6 +61,7 @@
         <!-- SAMBANDSFORM -->
         <form
           class="contact-form"
+          id="top-form"
           action="https://formspree.io/f/YOUR_FORM_ID"
           method="POST"
         >
@@ -64,7 +69,11 @@
           <div class="form-row">
 
             <div class="form-group">
-              <label for="name">NAFN</label>
+
+              <label for="name">
+                NAFN
+              </label>
+
               <input
                 type="text"
                 id="name"
@@ -73,10 +82,15 @@
                 autocomplete="name"
                 required
               >
+
             </div>
 
             <div class="form-group">
-              <label for="email">NETFANG</label>
+
+              <label for="email">
+                NETFANG
+              </label>
+
               <input
                 type="email"
                 id="email"
@@ -85,12 +99,17 @@
                 autocomplete="email"
                 required
               >
+
             </div>
 
           </div>
 
           <div class="form-group">
-            <label for="subject">EFNI</label>
+
+            <label for="subject">
+              EFNI
+            </label>
+
             <input
               type="text"
               id="subject"
@@ -98,10 +117,15 @@
               placeholder="Viðfangsefni"
               required
             >
+
           </div>
 
           <div class="form-group">
-            <label for="message">SKILABOÐ</label>
+
+            <label for="message">
+              SKILABOÐ
+            </label>
+
             <textarea
               id="message"
               name="message"
@@ -109,6 +133,7 @@
               placeholder="Skilaboð..."
               required
             ></textarea>
+
           </div>
 
           <input
@@ -117,7 +142,10 @@
             value="Ný fyrirspurn frá BOX800 vefsíðunni"
           >
 
-          <button type="submit" class="btn form-submit">
+          <button
+            type="submit"
+            class="btn form-submit"
+          >
             SENDA SKILABOÐ ↗
           </button>
 
@@ -143,8 +171,13 @@
 
         <div class="info-grid">
 
+          <!-- NETFANG -->
           <div class="info-card">
-            <span class="card-number">01</span>
+
+            <span class="card-number">
+              01
+            </span>
+
             <h3>NETFANG</h3>
 
             <a href="mailto:info@box800.is">
@@ -155,10 +188,16 @@
               Sendu okkur línu og við svörum
               eins fljótt og við getum.
             </p>
+
           </div>
 
+          <!-- STAÐSETNING -->
           <div class="info-card">
-            <span class="card-number">02</span>
+
+            <span class="card-number">
+              02
+            </span>
+
             <h3>STAÐSETNING</h3>
 
             <p class="address">
@@ -173,10 +212,16 @@
             >
               FÁ LEIÐARLÝSINGU ↗
             </a>
+
           </div>
 
+          <!-- ÆFINGATÍMAR -->
           <div class="info-card">
-            <span class="card-number">03</span>
+
+            <span class="card-number">
+              03
+            </span>
+
             <h3>ÆFINGATÍMAR</h3>
 
             <p>
@@ -188,6 +233,7 @@
             <a href="timatafla.html">
               SKOÐA TÍMATAFLU ↗
             </a>
+
           </div>
 
         </div>
@@ -216,6 +262,7 @@
         </p>
 
         <div class="map-frame">
+
           <iframe
             title="Staðsetning BOX800 á Eyravegi 57, Selfossi"
             src="https://maps.google.com/maps?q=Eyravegur%2057%2C%20800%20Selfoss%2C%20Iceland&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
@@ -223,8 +270,9 @@
             height="420"
             style="border:0"
             loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+
         </div>
 
         <a
@@ -240,7 +288,7 @@
 
     </section>
 
-    <!-- NEÐST -->
+    <!-- NEÐST Á SÍÐU -->
     <section class="contact-bottom">
 
       <span class="kicker">
@@ -256,7 +304,7 @@
         Við hlökkum til að sjá þig!
       </p>
 
-      <a class="btn" href="#top-form" onclick="document.querySelector('.contact-form').scrollIntoView({behavior:'smooth'}); return false;">
+      <a class="btn" href="#top-form">
         HAFÐU SAMBAND ↗
       </a>
 
@@ -264,7 +312,7 @@
 
   </main>
 
-  <!-- FÓTUR -->
+  <!-- FOOTER -->
   <footer class="contact-footer">
 
     <img
@@ -272,7 +320,9 @@
       alt="BOX800"
     >
 
-    <p>EYRAVEGUR 57 · 800 SELFOSS</p>
+    <p>
+      EYRAVEGUR 57 · 800 SELFOSS
+    </p>
 
     <a href="index.html">
       AFTUR Á FORSÍÐU ↑

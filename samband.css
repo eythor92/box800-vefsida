@@ -1,5 +1,9 @@
 
-/* BOX800 - HAFA SAMBAND */
+/* ==========================================
+   BOX800 - HAFA SAMBAND
+   ========================================== */
+
+/* GRUNNSTILLINGAR */
 
 * {
   box-sizing: border-box;
@@ -16,14 +20,17 @@ body {
   font-family: "Inter", sans-serif;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: "Barlow Condensed", sans-serif;
   font-weight: 900;
   line-height: 0.98;
   margin-top: 0;
 }
 
-h1 span, h2 span {
+h1 span,
+h2 span {
   color: #c6ccd6;
 }
 
@@ -50,44 +57,9 @@ a {
   margin-bottom: 25px;
 }
 
-/* HEADER */
-
-.contact-header {
-  background: #0b0b0b;
-  padding: 22px 6%;
-}
-
-.header-inner {
-  max-width: 1300px;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-}
-
-.logo img {
-  width: 110px;
-  display: block;
-}
-
-.contact-header nav {
-  display: flex;
-  gap: 25px;
-}
-
-.contact-header nav a {
-  color: white;
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 1px;
-}
-
-.contact-header nav a:hover {
-  color: #c6ccd6;
-}
-
-/* HERO */
+/* ==========================================
+   HERO - HAFA SAMBAND
+   ========================================== */
 
 .contact-hero {
   min-height: 600px;
@@ -97,13 +69,14 @@ a {
   background:
     linear-gradient(
       90deg,
-      rgba(0,0,0,0.93),
-      rgba(0,0,0,0.4)
+      rgba(0, 0, 0, 0.93),
+      rgba(0, 0, 0, 0.4)
     ),
-    url("images/team.webp") center/cover;
+    url("images/team.webp") center / cover;
 }
 
 .hero-inner {
+  width: 100%;
   max-width: 850px;
 }
 
@@ -119,7 +92,9 @@ a {
   margin-bottom: 35px;
 }
 
-/* HNAPPAR */
+/* ==========================================
+   HNAPPAR
+   ========================================== */
 
 .btn {
   display: inline-block;
@@ -129,7 +104,9 @@ a {
   font-size: 13px;
   font-weight: 800;
   letter-spacing: 1px;
-  transition: 0.2s;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
 }
 
 .btn:hover {
@@ -137,7 +114,83 @@ a {
   transform: translateY(-2px);
 }
 
-/* UPPLÝSINGAR */
+/* ==========================================
+   SAMBANDSFORM
+   ========================================== */
+
+.contact-form {
+  width: 100%;
+  max-width: 650px;
+  margin-top: 40px;
+  scroll-margin-top: 110px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 22px;
+}
+
+.form-group label {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  color: #c6ccd6;
+  margin-bottom: 10px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 17px 18px;
+  background: rgba(15, 15, 15, 0.85);
+  border: 1px solid #555555;
+  border-radius: 0;
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  outline: none;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #c6ccd6;
+}
+
+.form-group input:focus-visible,
+.form-group textarea:focus-visible {
+  border-color: #c6ccd6;
+  box-shadow: 0 0 0 2px rgba(198, 204, 214, 0.2);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #999999;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 160px;
+}
+
+.form-submit {
+  border: none;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+}
+
+/* ==========================================
+   SAMSKIPTAUPPLÝSINGAR
+   ========================================== */
 
 .contact-info {
   padding: 110px 0;
@@ -151,7 +204,7 @@ a {
 
 .info-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 20px;
 }
 
@@ -192,10 +245,12 @@ a {
 }
 
 .info-card a:hover {
-  color: white;
+  color: #ffffff;
 }
 
-/* KORT */
+/* ==========================================
+   KORT
+   ========================================== */
 
 .map-section {
   padding: 110px 0;
@@ -225,7 +280,13 @@ a {
   font-weight: 800;
 }
 
-/* LOKAHLUTI */
+.map-link:hover {
+  color: #ffffff;
+}
+
+/* ==========================================
+   LOKAHLUTI
+   ========================================== */
 
 .contact-bottom {
   padding: 120px 6%;
@@ -242,7 +303,9 @@ a {
   margin-bottom: 35px;
 }
 
-/* FOOTER */
+/* ==========================================
+   FOOTER
+   ========================================== */
 
 .contact-footer {
   padding: 35px 6%;
@@ -255,6 +318,7 @@ a {
 
 .contact-footer img {
   width: 90px;
+  height: auto;
 }
 
 .contact-footer p {
@@ -268,25 +332,23 @@ a {
   font-weight: 800;
 }
 
-/* SÍMAR */
+.contact-footer a:hover {
+  color: #ffffff;
+}
+
+/* ==========================================
+   SPJALDTÖLVUR OG SÍMAR
+   ========================================== */
 
 @media (max-width: 768px) {
-
-  .contact-header {
-    padding: 20px 5%;
-  }
-
-  .contact-header nav {
-    gap: 15px;
-  }
-
-  .contact-header nav a {
-    font-size: 11px;
-  }
 
   .contact-hero {
     min-height: 520px;
     padding: 80px 6%;
+  }
+
+  .contact-hero h1 {
+    font-size: clamp(60px, 12vw, 90px);
   }
 
   .contact-hero p {
@@ -318,74 +380,55 @@ a {
     flex-direction: column;
     text-align: center;
   }
+
 }
 
-/* CONTACT FORM */
-
-.contact-form {
-  width: 100%;
-  max-width: 650px;
-  margin-top: 40px;
-}
-
-.form-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-}
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 22px;
-}
-
-.form-group label {
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 1.5px;
-  color: #c6ccd6;
-  margin-bottom: 10px;
-}
-
-.form-group input,
-.form-group textarea {
-  width: 100%;
-  padding: 17px 18px;
-  background: rgba(15, 15, 15, 0.85);
-  border: 1px solid #555;
-  border-radius: 0;
-  color: #fff;
-  font-family: "Inter", sans-serif;
-  font-size: 15px;
-  outline: none;
-  transition: border-color 0.2s;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-  border-color: #c6ccd6;
-}
-
-.form-group input::placeholder,
-.form-group textarea::placeholder {
-  color: #999;
-}
-
-.form-group textarea {
-  resize: vertical;
-  min-height: 160px;
-}
-
-.form-submit {
-  border: none;
-  cursor: pointer;
-  font-family: "Inter", sans-serif;
-}
+/* ==========================================
+   MINNI SÍMAR
+   ========================================== */
 
 @media (max-width: 600px) {
+
+  .contact-hero {
+    padding: 65px 6%;
+  }
+
+  .contact-form {
+    max-width: 100%;
+  }
+
   .form-row {
     grid-template-columns: 1fr;
     gap: 0;
   }
+
+  .contact-info h2,
+  .map-section h2 {
+    font-size: clamp(48px, 11vw, 70px);
+  }
+
+  .contact-bottom h2 {
+    font-size: clamp(55px, 12vw, 85px);
+  }
+
+  .contact-footer {
+    gap: 15px;
+  }
+
+}
+
+/* ==========================================
+   AÐGENGI
+   ========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  .btn {
+    transition: none;
+  }
+
 }

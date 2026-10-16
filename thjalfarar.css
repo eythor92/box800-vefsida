@@ -1,96 +1,125 @@
 
-/* BOX800 - ÞJÁLFARAR */
+/* ==========================================
+   BOX800 - ÞJÁLFARAR
+   SAMRÆMT VIÐ VERÐSKRÁ
+   ========================================== */
 
-.trainers-header {
-  background: #0b0b0b;
-  padding: 20px 6%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.trainers-header img {
-  width: 110px;
-  height: auto;
-}
-
-.back-link {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 13px;
-}
+/* ==========================================
+   KYNNING - SAMA ÚTLIT OG VERÐSKRÁ
+   ========================================== */
 
 .trainers-hero {
-  background: #111;
-  color: white;
+  padding: 85px 24px 70px;
   text-align: center;
-  padding: 100px 20px;
+  color: #f5f6f7;
+
+  background: radial-gradient(
+    ellipse at 50% 100%,
+    #303b47 0%,
+    #12171c 42%,
+    #090b0d 78%
+  );
 }
 
 .trainers-hero .eyebrow {
   color: #c6ccd6;
-  letter-spacing: 4px;
-  font-weight: 700;
-  font-size: 13px;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  margin: 0;
 }
 
 .trainers-hero h1 {
-  font-size: clamp(42px, 8vw, 100px);
+  font-family: Lovelo, "Barlow Condensed", Impact, sans-serif;
+  font-size: clamp(54px, 11vw, 130px);
+  font-weight: 900;
+  letter-spacing: -0.06em;
   line-height: 1;
-  margin: 25px auto;
-  max-width: 1100px;
+  margin: 20px auto;
+  max-width: 1200px;
 }
 
 .trainers-hero > p:last-child {
   max-width: 650px;
   margin: 0 auto;
-  line-height: 1.8;
-  color: #c6ccd6;
+  color: #d3d7dd;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
 }
 
+/* ==========================================
+   ÞJÁLFARAR
+   ========================================== */
+
 .trainers-section {
-  background: #0b0b0b;
-  padding: 70px 6% 100px;
+  background: #090b0d;
+  padding: 80px 24px 100px;
 }
 
 .trainers-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
+/* ==========================================
+   ÞJÁLFARASPJÖLD
+   ========================================== */
+
 .trainer-card {
-  background: #1b1b1b;
-  color: white;
+  background: #171b20;
+  color: #ffffff;
   overflow: hidden;
-  border: 1px solid #333;
-  transition: transform 0.25s ease;
+  border: 1px solid #3a434d;
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease;
 }
 
 .trainer-card:hover {
   transform: translateY(-6px);
+  border-color: #c6ccd6;
 }
+
+/* ==========================================
+   MYNDIR
+   ========================================== */
 
 .trainer-photo {
   aspect-ratio: 4 / 5;
-  background: linear-gradient(145deg, #343942, #111);
+  background: linear-gradient(
+    145deg,
+    #343942,
+    #111111
+  );
+
   display: flex;
   justify-content: center;
   align-items: center;
+
   color: #c6ccd6;
   font-size: 70px;
   font-weight: 900;
   letter-spacing: -4px;
+
+  overflow: hidden;
 }
 
-/* Þegar ljósmyndir eru tilbúnar */
 .trainer-photo img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
+
+/* ==========================================
+   UPPLÝSINGAR UM ÞJÁLFARA
+   ========================================== */
 
 .trainer-info {
   padding: 28px;
@@ -99,6 +128,7 @@
 .trainer-info span {
   display: block;
   color: #c6ccd6;
+  font-family: "Inter", Arial, sans-serif;
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 2px;
@@ -106,9 +136,13 @@
 }
 
 .trainer-info h2 {
+  font-family: Lovelo, "Barlow Condensed", Impact, sans-serif;
   font-size: 25px;
+  font-weight: 900;
   line-height: 1.2;
+  letter-spacing: -0.015em;
   margin: 0 0 20px;
+  overflow-wrap: break-word;
 }
 
 .trainer-info ul {
@@ -119,19 +153,42 @@
 
 .trainer-info li {
   color: #c6ccd6;
+  font-family: "Inter", Arial, sans-serif;
   font-size: 14px;
   line-height: 1.6;
   padding: 8px 0;
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid #333b43;
 }
 
+.trainer-info li:last-child {
+  border-bottom: none;
+}
+
+/* ==========================================
+   FOOTER
+   ========================================== */
+
 .trainers-footer {
-  background: #111;
-  color: white;
-  padding: 35px 6%;
+  background: #090b0d;
+  color: #aeb6c0;
+
+  padding: 32px 24px;
+
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 20px;
+
+  border-top: 1px solid #343b42;
+
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.trainers-footer p {
+  margin: 0;
 }
 
 .trainers-footer a {
@@ -139,26 +196,107 @@
   text-decoration: none;
 }
 
+.trainers-footer a:hover {
+  color: #ffffff;
+}
+
+/* ==========================================
+   SPJALDTÖLVUR
+   ========================================== */
+
 @media (max-width: 950px) {
+
   .trainers-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
 }
 
+/* ==========================================
+   SÍMAR
+   ========================================== */
+
 @media (max-width: 600px) {
-  .trainers-grid {
-    grid-template-columns: 1fr;
-  }
 
   .trainers-hero {
-    padding: 75px 20px;
+    padding: 65px 18px 55px;
+  }
+
+  .trainers-hero h1 {
+    font-size: clamp(48px, 10vw, 70px);
+    letter-spacing: -0.04em;
+  }
+
+  .trainers-hero > p:last-child {
+    font-size: 16px;
+  }
+
+  .trainers-section {
+    padding: 55px 18px;
+  }
+
+  .trainers-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
   }
 
   .trainer-info {
     padding: 24px;
   }
 
+  .trainer-info h2 {
+    font-size: 27px;
+  }
+
   .trainers-footer {
     flex-direction: column;
+    text-align: center;
   }
+
+}
+
+/* ==========================================
+   MINNKA HREYFINGU EF ÓSKAÐ ER
+   ========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .trainer-card {
+    transition: none;
+  }
+
+}
+
+/* SAMRÆMDAR FYRIRSAGNIR - BOX800 */
+
+.trainers-hero h1,
+.course-hero h1,
+.timetable-hero h1 {
+  font-family: "Barlow Condensed", Impact, sans-serif;
+  font-weight: 800;
+  font-size: clamp(54px, 9vw, 115px);
+  letter-spacing: 0.015em;
+  line-height: 1.08;
+}
+
+/* Aðrar fyrirsagnir */
+
+.trainer-info h2,
+.courses-section h2,
+.course-content h3,
+.timetable-container h2,
+.timetable-bottom h2 {
+  font-family: "Barlow Condensed", Impact, sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.015em;
+  line-height: 1.12;
+}
+
+/* Lengri fyrirsögn á Þjálfarasíðunni */
+
+.trainers-hero h1 {
+  font-size: clamp(42px, 7vw, 90px);
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }

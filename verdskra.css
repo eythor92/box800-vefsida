@@ -1,3 +1,388 @@
-/* Verðskrá Box800 – sér CSS fyrir verdskra.html */
-:root{--p-bg:#090b0d;--p-card:#171b20;--p-accent:#c6ccd6;--p-text:#f5f6f7;--p-muted:#a7afb8}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--p-bg);color:var(--p-text);font-family:Inter,Arial,sans-serif;line-height:1.5}a{text-decoration:none;color:inherit}.price-header{height:90px;display:flex;align-items:center;justify-content:space-between;max-width:1250px;margin:auto;padding:0 28px}.price-logo{border:2px solid white;display:inline-flex;align-items:baseline;gap:6px;padding:4px 12px;font-size:27px;font-weight:900;letter-spacing:-2px}.price-logo small{font-size:13px;letter-spacing:0}.price-back{font-size:14px;font-weight:700;color:var(--p-accent)}.price-hero{padding:85px 24px 70px;text-align:center;background:radial-gradient(ellipse at 50% 100%,#303b47 0%,#12171c 42%,#090b0d 78%)}.price-eyebrow,.price-section-title>p{color:var(--p-accent);font-size:12px;font-weight:800;letter-spacing:3px}.price-hero h1{font-size:clamp(54px,11vw,130px);letter-spacing:-.06em;line-height:1;margin:20px 0}.price-hero>p:not(.price-eyebrow){max-width:600px;margin:0 auto;color:#d3d7dd;font-size:18px}.price-tabs{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:45px}.price-tabs a{border:1px solid #626a75;padding:12px 18px;font-size:13px;font-weight:800;text-transform:uppercase;transition:.2s}.price-tabs a:hover{background:var(--p-accent);color:#101317}.price-section{padding:80px 24px;max-width:1250px;margin:auto;scroll-margin-top:20px}.price-section.alternate{max-width:none;background:#11161a}.price-section.alternate>*{max-width:1202px;margin-left:auto;margin-right:auto}.price-section-title{margin-bottom:35px}.price-section-title h2{font-size:clamp(32px,5vw,60px);line-height:1.05;letter-spacing:-.04em;margin:10px 0 15px}.price-section-title span{color:var(--p-muted)}.price-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.price-card{position:relative;display:flex;flex-direction:column;min-height:310px;background:var(--p-card);border:1px solid #3a434d;padding:28px}.price-card.featured{border:2px solid var(--p-accent);background:linear-gradient(145deg,#26303a,#171b20)}.price-tag{position:absolute;right:0;top:0;background:var(--p-accent);color:#101317;padding:6px 10px;font-size:10px;font-weight:900;letter-spacing:1px}.price-card h3,.course-card h3{font-size:19px;margin:5px 0 18px}.price-amount{font-size:clamp(34px,3.4vw,49px);font-weight:900;letter-spacing:-2px;white-space:nowrap}.price-amount small{font-size:15px;letter-spacing:0;font-weight:600;color:var(--p-accent)}.price-card p{font-size:14px;color:var(--p-muted);margin:12px 0 25px}.price-button{display:block;margin-top:auto;padding:15px 12px;background:var(--p-accent);color:#11151a;text-align:center;font-size:13px;font-weight:900;letter-spacing:.6px}.price-button:hover,.course-cta:hover,.price-bottom a:hover{background:#fff}.course-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.course-card{background:#1d242a;border:1px solid #39434b;padding:25px;min-height:185px}.course-card h3{margin:0 0 14px}.course-card strong{font-size:25px;color:var(--p-accent)}.course-card p{font-size:13px;color:var(--p-muted)}.course-cta{display:table;margin-top:28px!important;padding:15px 22px;background:var(--p-accent);color:#111;font-size:13px;font-weight:900}.price-bottom{text-align:center;padding:80px 20px;background:#c6ccd6;color:#11151a}.price-bottom h2{font-size:clamp(32px,6vw,65px);margin:0;letter-spacing:-.05em}.price-bottom p{font-size:18px}.price-bottom a{display:inline-block;background:#101419;color:white;padding:17px 25px;font-weight:900;margin-top:14px}.price-bottom a:hover{background:#303a43;color:white}.price-footer{padding:32px 24px;display:flex;gap:18px;justify-content:space-between;max-width:1250px;margin:auto;color:#aeb6c0;font-size:12px;font-weight:700;letter-spacing:1px}@media(max-width:900px){.price-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.course-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:600px){.price-header{height:76px;padding:0 18px}.price-hero{padding:65px 18px 55px}.price-hero>p:not(.price-eyebrow){font-size:16px}.price-tabs a{font-size:11px;padding:11px}.price-section{padding:55px 18px}.price-grid,.course-grid{grid-template-columns:1fr}.price-card{min-height:270px}.price-amount{font-size:42px}.price-footer{flex-direction:column;align-items:center;text-align:center}}
+
+/* ==========================================
+   BOX800 - VERÐSKRÁ
+   ========================================== */
+
+:root {
+  --p-bg: #090b0d;
+  --p-card: #171b20;
+  --p-accent: #c6ccd6;
+  --p-text: #f5f6f7;
+  --p-muted: #a7afb8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--p-bg);
+  color: var(--p-text);
+  font-family: "Inter", Arial, sans-serif;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ==========================================
+   KYNNING
+   ========================================== */
+
+.price-hero {
+  padding: 85px 24px 70px;
+  text-align: center;
+
+  background: radial-gradient(
+    ellipse at 50% 100%,
+    #303b47 0%,
+    #12171c 42%,
+    #090b0d 78%
+  );
+}
+
+.price-eyebrow,
+.price-section-title > p {
+  color: var(--p-accent);
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+.price-hero h1 {
+  font-family: "Barlow Condensed", Impact, sans-serif;
+  font-size: clamp(54px, 9vw, 115px);
+  font-weight: 800;
+  letter-spacing: 0.015em;
+  line-height: 1.08;
+  margin: 20px 0;
+}
+
+.price-hero > p:not(.price-eyebrow) {
+  max-width: 600px;
+  margin: 0 auto;
+  color: #d3d7dd;
+  font-size: 18px;
+}
+
+/* ==========================================
+   FLOKKAR EFST
+   ========================================== */
+
+.price-tabs {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 45px;
+}
+
+.price-tabs a {
+  border: 1px solid #626a75;
+  padding: 12px 18px;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+  transition: background 0.2s, color 0.2s;
+}
+
+.price-tabs a:hover {
+  background: var(--p-accent);
+  color: #101317;
+}
+
+/* ==========================================
+   VERÐHLUTAR
+   ========================================== */
+
+.price-section {
+  padding: 80px 24px;
+  max-width: 1250px;
+  margin: auto;
+  scroll-margin-top: 100px;
+}
+
+.price-section.alternate {
+  max-width: none;
+  background: #11161a;
+}
+
+.price-section.alternate > * {
+  max-width: 1202px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.price-section-title {
+  margin-bottom: 35px;
+}
+
+.price-section-title h2 {
+  font-family: "Barlow Condensed", Impact, sans-serif;
+  font-size: clamp(32px, 5vw, 60px);
+  font-weight: 800;
+  letter-spacing: 0.015em;
+  line-height: 1.12;
+  margin: 10px 0 15px;
+}
+
+.price-section-title span {
+  color: var(--p-muted);
+}
+
+/* ==========================================
+   VERÐSPJÖLD
+   ========================================== */
+
+.price-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.price-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 310px;
+  background: var(--p-card);
+  border: 1px solid #3a434d;
+  padding: 28px;
+}
+
+.price-card.featured {
+  border: 2px solid var(--p-accent);
+  background: linear-gradient(145deg, #26303a, #171b20);
+}
+
+.price-tag {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: var(--p-accent);
+  color: #101317;
+  padding: 6px 10px;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.price-card h3,
+.course-card h3 {
+  font-family: "Barlow Condensed", Impact, sans-serif;
+  font-size: 23px;
+  font-weight: 800;
+  letter-spacing: 0.015em;
+  line-height: 1.12;
+  margin: 5px 0 18px;
+}
+
+.price-amount {
+  font-family: "Inter", Arial, sans-serif;
+  font-size: clamp(34px, 3.4vw, 49px);
+  font-weight: 900;
+  letter-spacing: -2px;
+  white-space: nowrap;
+}
+
+.price-amount small {
+  font-size: 15px;
+  letter-spacing: 0;
+  font-weight: 600;
+  color: var(--p-accent);
+}
+
+.price-card p {
+  font-size: 14px;
+  color: var(--p-muted);
+  margin: 12px 0 25px;
+}
+
+.price-button {
+  display: block;
+  margin-top: auto;
+  padding: 15px 12px;
+  background: var(--p-accent);
+  color: #11151a;
+  text-align: center;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0.6px;
+}
+
+.price-button:hover {
+  background: #ffffff;
+}
+
+/* ==========================================
+   NÁMSKEIÐ
+   ========================================== */
+
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.course-card {
+  background: #1d242a;
+  border: 1px solid #39434b;
+  padding: 25px;
+  min-height: 185px;
+}
+
+.course-card h3 {
+  margin: 0 0 14px;
+}
+
+.course-card strong {
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 25px;
+  color: var(--p-accent);
+}
+
+.course-card p {
+  font-size: 13px;
+  color: var(--p-muted);
+}
+
+.course-cta {
+  display: table;
+  margin-top: 28px !important;
+  padding: 15px 22px;
+  background: var(--p-accent);
+  color: #111111;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.course-cta:hover {
+  background: #ffffff;
+}
+
+/* ==========================================
+   LOKAHLUTI
+   ========================================== */
+
+.price-bottom {
+  text-align: center;
+  padding: 80px 20px;
+  background: #c6ccd6;
+  color: #11151a;
+}
+
+.price-bottom h2 {
+  font-family: "Barlow Condensed", Impact, sans-serif;
+  font-size: clamp(32px, 6vw, 65px);
+  font-weight: 800;
+  letter-spacing: 0.015em;
+  line-height: 1.12;
+  margin: 0;
+}
+
+.price-bottom p {
+  font-size: 18px;
+}
+
+.price-bottom a {
+  display: inline-block;
+  background: #101419;
+  color: #ffffff;
+  padding: 17px 25px;
+  font-family: "Inter", Arial, sans-serif;
+  font-weight: 900;
+  margin-top: 14px;
+}
+
+.price-bottom a:hover {
+  background: #303a43;
+  color: #ffffff;
+}
+
+/* ==========================================
+   FOOTER
+   ========================================== */
+
+.price-footer {
+  padding: 32px 24px;
+  display: flex;
+  gap: 18px;
+  justify-content: space-between;
+  max-width: 1250px;
+  margin: auto;
+  color: #aeb6c0;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* ==========================================
+   SPJALDTÖLVUR
+   ========================================== */
+
+@media (max-width: 900px) {
+  .price-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .course-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* ==========================================
+   SÍMAR
+   ========================================== */
+
+@media (max-width: 600px) {
+  .price-hero {
+    padding: 65px 18px 55px;
+  }
+
+  .price-hero h1 {
+    font-size: clamp(54px, 11vw, 85px);
+  }
+
+  .price-hero > p:not(.price-eyebrow) {
+    font-size: 16px;
+  }
+
+  .price-tabs a {
+    font-size: 11px;
+    padding: 11px;
+  }
+
+  .price-section {
+    padding: 55px 18px;
+  }
+
+  .price-grid,
+  .course-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .price-card {
+    min-height: 270px;
+  }
+
+  .price-amount {
+    font-size: 42px;
+  }
+
+  .price-footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
