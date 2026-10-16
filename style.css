@@ -568,7 +568,7 @@ h2 span {
       ),
       url("images/forsida.jpg");
 
-    background-size: cover, auto 190%;
+    background-size: cover, auto 130%;
     background-position: center, center bottom;
     background-repeat: no-repeat;
   }
