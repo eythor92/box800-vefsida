@@ -110,7 +110,7 @@ h2 span {
       rgba(4, 6, 8, 0.75) 38%,
       rgba(4, 6, 8, 0.20) 100%
     ),
-    url("images/group.jpeg");
+    url("images/forsida.jpg");
   background-position: center, 65% center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -564,7 +564,7 @@ h2 span {
         rgba(4, 6, 8, 0.58) 45%,
         rgba(4, 6, 8, 0.88) 100%
       ),
-      url("images/group.jpeg");
+      url("images/forsida.jpg");
 
     background-size: cover;
     background-position: center, center bottom;
