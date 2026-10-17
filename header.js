@@ -11,7 +11,12 @@ document.addEventListener("DOMContentLoaded", () => {
     { name: "Þjálfarar", url: "thjalfarar.html" },
     { name: "Verðskrá", url: "verdskra.html" },
     { name: "Drop-in", url: "dropin.html" },
-    { name: "Hafa samband", url: "samband.html" }
+    { name: "Hafa samband", url: "samband.html" },
+    {
+      name: "Kaupa kort",
+      url: "https://www.abler.io/shop/box800",
+      cta: true
+    }
   ];
 
   const currentPage =
@@ -50,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
         ${links.map(link => `
           <a
             href="${link.url}"
-            class="${link.url === "samband.html" ? "nav-cta" : ""}"
+            class="${link.cta ? "nav-cta" : ""}"
             ${currentPage === link.url ? 'aria-current="page"' : ""}
           >
             ${link.name}
@@ -77,6 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
   nav.querySelectorAll("a").forEach(link => {
     link.addEventListener("click", () => {
       nav.classList.remove("is-open");
+
       toggle.setAttribute("aria-expanded", "false");
       toggle.setAttribute("aria-label", "Opna valmynd");
     });

@@ -23,8 +23,7 @@
 /* HEADER */
 
 .site-header .nav-wrap {
-  width: calc(100% - 32px);
-  max-width: 1200px;
+  width: min(calc(100% - 44px), 1200px);
   min-height: 80px;
   margin: 0 auto;
 
@@ -84,7 +83,7 @@
   color: #c6ccd6;
 }
 
-/* HAFA SAMBAND */
+/* KAUPA KORT - GRÁR TAKKI */
 
 .site-header .main-nav .nav-cta {
   background: #c6ccd6;
@@ -205,6 +204,8 @@
     white-space: normal;
   }
 
+  /* KAUPA KORT Í FARSÍMAVALMYND */
+
   .site-header .main-nav .nav-cta {
     justify-content: center;
     margin-top: 12px;
@@ -223,27 +224,5 @@
 
   .site-header .brand-logo {
     width: 100px;
-  }
-}
-/* SAMEIGINLEG STAÐSETNING HEADER Á ÖLLUM SÍÐUM */
-
-.site-header .nav-wrap {
-  width: min(calc(100% - 44px), 1200px);
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 0;
-  padding-right: 0;
-}
-
-@media (max-width: 760px) {
-  .site-header .nav-wrap {
-    width: calc(100% - 32px);
-  }
-}
-
-@media (max-width: 480px) {
-  .site-header .nav-wrap {
-    width: calc(100% - 28px);
   }
 }
