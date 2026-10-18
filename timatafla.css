@@ -4,7 +4,10 @@
    SAMRÆMT VIÐ AÐRAR SÍÐUR
    ========================================== */
 
-/* GRUNNSTILLINGAR */
+
+/* ==========================================
+   GRUNNSTILLINGAR
+   ========================================== */
 
 .timetable-page {
   margin: 0;
@@ -13,8 +16,9 @@
   font-family: "Inter", Arial, sans-serif;
 }
 
+
 /* ==========================================
-   HERO - EINS OG VERÐSKRÁ
+   HERO
    ========================================== */
 
 .timetable-hero {
@@ -56,6 +60,7 @@
   line-height: 1.5;
 }
 
+
 /* ==========================================
    TÍMATAFLA
    ========================================== */
@@ -69,14 +74,6 @@
   max-width: 1200px;
   margin: 0 auto;
   text-align: center;
-}
-
-.timetable-section-eyebrow {
-  color: #c6ccd6;
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 3px;
-  margin-bottom: 15px;
 }
 
 .timetable-container h2 {
@@ -95,6 +92,7 @@
   margin-bottom: 35px;
 }
 
+
 /* MYND AF TÍMATÖFLU */
 
 .timetable-image {
@@ -111,6 +109,7 @@
   height: auto;
 }
 
+
 /* ==========================================
    OPNIR TÍMAR
    ========================================== */
@@ -126,6 +125,7 @@
   max-width: 1200px;
   margin: 0 auto;
 }
+
 
 /* FYRIRSÖGN */
 
@@ -161,6 +161,7 @@
   margin: 0;
 }
 
+
 /* ==========================================
    SPJÖLD - 3 DÁLKAR
    ========================================== */
@@ -192,7 +193,34 @@
   border-color: #c6ccd6;
 }
 
-/* TEXTI Í SPJÖLDUM */
+
+/* ==========================================
+   MYND AF BARRE SALNUM
+   ========================================== */
+
+.open-class-card-barre {
+  overflow: hidden;
+}
+
+.open-class-image {
+  width: 100%;
+  margin-bottom: 25px;
+  overflow: hidden;
+  border: 1px solid #41474e;
+}
+
+.open-class-image img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: center;
+}
+
+
+/* ==========================================
+   TEXTI Í SPJÖLDUM
+   ========================================== */
 
 .open-class-label {
   color: #c6ccd6;
@@ -221,7 +249,10 @@
   margin: 0 0 15px;
 }
 
-/* UPPLÝSINGAR NEÐST Á SPJÖLDUM */
+
+/* ==========================================
+   UPPLÝSINGAR NEÐST Á SPJÖLDUM
+   ========================================== */
 
 .open-class-info {
   display: flex;
@@ -251,7 +282,10 @@
   line-height: 1.5;
 }
 
-/* KAUPA KORT */
+
+/* ==========================================
+   KAUPA KORT
+   ========================================== */
 
 .open-classes-action {
   display: flex;
@@ -287,110 +321,6 @@
   outline-offset: 4px;
 }
 
-/* ==========================================
-   NEÐRI HLUTI
-   ========================================== */
-
-.timetable-bottom {
-  background: #11161a;
-  text-align: center;
-  padding: 80px 24px;
-}
-
-.timetable-bottom h2 {
-  font-family: "Barlow Condensed", Impact, sans-serif;
-  font-size: clamp(32px, 6vw, 65px);
-  font-weight: 800;
-  letter-spacing: 0.015em;
-  line-height: 1.12;
-  margin: 0 0 20px;
-}
-
-.timetable-bottom p {
-  max-width: 600px;
-  margin: 0 auto 30px;
-  color: #a7afb8;
-  font-size: 18px;
-  line-height: 1.6;
-}
-
-/* HNAPPAR */
-
-.timetable-buttons {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 15px;
-}
-
-.timetable-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  padding: 16px 25px;
-
-  background: #c6ccd6;
-  color: #11151a;
-
-  font-family: "Inter", Arial, sans-serif;
-  font-size: 13px;
-  font-weight: 900;
-  letter-spacing: 0.6px;
-  text-decoration: none;
-
-  transition:
-    background 0.2s ease,
-    color 0.2s ease;
-}
-
-.timetable-btn:hover {
-  background: #ffffff;
-}
-
-.timetable-btn-outline {
-  background: transparent;
-  color: #ffffff;
-  border: 1px solid #c6ccd6;
-}
-
-.timetable-btn-outline:hover {
-  background: #c6ccd6;
-  color: #11151a;
-}
-
-/* ==========================================
-   FOOTER
-   ========================================== */
-
-.timetable-footer {
-  max-width: 1250px;
-  margin: 0 auto;
-  padding: 32px 24px;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 18px;
-
-  color: #aeb6c0;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 1px;
-}
-
-.timetable-footer p {
-  margin: 0;
-}
-
-.timetable-footer a {
-  color: #c6ccd6;
-  text-decoration: none;
-}
-
-.timetable-footer a:hover {
-  color: #ffffff;
-}
 
 /* ==========================================
    SPJALDTÖLVUR
@@ -412,8 +342,9 @@
 
 }
 
+
 /* ==========================================
-   SÍMAR
+   FARSÍMAR
    ========================================== */
 
 @media (max-width: 760px) {
@@ -439,6 +370,16 @@
     margin-bottom: 30px;
   }
 
+  /* BARRE MYND */
+
+  .open-class-image {
+    margin-bottom: 20px;
+  }
+
+  .open-class-image img {
+    aspect-ratio: 16 / 8;
+  }
+
 }
 
 @media (max-width: 600px) {
@@ -448,7 +389,7 @@
   }
 
   .timetable-hero h1 {
-    font-size: clamp(54px, 11vw, 130px);
+    font-size: clamp(54px, 9vw, 115px);
   }
 
   .timetable-intro {
@@ -463,26 +404,17 @@
     font-size: clamp(32px, 8vw, 50px);
   }
 
-  .timetable-bottom {
-    padding: 65px 18px;
+  .open-class-card {
+    padding: 24px;
   }
 
-  .timetable-bottom p {
-    font-size: 16px;
+  .open-class-card h3 {
+    font-size: 38px;
   }
 
-  .timetable-buttons {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .timetable-btn {
-    width: 100%;
-  }
-
-  .timetable-footer {
-    flex-direction: column;
-    text-align: center;
+  .open-class-card p {
+    font-size: 14px;
+    line-height: 1.65;
   }
 
 }
@@ -490,7 +422,7 @@
 @media (max-width: 380px) {
 
   .open-class-card {
-    padding: 23px;
+    padding: 20px;
   }
 
   .open-classes-btn {
@@ -499,52 +431,16 @@
 
 }
 
+
 /* ==========================================
    MINNI HREYFING
    ========================================== */
 
 @media (prefers-reduced-motion: reduce) {
 
-  .timetable-btn,
   .open-class-card,
   .open-classes-btn {
     transition: none;
   }
 
-}
-
-/* ==========================================
-   SAMRÆMDAR FYRIRSAGNIR - BOX800
-   ========================================== */
-
-.trainers-hero h1,
-.course-hero h1,
-.timetable-hero h1 {
-  font-family: "Barlow Condensed", Impact, sans-serif;
-  font-weight: 800;
-  font-size: clamp(54px, 9vw, 115px);
-  letter-spacing: 0.015em;
-  line-height: 1.08;
-}
-
-/* AÐRAR FYRIRSAGNIR */
-
-.trainer-info h2,
-.courses-section h2,
-.course-content h3,
-.timetable-container h2,
-.timetable-bottom h2 {
-  font-family: "Barlow Condensed", Impact, sans-serif;
-  font-weight: 800;
-  letter-spacing: 0.015em;
-  line-height: 1.12;
-}
-
-/* LENGRI FYRIRSÖGN Á ÞJÁLFARASÍÐUNNI */
-
-.trainers-hero h1 {
-  font-size: clamp(42px, 7vw, 90px);
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
 }
