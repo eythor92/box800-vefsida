@@ -25,11 +25,12 @@
   <!-- CSS -->
   <link rel="stylesheet" href="samband.css">
   <link rel="stylesheet" href="header.css">
+  <link rel="stylesheet" href="footer.css">
 
-  <!-- SAMEIGINLEG VALMYND -->
+  <!-- SAMEIGINLEG VALMYND OG FOOTER -->
   <script src="header.js" defer></script>
-<link rel="stylesheet" href="footer.css">
-<script src="footer.js" defer></script>
+  <script src="footer.js" defer></script>
+
 </head>
 
 <body>
@@ -39,7 +40,10 @@
 
   <main>
 
-    <!-- EFST Á SÍÐU -->
+    <!-- =====================================
+         EFST Á SÍÐU
+    ====================================== -->
+
     <section class="contact-hero">
 
       <div class="hero-inner">
@@ -59,16 +63,20 @@
           Við erum alltaf til í að heyra frá þér.
         </p>
 
-        <!-- SAMBANDSFORM -->
+        <!-- =====================================
+             SAMBANDSFORM - FORMSPREE
+        ====================================== -->
+
         <form
           class="contact-form"
           id="top-form"
-          action="https://formspree.io/f/YOUR_FORM_ID"
+          action="https://formspree.io/f/mdeajgdq"
           method="POST"
         >
 
           <div class="form-row">
 
+            <!-- NAFN -->
             <div class="form-group">
 
               <label for="name">
@@ -86,6 +94,7 @@
 
             </div>
 
+            <!-- NETFANG -->
             <div class="form-group">
 
               <label for="email">
@@ -105,6 +114,7 @@
 
           </div>
 
+          <!-- EFNI -->
           <div class="form-group">
 
             <label for="subject">
@@ -121,6 +131,7 @@
 
           </div>
 
+          <!-- SKILABOÐ -->
           <div class="form-group">
 
             <label for="message">
@@ -137,17 +148,37 @@
 
           </div>
 
+          <!-- EFNI TIL FORMSPREE -->
           <input
             type="hidden"
             name="_subject"
             value="Ný fyrirspurn frá BOX800 vefsíðunni"
           >
 
+          <!-- EINFÖLD RUSLPÓSTSVÖRN -->
+          <div
+            class="contact-honeypot"
+            aria-hidden="true"
+          >
+            <label for="website">
+              Skildu þennan reit eftir auðan
+            </label>
+
+            <input
+              type="text"
+              id="website"
+              name="_gotcha"
+              tabindex="-1"
+              autocomplete="off"
+            >
+          </div>
+
+          <!-- SENDA -->
           <button
             type="submit"
             class="btn form-submit"
           >
-            SENDA SKILABOÐ 
+            SENDA SKILABOÐ
           </button>
 
         </form>
@@ -156,11 +187,14 @@
 
     </section>
 
-    <!-- SAMSKIPTAUPPLÝSINGAR -->
+
+    <!-- =====================================
+         SAMSKIPTAUPPLÝSINGAR
+    ====================================== -->
+
     <section class="contact-info">
 
       <div class="container">
-
 
         <h2>
           VIÐ ERUM<br>
@@ -172,12 +206,10 @@
           <!-- NETFANG -->
           <div class="info-card">
 
-           
-
             <h3>NETFANG</h3>
 
             <a href="mailto:info@box800.is">
-              info@box800.is 
+              info@box800.is
             </a>
 
             <p>
@@ -189,8 +221,6 @@
 
           <!-- STAÐSETNING -->
           <div class="info-card">
-
-           
 
             <h3>STAÐSETNING</h3>
 
@@ -204,15 +234,13 @@
               target="_blank"
               rel="noopener noreferrer"
             >
-              FÁ LEIÐARLÝSINGU 
+              FÁ LEIÐARLÝSINGU
             </a>
 
           </div>
 
           <!-- ÆFINGATÍMAR -->
           <div class="info-card">
-
-          
 
             <h3>ÆFINGATÍMAR</h3>
 
@@ -223,7 +251,7 @@
             </p>
 
             <a href="timatafla.html">
-              SKOÐA TÍMATAFLU 
+              SKOÐA TÍMATAFLU
             </a>
 
           </div>
@@ -234,13 +262,17 @@
 
     </section>
 
-    <!-- KORT -->
+
+    <!-- =====================================
+         KORT
+    ====================================== -->
+
     <section class="map-section">
 
       <div class="container">
 
         <span class="kicker">
-         FINNDU OKKUR
+          FINNDU OKKUR
         </span>
 
         <h2>
@@ -273,20 +305,17 @@
           target="_blank"
           rel="noopener noreferrer"
         >
-          OPNA Í GOOGLE MAPS 
+          OPNA Í GOOGLE MAPS
         </a>
 
       </div>
 
     </section>
 
-    
-
   </main>
 
   <!-- SAMEIGINLEGUR FOOTER -->
-<footer id="box800-footer"></footer>
-  </footer>
+  <footer id="box800-footer"></footer>
 
 </body>
 </html>
