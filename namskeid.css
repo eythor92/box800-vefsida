@@ -1,12 +1,9 @@
 
 /* ==========================================
    BOX800 - NÁMSKEIÐ
-   SAMRÆMT VIÐ VERÐSKRÁ
    ========================================== */
 
-/* ==========================================
-   KYNNING - SAMA ÚTLIT OG VERÐSKRÁ
-   ========================================== */
+/* KYNNING */
 
 .course-hero {
   padding: 85px 24px 70px;
@@ -31,11 +28,11 @@
 }
 
 .course-hero h1 {
-  font-family: Lovelo, "Barlow Condensed", Impact, sans-serif;
-  font-size: clamp(54px, 11vw, 130px);
-  font-weight: 900;
-  letter-spacing: -0.06em;
-  line-height: 1;
+  font-family: "Barlow Condensed", Impact, sans-serif;
+  font-size: clamp(54px, 9vw, 115px);
+  font-weight: 800;
+  letter-spacing: 0.015em;
+  line-height: 1.08;
   margin: 20px 0;
 }
 
@@ -48,18 +45,12 @@
   line-height: 1.5;
 }
 
-/* ==========================================
-   NÁMSKEIÐAHLUTAR
-   ========================================== */
+/* NÁMSKEIÐAHLUTI */
 
 .courses-section {
   background: #0b0b0b;
   color: #ffffff;
   padding: 75px 22px;
-}
-
-.courses-section-alt {
-  background: #121518;
 }
 
 .courses-container {
@@ -69,18 +60,16 @@
 }
 
 .courses-section h2 {
-  font-family: Lovelo, "Barlow Condensed", Impact, sans-serif;
+  font-family: "Barlow Condensed", Impact, sans-serif;
   font-size: clamp(34px, 5vw, 52px);
-  font-weight: 900;
-  line-height: 1.1;
-  letter-spacing: -0.015em;
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: 0.015em;
   margin: 0 0 35px;
   color: #ffffff;
 }
 
-/* ==========================================
-   GRID
-   ========================================== */
+/* GRID */
 
 .courses-grid {
   display: grid;
@@ -89,15 +78,12 @@
   align-items: stretch;
 }
 
-/* ==========================================
-   NÁMSKEIÐASPJÖLD
-   ========================================== */
+/* NÁMSKEIÐASPJÖLD */
 
 .course-card {
   display: flex;
   flex-direction: column;
   min-width: 0;
-  height: 100%;
   background: #202124;
   border: 1px solid #383d42;
   overflow: hidden;
@@ -112,14 +98,31 @@
   border-color: #c6ccd6;
 }
 
-/* ==========================================
-   MYNDIR
-   ========================================== */
+.course-card.is-expanded {
+  border-color: #c6ccd6;
+}
+
+/* HEITI NÁMSKEIÐS */
+
+.course-card > h3 {
+  order: 2;
+
+  font-family: "Barlow Condensed", Impact, sans-serif;
+  font-size: 34px;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: 0.015em;
+
+  color: #ffffff;
+  margin: 24px 28px 0;
+}
+
+/* MYND */
 
 .course-image-wrap {
+  order: 1;
   width: 100%;
   height: 230px;
-  flex-shrink: 0;
   overflow: hidden;
   background: #15191d;
 }
@@ -128,7 +131,6 @@
   display: block;
   width: 100%;
   height: 100%;
-  max-width: none;
   object-fit: cover;
   object-position: center;
 
@@ -139,119 +141,142 @@
   transform: scale(1.04);
 }
 
-/* ==========================================
-   TEXTI OG HNAPPAR
-   ========================================== */
+/* TEXTI */
 
 .course-content {
+  order: 3;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   flex: 1;
   width: 100%;
-  padding: 28px;
+  min-width: 0;
+  padding: 15px 28px 28px;
 }
 
-.course-content h3 {
-  font-family: Lovelo, "Barlow Condensed", Impact, sans-serif;
-  font-size: 34px;
-  font-weight: 900;
-  line-height: 1.1;
-  letter-spacing: -0.015em;
-  margin: 0 0 15px;
-  color: #ffffff;
-}
-
-.course-content p {
+.course-short {
   color: #c6ccd6;
   font-family: "Inter", Arial, sans-serif;
   font-size: 14px;
   line-height: 1.7;
-  margin: 0 0 28px;
+  margin: 0 0 24px;
 }
 
-.course-content a {
-  display: inline-flex;
+/* TVEIR HNAPPAR HLIÐ VIÐ HLIÐ */
+
+.course-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  width: 100%;
+  margin-top: auto;
+}
+
+.course-actions a {
+  display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: auto;
-  padding: 15px 20px;
-  background: #c6ccd6;
-  color: #111111;
+
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 8px;
+
   font-family: "Inter", Arial, sans-serif;
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 800;
-  line-height: 1.3;
-  letter-spacing: 0.3px;
+  line-height: 1.35;
+  letter-spacing: 0.2px;
   text-align: center;
   text-decoration: none;
 
-  transition: background 0.2s ease;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
 }
 
-.course-content a:hover {
-  background: #ffffff;
-}
+/* LESA MEIRA */
 
-/* ==========================================
-   SPJÖLD ÁN MYNDA
-   ========================================== */
-
-.course-card.no-image {
-  justify-content: center;
-  background: #1b1e22;
-}
-
-.course-card.no-image .course-content {
-  justify-content: center;
-  min-height: 300px;
-  padding: 35px 28px;
-}
-
-.course-card.no-image .course-content a {
-  margin-top: 15px;
-}
-
-/* ==========================================
-   FOOTER
-   ========================================== */
-
-.course-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-  background: #090b0d;
-  border-top: 1px solid #343b42;
-
-  padding: 35px max(22px, calc((100% - 1200px) / 2));
-
+.course-read-btn {
   color: #ffffff;
+  background: transparent;
+  border: 1px solid #69727b;
 }
 
-.course-footer p {
-  margin: 0;
+.course-read-btn:hover {
+  background: #30363c;
+  border-color: #c6ccd6;
+}
+
+/* KAUPA NÁMSKEIÐ */
+
+.course-buy-btn {
+  color: #111111;
+  background: #c6ccd6;
+  border: 1px solid #c6ccd6;
+}
+
+.course-buy-btn:hover {
+  color: #111111;
+  background: #ffffff;
+  border-color: #ffffff;
+}
+
+.course-actions a:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 3px;
+}
+
+/* ÍTARLEG LÝSING */
+
+.course-details-content {
+  width: 100%;
+  margin-top: 22px;
+  padding-top: 20px;
+  border-top: 1px solid #41474e;
   font-family: "Inter", Arial, sans-serif;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 1px;
 }
 
-.course-footer a {
+.course-details-content[hidden] {
+  display: none;
+}
+
+.course-details-content p {
   color: #c6ccd6;
-  font-family: "Inter", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.75;
+  margin: 0 0 14px;
+}
+
+.course-details-content h4 {
+  margin: 22px 0 12px;
+  color: #ffffff;
   font-size: 12px;
   font-weight: 800;
-  text-decoration: none;
+  letter-spacing: 0.7px;
 }
 
-.course-footer a:hover {
+.course-details-content ul {
+  padding-left: 19px;
+  margin: 0 0 18px;
+}
+
+.course-details-content li {
+  color: #c6ccd6;
+  font-size: 13px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.course-details-content .course-details-note {
+  padding: 13px 15px;
+  margin: 16px 0 0;
+  background: #2b3036;
+  border-left: 3px solid #c6ccd6;
   color: #ffffff;
+  font-size: 12px;
+  line-height: 1.7;
 }
 
-/* ==========================================
-   SPJALDTÖLVUR
-   ========================================== */
+/* SPJALDTÖLVUR */
 
 @media (max-width: 900px) {
 
@@ -266,287 +291,69 @@
 }
 
 /* ==========================================
-   SÍMAR
+   FARSÍMAR
    ========================================== */
 
 @media (max-width: 600px) {
 
   .course-hero {
-    padding: 65px 18px 55px;
+    padding: 55px 18px 50px;
   }
 
   .course-hero h1 {
-    font-size: clamp(54px, 11vw, 130px);
+    font-size: 60px;
   }
 
   .course-intro {
-    font-size: 16px;
+    font-size: 15px;
   }
 
   .courses-section {
-    padding: 55px 16px;
+    padding: 45px 16px;
   }
 
   .courses-section h2 {
     font-size: 38px;
-    margin-bottom: 25px;
+    margin-bottom: 24px;
   }
 
   .courses-grid {
     grid-template-columns: 1fr;
-    gap: 18px;
+    gap: 16px;
   }
 
-  .course-image-wrap {
-    height: 230px;
-  }
+  /* ÞÉTT OG HREINT SPJALD */
 
-  .course-content {
-    padding: 25px;
-  }
-
-  .course-content h3 {
-    font-size: 32px;
-  }
-
-  .course-content p {
-    font-size: 14px;
-  }
-
-  .course-card.no-image .course-content {
-    min-height: 230px;
-    padding: 30px 25px;
-  }
-
-  .course-footer {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 35px 20px;
-  }
-
-}
-
-/* ==========================================
-   MINNI SÍMAR
-   ========================================== */
-
-@media (max-width: 380px) {
-
-  .course-content {
-    padding: 22px;
-  }
-
-  .course-content a {
-    width: 100%;
-    padding: 15px 12px;
-  }
-
-}
-
-/* ==========================================
-   MINNKA HREYFINGU EF ÓSKAÐ ER
-   ========================================== */
-
-@media (prefers-reduced-motion: reduce) {
-
-  .course-card,
-  .course-image-wrap img,
-  .course-content a {
-    transition: none;
-  }
-
-}
-
-/* SAMRÆMDAR FYRIRSAGNIR - BOX800 */
-
-.trainers-hero h1,
-.course-hero h1,
-.timetable-hero h1 {
-  font-family: "Barlow Condensed", Impact, sans-serif;
-  font-weight: 800;
-  font-size: clamp(54px, 9vw, 115px);
-  letter-spacing: 0.015em;
-  line-height: 1.08;
-}
-
-/* Aðrar fyrirsagnir */
-
-.trainer-info h2,
-.courses-section h2,
-.course-content h3,
-.timetable-container h2,
-.timetable-bottom h2 {
-  font-family: "Barlow Condensed", Impact, sans-serif;
-  font-weight: 800;
-  letter-spacing: 0.015em;
-  line-height: 1.12;
-}
-
-/* Lengri fyrirsögn á Þjálfarasíðunni */
-
-.trainers-hero h1 {
-  font-size: clamp(42px, 7vw, 90px);
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* ==========================================
-   BOX800 - LESA MEIRA Í NÁMSKEIÐASPJÖLDUM
-   ========================================== */
-
-.course-details {
-  width: 100%;
-  margin: 0 0 22px;
-  color: #c6ccd6;
-  font-family: "Inter", Arial, sans-serif;
-}
-
-/* LESA MEIRA TAKKI */
-
-.course-details summary {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  padding: 11px 15px;
-  border: 1px solid #69727b;
-
-  color: #ffffff;
-  background: transparent;
-
-  font-size: 11px;
-  font-weight: 800;
-  letter-spacing: 0.5px;
-
-  cursor: pointer;
-  list-style: none;
-
-  transition:
-    background 0.2s ease,
-    border-color 0.2s ease;
-}
-
-.course-details summary::-webkit-details-marker {
-  display: none;
-}
-
-.course-details summary::marker {
-  content: "";
-}
-
-.course-details summary:hover {
-  background: #30363c;
-  border-color: #c6ccd6;
-}
-
-.course-details summary:focus-visible {
-  outline: 2px solid #c6ccd6;
-  outline-offset: 3px;
-}
-
-/* BREYTA TEXTA ÞEGAR OPNAÐ ER */
-
-.course-details .details-less {
-  display: none;
-}
-
-.course-details[open] .details-more {
-  display: none;
-}
-
-.course-details[open] .details-less {
-  display: inline;
-}
-
-/* ÍTARLEGRI UPPLÝSINGAR */
-
-.course-details-content {
-  padding: 20px 0 0;
-  margin-top: 16px;
-  border-top: 1px solid #41474e;
-}
-
-.course-details-content p {
-  margin: 0 0 14px;
-  color: #c6ccd6;
-  font-size: 13px;
-  line-height: 1.75;
-}
-
-.course-details-content h4 {
-  margin: 22px 0 12px;
-
-  color: #ffffff;
-  font-family: "Inter", Arial, sans-serif;
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 0.7px;
-}
-
-.course-details-content ul {
-  padding-left: 19px;
-  margin: 0 0 18px;
-}
-
-.course-details-content li {
-  margin-bottom: 10px;
-  color: #c6ccd6;
-  font-size: 13px;
-  line-height: 1.6;
-}
-
-/* ATHUGASEMDIR */
-
-.course-details-content .course-details-note {
-  padding: 13px 15px;
-  margin: 16px 0 0;
-
-  background: #2b3036;
-  border-left: 3px solid #c6ccd6;
-
-  color: #ffffff;
-  font-size: 12px;
-  line-height: 1.7;
-}
-
-/* HALDA KAUPHNAPP NEÐST Í SPJALDI */
-
-.course-content > a {
-  margin-top: auto;
-}
-
-/* SPJÖLD MEÐ UPPLÝSINGUM */
-
-.course-card:has(.course-details[open]) {
-  border-color: #c6ccd6;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .course-details summary {
-    transition: none;
-  }
-}
-
-/* ==========================================
-   NÁMSKEIÐ - ÞÉTTARI SPJÖLD Í FARSÍMA
-   ========================================== */
-
-@media (max-width: 600px) {
-
-  /* Mynd til vinstri, texti til hægri */
   .course-card {
-    display: grid;
-    grid-template-columns: 38% minmax(0, 1fr);
-    align-items: stretch;
-    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 22px 18px 20px;
   }
 
-  /* MYND */
-  .course-image-wrap {
+  .course-card:hover {
+    transform: none;
+  }
+
+  /* HEITI EFST */
+
+  .course-card > h3 {
+    order: 1;
     width: 100%;
-    height: 100%;
-    min-height: 210px;
+    margin: 0 0 16px;
+    font-size: 30px;
+    line-height: 1.1;
+    text-align: center;
+  }
+
+  /* LÍTIL MYND Í MIÐJU */
+
+  .course-image-wrap {
+    order: 2;
+    width: 100%;
+    max-width: 240px;
+    height: 135px;
+    min-height: 0;
+    margin: 0 auto 17px;
     overflow: hidden;
   }
 
@@ -557,55 +364,59 @@
     object-position: center;
   }
 
-  /* TEXTI */
+  .course-card:hover .course-image-wrap img {
+    transform: none;
+  }
+
+  /* STUTT LÝSING */
+
   .course-content {
-    min-width: 0;
-    padding: 18px 14px;
-  }
-
-  .course-content h3 {
-    font-size: clamp(21px, 5vw, 28px);
-    line-height: 1.05;
-    margin-bottom: 10px;
-    overflow-wrap: anywhere;
-  }
-
-  .course-content > p {
-    font-size: 12px;
-    line-height: 1.5;
-    margin-bottom: 14px;
-  }
-
-  /* LESA MEIRA */
-  .course-details {
-    margin-bottom: 14px;
-  }
-
-  .course-details summary {
-    padding: 10px 9px;
-    font-size: 10px;
-    letter-spacing: 0;
-  }
-
-  /* KAUPA NÁMSKEIÐ */
-  .course-content > a {
+    order: 3;
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    padding: 12px 8px;
-    font-size: 10px;
-    text-align: center;
-    white-space: normal;
-    line-height: 1.4;
+    padding: 0;
   }
 
-  /* Opnuð lýsing */
+  .course-short {
+    margin: 0 0 18px;
+    color: #c6ccd6;
+    font-size: 13px;
+    line-height: 1.6;
+    text-align: center;
+  }
+
+  /* HNAPPAR HLIÐ VIÐ HLIÐ */
+
+  .course-actions {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 9px;
+    width: 100%;
+    margin: 0;
+  }
+
+  .course-actions a {
+    width: 100%;
+    min-width: 0;
+    min-height: 46px;
+    padding: 10px 5px;
+    font-size: 10px;
+    line-height: 1.25;
+    white-space: normal;
+  }
+
+  /* OPNUÐ LÝSING */
+
   .course-details-content {
-    padding-top: 12px;
-    margin-top: 12px;
+    margin-top: 20px;
+    padding-top: 18px;
   }
 
   .course-details-content p,
   .course-details-content li {
-    font-size: 12px;
+    font-size: 13px;
+    line-height: 1.7;
   }
 
 }
@@ -615,120 +426,32 @@
 @media (max-width: 380px) {
 
   .course-card {
-    grid-template-columns: 35% minmax(0, 1fr);
+    padding: 20px 14px;
   }
 
-  .course-content {
-    padding: 14px 10px;
+  .course-card > h3 {
+    font-size: 27px;
   }
 
-  .course-content h3 {
-    font-size: 21px;
+  .course-actions {
+    gap: 7px;
+  }
+
+  .course-actions a {
+    font-size: 9px;
+    padding: 10px 4px;
   }
 
 }
 
-/* ==========================================
-   BOX800 - LAGA NÁMSKEIÐ Í FARSÍMA
-   ========================================== */
+/* MINNKA HREYFINGU EF ÓSKAÐ ER */
 
-@media (max-width: 600px) {
+@media (prefers-reduced-motion: reduce) {
 
-  /* Spjaldið: mynd og stuttur texti hlið við hlið */
-
-  .course-card {
-    display: grid;
-    grid-template-columns: 38% minmax(0, 1fr);
-    grid-template-rows: auto;
-    align-items: start;
-    height: auto;
-  }
-
-  /* Myndin heldur fastri hæð */
-
-  .course-image-wrap {
-    grid-column: 1;
-    grid-row: 1;
-    width: 100%;
-    height: 230px;
-    min-height: 0;
-    align-self: start;
-    overflow: hidden;
-  }
-
-  .course-image-wrap img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-  }
-
-  /* Leyfum börnum course-content
-     að raðast beint í grid */
-
-  .course-content {
-    display: contents;
-  }
-
-  /* Fyrirsögn og stutt lýsing */
-
-  .course-content h3 {
-    grid-column: 2;
-    grid-row: 1;
-    align-self: start;
-    margin: 18px 14px 0;
-    font-size: clamp(21px, 5vw, 28px);
-    line-height: 1.08;
-    overflow-wrap: anywhere;
-  }
-
-  .course-content > p {
-    grid-column: 2;
-    grid-row: 2;
-    margin: 10px 14px 14px;
-    font-size: 12px;
-    line-height: 1.5;
-  }
-
-  /* LESA MEIRA nær yfir alla breidd
-     þegar ítarleg lýsing opnast */
-
-  .course-details {
-    grid-column: 1 / -1;
-    grid-row: 4;
-    width: auto;
-    margin: 0;
-    padding: 0 16px;
-  }
-
-  .course-details summary {
-    margin-bottom: 14px;
-    padding: 11px 14px;
-    font-size: 11px;
-  }
-
-  .course-details-content {
-    margin-top: 0;
-    padding: 20px 0;
-  }
-
-  .course-details-content p,
-  .course-details-content li {
-    font-size: 13px;
-    line-height: 1.7;
-  }
-
-  /* Kauphnappur */
-
-  .course-content > a {
-    grid-column: 2;
-    grid-row: 3;
-    width: auto;
-    margin: 0 14px 16px;
-    padding: 12px 8px;
-    font-size: 10px;
-    text-align: center;
+  .course-card,
+  .course-image-wrap img,
+  .course-actions a {
+    transition: none;
   }
 
 }

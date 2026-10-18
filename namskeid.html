@@ -1,51 +1,39 @@
 
 <!DOCTYPE html>
 <html lang="is">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta
-    name="description"
-    content="Skoðaðu námskeið BOX800 á Selfossi. Fjölbreytt þjálfun fyrir öll getustig."
-  >
+  <meta name="description"
+        content="Skoðaðu námskeið BOX800 á Selfossi. Fjölbreytt þjálfun fyrir öll getustig.">
 
   <title>Námskeið | BOX800</title>
 
-  <!-- LETURGERÐIR -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet"
-  >
-
-  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="namskeid.css">
   <link rel="stylesheet" href="header.css">
   <link rel="stylesheet" href="footer.css">
 
-  <!-- JAVASCRIPT -->
   <script src="header.js" defer></script>
   <script src="footer.js" defer></script>
 </head>
 
 <body>
 
-  <!-- SAMEIGINLEG VALMYND -->
   <header id="box800-header"></header>
 
   <main>
 
     <!-- KYNNING -->
-    <section class="course-hero">
 
-      <p class="course-eyebrow">
-        BOX800 · SELFOSS
-      </p>
+    <section class="course-hero">
+      <p class="course-eyebrow">BOX800 · SELFOSS</p>
 
       <h1>NÁMSKEIÐ</h1>
 
@@ -53,561 +41,578 @@
         Finndu námskeið sem hentar þér.
         Hjá BOX800 er pláss fyrir alla.
       </p>
-
     </section>
 
-
-    <!-- =====================================
-         ÖLL NÁMSKEIÐ
-    ====================================== -->
+    <!-- ÖLL NÁMSKEIÐ -->
 
     <section class="courses-section">
-
       <div class="courses-container">
 
         <h2>ÖLL NÁMSKEIÐ</h2>
 
         <div class="courses-grid">
 
-
-          <!-- =====================================
-               KARLAHREYSTI
-          ====================================== -->
+          <!-- KARLAHREYSTI -->
 
           <article class="course-card">
+
+            <h3>KARLAHREYSTI</h3>
 
             <div class="course-image-wrap">
               <img
                 src="images/karlahreysti.jpeg"
                 alt="Karlahreysti hjá BOX800"
-                loading="lazy"
-              >
+                loading="lazy">
             </div>
 
             <div class="course-content">
 
-              <h3>KARLAHREYSTI</h3>
-
-              <p>
+              <p class="course-short">
                 Fjölbreyttar æfingar fyrir byrjendur
                 og lengra komna undir handleiðslu
                 reyndra þjálfara.
               </p>
 
-              <details class="course-details">
+              <div class="course-actions">
 
-                <summary>
-                  <span class="details-more">LESA MEIRA</span>
-                  <span class="details-less">LESA MINNA</span>
-                </summary>
+                <a
+                  class="course-read-btn"
+                  href="#karlahreysti-info"
+                  aria-expanded="false"
+                  aria-controls="karlahreysti-info">
+                  LESA MEIRA
+                </a>
 
-                <div class="course-details-content">
+                <a
+                  class="course-buy-btn"
+                  href="https://www.abler.io/shop/box800?program=Q2x1YlNlcnZpY2U6MTg4MzY="
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  KAUPA NÁMSKEIÐ
+                </a>
 
-                  <p>
-                    Námskeiðið er tilvalið fyrir byrjendur
-                    sem og lengra komna sem vilja æfa
-                    skynsamlega undir handleiðslu
-                    reyndra þjálfara.
-                  </p>
+              </div>
 
-                  <p>
-                    Auðvelt er að aðlaga æfingarnar
-                    og hver og einn getur unnið
-                    á sínum hraða.
-                  </p>
+              <div class="course-details-content"
+                   id="karlahreysti-info" hidden>
 
-                  <p>
-                    Lögð er áhersla á að auka styrk,
-                    úthald, liðleika og jafnvægi.
-                    Markmið námskeiðsins er að taka
-                    góða æfingu í góðum félagsskap
-                    og líða vel.
-                  </p>
+                <p>
+                  Námskeiðið er tilvalið fyrir byrjendur
+                  sem og lengra komna sem vilja æfa
+                  skynsamlega undir handleiðslu
+                  reyndra þjálfara.
+                </p>
 
-                  <h4>4 VIKNA NÁMSKEIÐ</h4>
+                <p>
+                  Auðvelt er að aðlaga æfingarnar
+                  og hver og einn getur unnið
+                  á sínum hraða.
+                </p>
 
-                  <ul>
-                    <li>Mánudaga kl. 19:45–20:35</li>
-                    <li>Miðvikudaga kl. 19:45–20:35</li>
-                  </ul>
+                <p>
+                  Lögð er áhersla á að auka styrk,
+                  úthald, liðleika og jafnvægi.
+                  Markmið námskeiðsins er að taka
+                  góða æfingu í góðum félagsskap
+                  og líða vel.
+                </p>
 
-                  <p class="course-details-note">
-                    Meðlimir hafa einnig aðgang
-                    að opnum tímum stöðvarinnar.
-                  </p>
+                <h4>4 VIKNA NÁMSKEIÐ</h4>
 
-                </div>
+                <ul>
+                  <li>Mánudaga kl. 19:45–20:35</li>
+                  <li>Miðvikudaga kl. 19:45–20:35</li>
+                </ul>
 
-              </details>
+                <p class="course-details-note">
+                  Meðlimir hafa einnig aðgang
+                  að opnum tímum stöðvarinnar.
+                </p>
 
-              <a
-                href="https://www.abler.io/shop/box800?program=Q2x1YlNlcnZpY2U6MTg4MzY="
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                KAUPA NÁMSKEIÐ
-              </a>
+              </div>
 
             </div>
-
           </article>
 
-
-          <!-- =====================================
-               KONUHREYSTI
-          ====================================== -->
+          <!-- KONUHREYSTI -->
 
           <article class="course-card">
+
+            <h3>KONUHREYSTI</h3>
 
             <div class="course-image-wrap">
               <img
                 src="images/konuhreysti.jpeg"
                 alt="Konuhreysti hjá BOX800"
-                loading="lazy"
-              >
+                loading="lazy">
             </div>
 
             <div class="course-content">
 
-              <h3>KONUHREYSTI</h3>
-
-              <p>
+              <p class="course-short">
                 Fjölbreyttar æfingar með áherslu
                 á styrk, úthald og góðan félagsskap.
               </p>
 
-              <details class="course-details">
+              <div class="course-actions">
 
-                <summary>
-                  <span class="details-more">LESA MEIRA</span>
-                  <span class="details-less">LESA MINNA</span>
-                </summary>
+                <a
+                  class="course-read-btn"
+                  href="#konuhreysti-info"
+                  aria-expanded="false"
+                  aria-controls="konuhreysti-info">
+                  LESA MEIRA
+                </a>
 
-                <div class="course-details-content">
+                <a
+                  class="course-buy-btn"
+                  href="https://www.abler.io/shop/box800?program=Q2x1YlNlcnZpY2U6MTQ5NTg="
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  KAUPA NÁMSKEIÐ
+                </a>
 
-                  <p>
-                    Námskeiðið er tilvalið fyrir byrjendur
-                    sem og lengra komna sem vilja æfa
-                    skynsamlega undir handleiðslu
-                    reyndra þjálfara.
-                  </p>
+              </div>
 
-                  <p>
-                    Auðvelt er að aðlaga æfingarnar
-                    og hver og ein getur unnið
-                    á sínum hraða.
-                  </p>
+              <div class="course-details-content"
+                   id="konuhreysti-info" hidden>
 
-                  <p>
-                    Lögð er áhersla á að auka styrk,
-                    úthald, liðleika og jafnvægi.
-                    Markmið námskeiðsins er að taka
-                    góða æfingu í góðum félagsskap
-                    og líða vel.
-                  </p>
+                <p>
+                  Námskeiðið er tilvalið fyrir byrjendur
+                  sem og lengra komna sem vilja æfa
+                  skynsamlega undir handleiðslu
+                  reyndra þjálfara.
+                </p>
 
-                  <h4>4 VIKNA NÁMSKEIÐ</h4>
+                <p>
+                  Auðvelt er að aðlaga æfingarnar
+                  og hver og ein getur unnið
+                  á sínum hraða.
+                </p>
 
-                  <ul>
-                    <li>Þriðjudaga kl. 16:30</li>
-                    <li>Fimmtudaga kl. 16:30</li>
-                  </ul>
+                <p>
+                  Lögð er áhersla á að auka styrk,
+                  úthald, liðleika og jafnvægi.
+                  Markmið námskeiðsins er að taka
+                  góða æfingu í góðum félagsskap
+                  og líða vel.
+                </p>
 
-                  <p class="course-details-note">
-                    Meðlimir hafa einnig aðgang
-                    að opnum tímum stöðvarinnar.
-                  </p>
+                <h4>4 VIKNA NÁMSKEIÐ</h4>
 
-                </div>
+                <ul>
+                  <li>Þriðjudaga kl. 16:30</li>
+                  <li>Fimmtudaga kl. 16:30</li>
+                </ul>
 
-              </details>
+                <p class="course-details-note">
+                  Meðlimir hafa einnig aðgang
+                  að opnum tímum stöðvarinnar.
+                </p>
 
-              <a
-                href="https://www.abler.io/shop/box800?program=Q2x1YlNlcnZpY2U6MTQ5NTg="
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                KAUPA NÁMSKEIÐ
-              </a>
+              </div>
 
             </div>
-
           </article>
 
-
-          <!-- =====================================
-               HELDRIHREYSTI
-          ====================================== -->
+          <!-- HELDRIHREYSTI -->
 
           <article class="course-card">
+
+            <h3>HELDRIHREYSTI</h3>
 
             <div class="course-image-wrap">
               <img
                 src="images/heldrihreysti.jpeg"
                 alt="Heldrihreysti hjá BOX800"
-                loading="lazy"
-              >
+                loading="lazy">
             </div>
 
             <div class="course-content">
 
-              <h3>HELDRIHREYSTI</h3>
-
-              <p>
-                Stöðvaþjálfun fyrir byrjendur og lengra
-                komna, sérstaklega hugsuð fyrir 60 ára
-                og eldri.
+              <p class="course-short">
+                Stöðvaþjálfun fyrir byrjendur
+                og lengra komna, sérstaklega
+                hugsuð fyrir 60 ára og eldri.
               </p>
 
-              <details class="course-details">
+              <div class="course-actions">
 
-                <summary>
-                  <span class="details-more">LESA MEIRA</span>
-                  <span class="details-less">LESA MINNA</span>
-                </summary>
+                <a
+                  class="course-read-btn"
+                  href="#heldrihreysti-info"
+                  aria-expanded="false"
+                  aria-controls="heldrihreysti-info">
+                  LESA MEIRA
+                </a>
 
-                <div class="course-details-content">
+                <a
+                  class="course-buy-btn"
+                  href="https://www.abler.io/shop/box800?program=Q2x1YlNlcnZpY2U6NDY4Nzg="
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  KAUPA NÁMSKEIÐ
+                </a>
 
-                  <p>
-                    Heldrihreysti er stöðvaþjálfun
-                    fyrir byrjendur sem og lengra komna.
-                  </p>
+              </div>
 
-                  <p>
-                    Æfingarnar eru hugsaðar fyrir
-                    60 ára og eldri, en engin krafa
-                    er gerð um að hafa náð þeim aldri.
-                  </p>
+              <div class="course-details-content"
+                   id="heldrihreysti-info" hidden>
 
-                  <p>
-                    Gott utanumhald er í tímunum
-                    og persónuleg og fagleg þjálfun.
-                  </p>
+                <p>
+                  Heldrihreysti er stöðvaþjálfun
+                  fyrir byrjendur sem og lengra komna.
+                </p>
 
-                  <h4>TÍMASETNINGAR</h4>
+                <p>
+                  Æfingarnar eru hugsaðar fyrir
+                  60 ára og eldri, en engin krafa
+                  er gerð um að hafa náð þeim aldri.
+                </p>
 
-                  <ul>
-                    <li>Þriðjudaga kl. 09:30–10:20</li>
-                    <li>Fimmtudaga kl. 09:30–10:20</li>
-                  </ul>
+                <p>
+                  Gott utanumhald er í tímunum
+                  og persónuleg og fagleg þjálfun.
+                </p>
 
-                </div>
+                <h4>TÍMASETNINGAR</h4>
 
-              </details>
+                <ul>
+                  <li>Þriðjudaga kl. 09:30–10:20</li>
+                  <li>Fimmtudaga kl. 09:30–10:20</li>
+                </ul>
 
-              <a
-                href="https://www.abler.io/shop/box800?program=Q2x1YlNlcnZpY2U6NDY4Nzg="
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                KAUPA NÁMSKEIÐ
-              </a>
+              </div>
 
             </div>
-
           </article>
 
-
-          <!-- =====================================
-               MÖMMUHREYSTI
-          ====================================== -->
+          <!-- MÖMMUHREYSTI -->
 
           <article class="course-card">
+
+            <h3>MÖMMUHREYSTI</h3>
 
             <div class="course-image-wrap">
               <img
                 src="images/mommuhreysti.jpeg"
                 alt="Mömmuhreysti hjá BOX800"
-                loading="lazy"
-              >
+                loading="lazy">
             </div>
 
             <div class="course-content">
 
-              <h3>MÖMMUHREYSTI</h3>
-
-              <p>
+              <p class="course-short">
                 Fjögurra vikna framhaldsnámskeið
                 fyrir mæður.
               </p>
 
-              <details class="course-details">
+              <div class="course-actions">
 
-                <summary>
-                  <span class="details-more">LESA MEIRA</span>
-                  <span class="details-less">LESA MINNA</span>
-                </summary>
+                <a
+                  class="course-read-btn"
+                  href="#mommuhreysti-info"
+                  aria-expanded="false"
+                  aria-controls="mommuhreysti-info">
+                  LESA MEIRA
+                </a>
 
-                <div class="course-details-content">
+                <a
+                  class="course-buy-btn"
+                  href="https://www.abler.io/shop/box800?program=Q2x1YlNlcnZpY2U6MTY3MjE="
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  KAUPA NÁMSKEIÐ
+                </a>
 
-                  <p>
-                    Fjögurra vikna framhaldsnámskeið
-                    af Mömmugrunni eða öðrum grunni
-                    sem mömmur búa yfir.
-                  </p>
+              </div>
 
-                  <h4>TÍMASETNINGAR</h4>
+              <div class="course-details-content"
+                   id="mommuhreysti-info" hidden>
 
-                  <ul>
-                    <li>
-                      Mánudaga, miðvikudaga og
-                      föstudaga kl. 09:30
-                    </li>
-                    <li>
-                      Mánudaga, miðvikudaga og
-                      föstudaga kl. 10:30
-                    </li>
-                  </ul>
+                <p>
+                  Fjögurra vikna framhaldsnámskeið
+                  af Mömmugrunni eða öðrum grunni
+                  sem mömmur búa yfir.
+                </p>
 
-                  <p class="course-details-note">
-                    ATH! Við erum að kanna hvort
-                    nægur fjöldi sé fyrir kl. 13:00
-                    tíma líka. Forskráning er í gangi.
-                  </p>
+                <h4>TÍMASETNINGAR</h4>
 
-                </div>
+                <ul>
+                  <li>
+                    Mánudaga, miðvikudaga og
+                    föstudaga kl. 09:30
+                  </li>
+                  <li>
+                    Mánudaga, miðvikudaga og
+                    föstudaga kl. 10:30
+                  </li>
+                </ul>
 
-              </details>
+                <p class="course-details-note">
+                  ATH! Við erum að kanna hvort
+                  nægur fjöldi sé fyrir kl. 13:00
+                  tíma líka. Forskráning er í gangi.
+                </p>
 
-              <a
-                href="https://www.abler.io/shop/box800?program=Q2x1YlNlcnZpY2U6MTY3MjE="
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                KAUPA NÁMSKEIÐ
-              </a>
+              </div>
 
             </div>
-
           </article>
 
-
-          <!-- =====================================
-               MÖMMUGRUNNUR
-          ====================================== -->
+          <!-- MÖMMUGRUNNUR -->
 
           <article class="course-card">
+
+            <h3>MÖMMUGRUNNUR</h3>
 
             <div class="course-image-wrap">
               <img
                 src="images/mommugrunnur.jpeg"
                 alt="Mömmugrunnur hjá BOX800"
-                loading="lazy"
-              >
+                loading="lazy">
             </div>
 
             <div class="course-content">
 
-              <h3>MÖMMUGRUNNUR</h3>
-
-              <p>
+              <p class="course-short">
                 Fyrstu skrefin í þjálfun eftir fæðingu.
                 Fjögurra vikna námskeið.
               </p>
 
-              <details class="course-details">
+              <div class="course-actions">
 
-                <summary>
-                  <span class="details-more">LESA MEIRA</span>
-                  <span class="details-less">LESA MINNA</span>
-                </summary>
+                <a
+                  class="course-read-btn"
+                  href="#mommugrunnur-info"
+                  aria-expanded="false"
+                  aria-controls="mommugrunnur-info">
+                  LESA MEIRA
+                </a>
 
-                <div class="course-details-content">
+                <a
+                  class="course-buy-btn"
+                  href="https://www.abler.io/shop/box800?program=Q2x1YlNlcnZpY2U6MTY3MjE="
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  KAUPA NÁMSKEIÐ
+                </a>
 
-                  <p>
-                    Mömmugrunnur er fyrir allar mæður
-                    sem eru að taka sín fyrstu skref
-                    eftir fæðingu.
-                  </p>
+              </div>
 
-                  <p>
-                    Mikilvægur grunnur áður en farið
-                    er í Mömmuhreysti.
-                  </p>
+              <div class="course-details-content"
+                   id="mommugrunnur-info" hidden>
 
-                  <p>
-                    Fókus á öndun og tengingu við
-                    líkamann eftir fæðingu, en á sama
-                    tíma góðar og sveittar æfingar.
-                  </p>
+                <p>
+                  Mömmugrunnur er fyrir allar mæður
+                  sem eru að taka sín fyrstu skref
+                  eftir fæðingu.
+                </p>
 
-                  <h4>4 VIKNA NÁMSKEIÐ</h4>
+                <p>
+                  Mikilvægur grunnur áður en farið
+                  er í Mömmuhreysti.
+                </p>
 
-                  <ul>
-                    <li>Þriðjudaga kl. 10:30–11:20</li>
-                    <li>Fimmtudaga kl. 10:30–11:20</li>
-                  </ul>
+                <p>
+                  Fókus á öndun og tengingu við
+                  líkamann eftir fæðingu, en á sama
+                  tíma góðar og sveittar æfingar.
+                </p>
 
-                </div>
+                <h4>4 VIKNA NÁMSKEIÐ</h4>
 
-              </details>
+                <ul>
+                  <li>Þriðjudaga kl. 10:30–11:20</li>
+                  <li>Fimmtudaga kl. 10:30–11:20</li>
+                </ul>
 
-              <a
-                href="https://www.abler.io/shop/box800?program=Q2x1YlNlcnZpY2U6MTY3MjE="
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                KAUPA NÁMSKEIÐ
-              </a>
+              </div>
 
             </div>
-
           </article>
 
-
-          <!-- =====================================
-               ÞOLÞJÁLFUN
-          ====================================== -->
+          <!-- ÞOLÞJÁLFUN -->
 
           <article class="course-card">
+
+            <h3>ÞOLÞJÁLFUN</h3>
 
             <div class="course-image-wrap">
               <img
                 src="images/thol.jpeg"
                 alt="Þolþjálfun hjá BOX800"
-                loading="lazy"
-              >
+                loading="lazy">
             </div>
 
             <div class="course-content">
 
-              <h3>ÞOLÞJÁLFUN</h3>
-
-              <p>
+              <p class="course-short">
                 Fimm vikna þolþjálfun með
                 púlsmælingum fyrir alla.
               </p>
 
-              <details class="course-details">
+              <div class="course-actions">
 
-                <summary>
-                  <span class="details-more">LESA MEIRA</span>
-                  <span class="details-less">LESA MINNA</span>
-                </summary>
+                <a
+                  class="course-read-btn"
+                  href="#thol-info"
+                  aria-expanded="false"
+                  aria-controls="thol-info">
+                  LESA MEIRA
+                </a>
 
-                <div class="course-details-content">
+                <a
+                  class="course-buy-btn"
+                  href="https://www.abler.io/shop/box800"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  SKOÐA SKRÁNINGU
+                </a>
 
-                  <h4>
-                    5 VIKNA ÞOLÞJÁLFUN MEÐ PÚLSMÆLINGUM
-                  </h4>
+              </div>
 
-                  <p>
-                    Í þessum tímum er markmiðið
-                    að bæta úthald og stjórn á púlsi.
-                  </p>
+              <div class="course-details-content"
+                   id="thol-info" hidden>
 
-                  <p>
-                    Við æfum bæði að fara upp í háan
-                    púls og að vinna lengi á stöðugum
-                    hraða.
-                  </p>
+                <h4>
+                  5 VIKNA ÞOLÞJÁLFUN MEÐ PÚLSMÆLINGUM
+                </h4>
 
-                  <p>
-                    Þetta er frábær þjálfun fyrir alla.
-                  </p>
+                <p>
+                  Í þessum tímum er markmiðið
+                  að bæta úthald og stjórn á púlsi.
+                </p>
 
-                  <h4>TÍMASETNINGAR</h4>
+                <p>
+                  Við æfum bæði að fara upp í háan
+                  púls og að vinna lengi á stöðugum
+                  hraða.
+                </p>
 
-                  <ul>
-                    <li>Þriðjudaga kl. 17:35</li>
-                    <li>Fimmtudaga kl. 17:35</li>
-                  </ul>
+                <p>
+                  Þetta er frábær þjálfun fyrir alla.
+                </p>
 
-                </div>
+                <h4>TÍMASETNINGAR</h4>
 
-              </details>
+                <ul>
+                  <li>Þriðjudaga kl. 17:35</li>
+                  <li>Fimmtudaga kl. 17:35</li>
+                </ul>
 
-              <a
-                href="https://www.abler.io/shop/box800"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                SKOÐA SKRÁNINGU
-              </a>
+              </div>
 
             </div>
-
           </article>
 
-
-          <!-- =====================================
-               UNGLINGASTYRKUR
-          ====================================== -->
+          <!-- UNGLINGASTYRKUR -->
 
           <article class="course-card">
+
+            <h3>UNGLINGASTYRKUR</h3>
 
             <div class="course-image-wrap">
               <img
                 src="images/unglingahreysti.jpeg"
                 alt="Unglingastyrkur hjá BOX800"
-                loading="lazy"
-              >
+                loading="lazy">
             </div>
 
             <div class="course-content">
 
-              <h3>UNGLINGASTYRKUR</h3>
-
-              <p>
+              <p class="course-short">
                 Styrkur, samhæfing og sprengikraftur
                 fyrir unglinga.
               </p>
 
-              <details class="course-details">
+              <div class="course-actions">
 
-                <summary>
-                  <span class="details-more">LESA MEIRA</span>
-                  <span class="details-less">LESA MINNA</span>
-                </summary>
+                <a
+                  class="course-read-btn"
+                  href="#unglingastyrkur-info"
+                  aria-expanded="false"
+                  aria-controls="unglingastyrkur-info">
+                  LESA MEIRA
+                </a>
 
-                <div class="course-details-content">
+                <a
+                  class="course-buy-btn"
+                  href="https://www.abler.io/shop/box800?program=Q2x1YlNlcnZpY2U6NDMxNDg="
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  KAUPA NÁMSKEIÐ
+                </a>
 
-                  <p>
-                    Námskeið þar sem áhersla er lögð
-                    á að auka styrk, samhæfingu
-                    og sprengikraft.
-                  </p>
+              </div>
 
-                  <p>
-                    Á sama tíma er hugað að því
-                    að efla sjálfstraust
-                    og líkamsvitund.
-                  </p>
+              <div class="course-details-content"
+                   id="unglingastyrkur-info" hidden>
 
-                  <h4>TÍMASETNINGAR</h4>
+                <p>
+                  Námskeið þar sem áhersla er lögð
+                  á að auka styrk, samhæfingu
+                  og sprengikraft.
+                </p>
 
-                  <ul>
-                    <li>Mánudaga kl. 14:50–15:40</li>
-                    <li>Miðvikudaga kl. 14:50–15:40</li>
-                  </ul>
+                <p>
+                  Á sama tíma er hugað að því
+                  að efla sjálfstraust
+                  og líkamsvitund.
+                </p>
 
-                </div>
+                <h4>TÍMASETNINGAR</h4>
 
-              </details>
+                <ul>
+                  <li>Mánudaga kl. 14:50–15:40</li>
+                  <li>Miðvikudaga kl. 14:50–15:40</li>
+                </ul>
 
-              <a
-                href="https://www.abler.io/shop/box800?program=Q2x1YlNlcnZpY2U6NDMxNDg="
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                KAUPA NÁMSKEIÐ
-              </a>
+              </div>
 
             </div>
-
           </article>
 
-
         </div>
-
       </div>
-
     </section>
 
   </main>
 
-  <!-- SAMEIGINLEGUR FOOTER -->
   <footer id="box800-footer"></footer>
+
+  <!-- LESA MEIRA / LESA MINNA -->
+
+  <script>
+    document.querySelectorAll(".course-read-btn").forEach(button => {
+
+      button.addEventListener("click", function(event) {
+        event.preventDefault();
+
+        const detailsId = this.getAttribute("aria-controls");
+        const details = document.getElementById(detailsId);
+
+        if (!details) return;
+
+        const isOpening = details.hidden;
+
+        details.hidden = !isOpening;
+
+        this.textContent = isOpening
+          ? "LESA MINNA"
+          : "LESA MEIRA";
+
+        this.setAttribute(
+          "aria-expanded",
+          String(isOpening)
+        );
+
+        this.closest(".course-card")
+          .classList.toggle("is-expanded", isOpening);
+      });
+
+    });
+  </script>
 
 </body>
 </html>
