@@ -1,7 +1,7 @@
 
 /* ==========================================
    BOX800 - TÍMATAFLA
-   SAMA ÚTLIT OG VERÐSKRÁ
+   SAMRÆMT VIÐ AÐRAR SÍÐUR
    ========================================== */
 
 /* GRUNNSTILLINGAR */
@@ -39,11 +39,11 @@
 }
 
 .timetable-hero h1 {
-  font-family: Lovelo, "Barlow Condensed", Impact, sans-serif;
-  font-size: clamp(54px, 11vw, 130px);
-  font-weight: 900;
-  letter-spacing: -0.06em;
-  line-height: 1;
+  font-family: "Barlow Condensed", Impact, sans-serif;
+  font-size: clamp(54px, 9vw, 115px);
+  font-weight: 800;
+  letter-spacing: 0.015em;
+  line-height: 1.08;
   margin: 20px 0;
 }
 
@@ -80,11 +80,11 @@
 }
 
 .timetable-container h2 {
-  font-family: Lovelo, "Barlow Condensed", Impact, sans-serif;
+  font-family: "Barlow Condensed", Impact, sans-serif;
   font-size: clamp(32px, 5vw, 60px);
-  font-weight: 900;
-  line-height: 1.05;
-  letter-spacing: -0.04em;
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: 0.015em;
   margin: 10px 0 15px;
 }
 
@@ -112,6 +112,182 @@
 }
 
 /* ==========================================
+   OPNIR TÍMAR
+   ========================================== */
+
+.open-classes-section {
+  background: #101419;
+  color: #ffffff;
+  padding: 85px 22px;
+}
+
+.open-classes-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* FYRIRSÖGN */
+
+.open-classes-heading {
+  max-width: 700px;
+  margin-bottom: 40px;
+}
+
+.open-classes-eyebrow {
+  color: #c6ccd6;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin: 0 0 15px;
+}
+
+.open-classes-heading h2 {
+  font-family: "Barlow Condensed", Impact, sans-serif;
+  font-size: clamp(42px, 6vw, 70px);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: 0.015em;
+  margin: 0 0 20px;
+  color: #ffffff;
+}
+
+.open-classes-heading > p:last-child {
+  color: #c6ccd6;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ==========================================
+   SPJÖLD - 3 DÁLKAR
+   ========================================== */
+
+.open-classes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  align-items: stretch;
+}
+
+.open-class-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+
+  background: #202124;
+  border: 1px solid #383d42;
+  padding: 32px;
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.open-class-card:hover {
+  transform: translateY(-4px);
+  border-color: #c6ccd6;
+}
+
+/* TEXTI Í SPJÖLDUM */
+
+.open-class-label {
+  color: #c6ccd6;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+  margin-bottom: 18px;
+}
+
+.open-class-card h3 {
+  font-family: "Barlow Condensed", Impact, sans-serif;
+  font-size: 44px;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: 0.015em;
+  color: #ffffff;
+  margin: 0 0 20px;
+}
+
+.open-class-card p {
+  color: #c6ccd6;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.75;
+  margin: 0 0 15px;
+}
+
+/* UPPLÝSINGAR NEÐST Á SPJÖLDUM */
+
+.open-class-info {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+
+  width: 100%;
+  margin-top: auto;
+  padding-top: 25px;
+
+  border-top: 1px solid #41474e;
+}
+
+.open-class-info span {
+  color: #c6ccd6;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.open-class-info strong {
+  color: #ffffff;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+/* KAUPA KORT */
+
+.open-classes-action {
+  display: flex;
+  justify-content: center;
+  margin-top: 35px;
+}
+
+.open-classes-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 17px 30px;
+
+  background: #c6ccd6;
+  color: #090b0d;
+
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+
+  transition: background 0.2s ease;
+}
+
+.open-classes-btn:hover {
+  background: #ffffff;
+}
+
+.open-classes-btn:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 4px;
+}
+
+/* ==========================================
    NEÐRI HLUTI
    ========================================== */
 
@@ -122,11 +298,11 @@
 }
 
 .timetable-bottom h2 {
-  font-family: Lovelo, "Barlow Condensed", Impact, sans-serif;
+  font-family: "Barlow Condensed", Impact, sans-serif;
   font-size: clamp(32px, 6vw, 65px);
-  font-weight: 900;
-  letter-spacing: -0.05em;
-  line-height: 1.05;
+  font-weight: 800;
+  letter-spacing: 0.015em;
+  line-height: 1.12;
   margin: 0 0 20px;
 }
 
@@ -220,6 +396,14 @@
    SPJALDTÖLVUR
    ========================================== */
 
+@media (max-width: 1050px) {
+
+  .open-classes-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+}
+
 @media (max-width: 900px) {
 
   .timetable-section {
@@ -231,6 +415,31 @@
 /* ==========================================
    SÍMAR
    ========================================== */
+
+@media (max-width: 760px) {
+
+  .open-classes-section {
+    padding: 60px 16px;
+  }
+
+  .open-classes-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .open-class-card {
+    padding: 28px;
+  }
+
+  .open-class-card h3 {
+    font-size: 40px;
+  }
+
+  .open-classes-heading {
+    margin-bottom: 30px;
+  }
+
+}
 
 @media (max-width: 600px) {
 
@@ -278,19 +487,35 @@
 
 }
 
+@media (max-width: 380px) {
+
+  .open-class-card {
+    padding: 23px;
+  }
+
+  .open-classes-btn {
+    width: 100%;
+  }
+
+}
+
 /* ==========================================
    MINNI HREYFING
    ========================================== */
 
 @media (prefers-reduced-motion: reduce) {
 
-  .timetable-btn {
+  .timetable-btn,
+  .open-class-card,
+  .open-classes-btn {
     transition: none;
   }
 
 }
 
-/* SAMRÆMDAR FYRIRSAGNIR - BOX800 */
+/* ==========================================
+   SAMRÆMDAR FYRIRSAGNIR - BOX800
+   ========================================== */
 
 .trainers-hero h1,
 .course-hero h1,
@@ -302,7 +527,7 @@
   line-height: 1.08;
 }
 
-/* Aðrar fyrirsagnir */
+/* AÐRAR FYRIRSAGNIR */
 
 .trainer-info h2,
 .courses-section h2,
@@ -315,7 +540,7 @@
   line-height: 1.12;
 }
 
-/* Lengri fyrirsögn á Þjálfarasíðunni */
+/* LENGRI FYRIRSÖGN Á ÞJÁLFARASÍÐUNNI */
 
 .trainers-hero h1 {
   font-size: clamp(42px, 7vw, 90px);

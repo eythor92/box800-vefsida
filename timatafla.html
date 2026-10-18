@@ -4,14 +4,11 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <meta
     name="description"
-    content="Skoðaðu tímatafluna hjá BOX800 á Selfossi og finndu æfingatíma sem hentar þér."
+    content="Skoðaðu tímatafluna hjá BOX800 á Selfossi. Kynntu þér Hreysti, HYROX og Barre og finndu æfingatíma sem hentar þér."
   >
 
   <title>Tímatafla | BOX800</title>
@@ -29,11 +26,12 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="timatafla.css">
   <link rel="stylesheet" href="header.css">
-
-  <!-- SAMEIGINLEG VALMYND -->
-  <script src="header.js" defer></script>
   <link rel="stylesheet" href="footer.css">
+
+  <!-- SAMEIGINLEG VALMYND OG FOOTER -->
+  <script src="header.js" defer></script>
   <script src="footer.js" defer></script>
+
 </head>
 
 <body class="timetable-page">
@@ -43,7 +41,10 @@
 
   <main>
 
-    <!-- KYNNING -->
+    <!-- =====================================
+         KYNNING
+    ====================================== -->
+
     <section class="timetable-hero">
 
       <p class="timetable-eyebrow">
@@ -59,12 +60,14 @@
 
     </section>
 
-    <!-- TÍMATAFLA -->
+
+    <!-- =====================================
+         TÍMATAFLA
+    ====================================== -->
+
     <section class="timetable-section">
 
       <div class="timetable-container">
-
-        
 
         <h2>ÆFINGATÍMAR OKKAR</h2>
 
@@ -77,6 +80,7 @@
           target="_blank"
           rel="noopener noreferrer"
           class="timetable-image"
+          aria-label="Opna tímatafluna í stærri mynd"
         >
           <img
             src="images/timatafla.jpg"
@@ -88,41 +92,173 @@
 
     </section>
 
-    <!-- NÆSTU SKREF -->
-    <section class="timetable-bottom">
 
-      <h2>TILBÚIN/N AÐ BYRJA?</h2>
+    <!-- =====================================
+         OPNIR TÍMAR
+    ====================================== -->
 
-      <p>
-        Skoðaðu námskeiðin okkar eða kynntu þér
-        áskriftir hjá BOX800.
-      </p>
+    <section class="open-classes-section">
 
-      <div class="timetable-buttons">
+      <div class="open-classes-container">
 
-        <a
-          href="namskeid.html"
-          class="timetable-btn"
-        >
-          SKOÐA NÁMSKEIÐ 
-        </a>
+        <div class="open-classes-heading">
 
-        <a
-          href="verdskra.html"
-          class="timetable-btn timetable-btn-outline"
-        >
-          SKOÐA VERÐSKRÁ 
-        </a>
+          <p class="open-classes-eyebrow">
+            ÞJÁLFUN HJÁ BOX800
+          </p>
+
+          <h2>OPNIR TÍMAR.</h2>
+
+          <p>
+            Fjölbreyttar æfingar undir leiðsögn
+            þjálfara. Hér geta allir fundið
+            þjálfun við sitt hæfi.
+          </p>
+
+        </div>
+
+
+        <div class="open-classes-grid">
+
+          <!-- =====================================
+               HREYSTI
+          ====================================== -->
+
+          <article class="open-class-card">
+
+            <div class="open-class-label">
+              ALMENNIR ÆFINGATÍMAR
+            </div>
+
+            <h3>HREYSTI</h3>
+
+            <p>
+              Fjölbreyttar og skemmtilegar æfingar
+              undir leiðsögn þjálfara.
+            </p>
+
+            <p>
+              Æfingarnar er ávallt hægt að aðlaga
+              eftir þörfum hvers og eins og henta
+              því öllum.
+            </p>
+
+            <p>
+              Notast er við fjölbreyttan búnað,
+              má þar nefna þrektæki, lyftingastangir,
+              ketilbjöllur, handlóð, sippubönd
+              og fleira.
+            </p>
+
+            <div class="open-class-info">
+              <span>ÆFINGALENGD</span>
+              <strong>50–60 mínútur</strong>
+            </div>
+
+          </article>
+
+
+          <!-- =====================================
+               HYROX
+          ====================================== -->
+
+          <article class="open-class-card">
+
+            <div class="open-class-label">
+              ALMENNIR ÆFINGATÍMAR
+            </div>
+
+            <h3>HYROX</h3>
+
+            <p>
+              Kraftmiklar æfingar þar sem við
+              sameinum hlaup, styrk og þol
+              í fjölbreyttri þjálfun.
+            </p>
+
+            <p>
+              Æfingarnar byggja á HYROX-hugmyndafræðinni
+              þar sem hlaupakaflar og mismunandi
+              styrktar- og þolæfingar fara saman.
+            </p>
+
+            <p>
+              Allir geta tekið þátt og æfingarnar
+              eru aðlagaðar að getu hvers og eins.
+            </p>
+
+            <div class="open-class-info">
+              <span>ÆFINGADAGUR</span>
+              <strong>Alla mánudaga</strong>
+            </div>
+
+          </article>
+
+
+          <!-- =====================================
+               BARRE
+          ====================================== -->
+
+          <article class="open-class-card">
+
+            <div class="open-class-label">
+              ALMENNIR ÆFINGATÍMAR
+            </div>
+
+            <h3>BARRE</h3>
+
+            <p>
+              Barre er samblanda af styrktaræfingum,
+              Pilates og jóga.
+            </p>
+
+            <p>
+              Unnið er með eigin líkamsþyngd
+              ásamt léttum lóðum, boltum og teygjum.
+              Áhersla er lögð á öndun og hvernig
+              hún hjálpar okkur að komast í gegnum
+              æfingarnar og ná þannig betri árangri.
+            </p>
+
+            <p>
+              Barre styrkir kjarnvöðva, eykur
+              liðleika og jafnvægi og bætir
+              líkamsstöðu.
+            </p>
+
+            <div class="open-class-info">
+              <span>AÐGANGUR</span>
+              <strong>Innifalið í almennu korti</strong>
+            </div>
+
+          </article>
+
+        </div>
+
+
+        <!-- KAUPA KORT -->
+
+        <div class="open-classes-action">
+
+          <a
+            href="https://www.abler.io/shop/box800"
+            class="open-classes-btn"
+          >
+            KAUPA KORT
+          </a>
+
+        </div>
 
       </div>
 
     </section>
 
+
+    
   </main>
 
- <!-- SAMEIGINLEGUR FOOTER -->
-<footer id="box800-footer"></footer>
-  </footer>
+  <!-- SAMEIGINLEGUR FOOTER -->
+  <footer id="box800-footer"></footer>
 
 </body>
 </html>
