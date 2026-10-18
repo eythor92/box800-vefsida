@@ -226,3 +226,18 @@
     width: 100px;
   }
 }
+
+/* ==========================================
+   BOX800 - SAMRÆMDUR HEADER Á ÖLLUM SÍÐUM
+   ========================================== */
+
+.site-header .header-container {
+  padding: 0;
+  max-width: none;
+}
+
+.site-header .header-container > a:first-child {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}

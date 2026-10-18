@@ -25,9 +25,9 @@ document.addEventListener("DOMContentLoaded", () => {
   header.className = "site-header";
 
   header.innerHTML = `
-    <div class="container nav-wrap">
+    <div class="header-container nav-wrap">
 
-      <a href="index.html" aria-label="BOX800 forsíða">
+<a class="brand" href="index.html" aria-label="BOX800 forsíða">
         <img
           class="brand-logo"
           src="images/box800-logo-white.png"
