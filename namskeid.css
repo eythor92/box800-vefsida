@@ -527,3 +527,103 @@
     transition: none;
   }
 }
+
+/* ==========================================
+   NÁMSKEIÐ - ÞÉTTARI SPJÖLD Í FARSÍMA
+   ========================================== */
+
+@media (max-width: 600px) {
+
+  /* Mynd til vinstri, texti til hægri */
+  .course-card {
+    display: grid;
+    grid-template-columns: 38% minmax(0, 1fr);
+    align-items: stretch;
+    height: auto;
+  }
+
+  /* MYND */
+  .course-image-wrap {
+    width: 100%;
+    height: 100%;
+    min-height: 210px;
+    overflow: hidden;
+  }
+
+  .course-image-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  /* TEXTI */
+  .course-content {
+    min-width: 0;
+    padding: 18px 14px;
+  }
+
+  .course-content h3 {
+    font-size: clamp(21px, 5vw, 28px);
+    line-height: 1.05;
+    margin-bottom: 10px;
+    overflow-wrap: anywhere;
+  }
+
+  .course-content > p {
+    font-size: 12px;
+    line-height: 1.5;
+    margin-bottom: 14px;
+  }
+
+  /* LESA MEIRA */
+  .course-details {
+    margin-bottom: 14px;
+  }
+
+  .course-details summary {
+    padding: 10px 9px;
+    font-size: 10px;
+    letter-spacing: 0;
+  }
+
+  /* KAUPA NÁMSKEIÐ */
+  .course-content > a {
+    width: 100%;
+    padding: 12px 8px;
+    font-size: 10px;
+    text-align: center;
+    white-space: normal;
+    line-height: 1.4;
+  }
+
+  /* Opnuð lýsing */
+  .course-details-content {
+    padding-top: 12px;
+    margin-top: 12px;
+  }
+
+  .course-details-content p,
+  .course-details-content li {
+    font-size: 12px;
+  }
+
+}
+
+/* MJÖG LITLIR SÍMAR */
+
+@media (max-width: 380px) {
+
+  .course-card {
+    grid-template-columns: 35% minmax(0, 1fr);
+  }
+
+  .course-content {
+    padding: 14px 10px;
+  }
+
+  .course-content h3 {
+    font-size: 21px;
+  }
+
+}
