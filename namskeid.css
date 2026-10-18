@@ -390,3 +390,140 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+/* ==========================================
+   BOX800 - LESA MEIRA Í NÁMSKEIÐASPJÖLDUM
+   ========================================== */
+
+.course-details {
+  width: 100%;
+  margin: 0 0 22px;
+  color: #c6ccd6;
+  font-family: "Inter", Arial, sans-serif;
+}
+
+/* LESA MEIRA TAKKI */
+
+.course-details summary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 11px 15px;
+  border: 1px solid #69727b;
+
+  color: #ffffff;
+  background: transparent;
+
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+
+  cursor: pointer;
+  list-style: none;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.course-details summary::-webkit-details-marker {
+  display: none;
+}
+
+.course-details summary::marker {
+  content: "";
+}
+
+.course-details summary:hover {
+  background: #30363c;
+  border-color: #c6ccd6;
+}
+
+.course-details summary:focus-visible {
+  outline: 2px solid #c6ccd6;
+  outline-offset: 3px;
+}
+
+/* BREYTA TEXTA ÞEGAR OPNAÐ ER */
+
+.course-details .details-less {
+  display: none;
+}
+
+.course-details[open] .details-more {
+  display: none;
+}
+
+.course-details[open] .details-less {
+  display: inline;
+}
+
+/* ÍTARLEGRI UPPLÝSINGAR */
+
+.course-details-content {
+  padding: 20px 0 0;
+  margin-top: 16px;
+  border-top: 1px solid #41474e;
+}
+
+.course-details-content p {
+  margin: 0 0 14px;
+  color: #c6ccd6;
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+.course-details-content h4 {
+  margin: 22px 0 12px;
+
+  color: #ffffff;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.7px;
+}
+
+.course-details-content ul {
+  padding-left: 19px;
+  margin: 0 0 18px;
+}
+
+.course-details-content li {
+  margin-bottom: 10px;
+  color: #c6ccd6;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* ATHUGASEMDIR */
+
+.course-details-content .course-details-note {
+  padding: 13px 15px;
+  margin: 16px 0 0;
+
+  background: #2b3036;
+  border-left: 3px solid #c6ccd6;
+
+  color: #ffffff;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+/* HALDA KAUPHNAPP NEÐST Í SPJALDI */
+
+.course-content > a {
+  margin-top: auto;
+}
+
+/* SPJÖLD MEÐ UPPLÝSINGUM */
+
+.course-card:has(.course-details[open]) {
+  border-color: #c6ccd6;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .course-details summary {
+    transition: none;
+  }
+}
