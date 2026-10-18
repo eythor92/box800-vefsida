@@ -627,3 +627,108 @@
   }
 
 }
+
+/* ==========================================
+   BOX800 - LAGA NÁMSKEIÐ Í FARSÍMA
+   ========================================== */
+
+@media (max-width: 600px) {
+
+  /* Spjaldið: mynd og stuttur texti hlið við hlið */
+
+  .course-card {
+    display: grid;
+    grid-template-columns: 38% minmax(0, 1fr);
+    grid-template-rows: auto;
+    align-items: start;
+    height: auto;
+  }
+
+  /* Myndin heldur fastri hæð */
+
+  .course-image-wrap {
+    grid-column: 1;
+    grid-row: 1;
+    width: 100%;
+    height: 230px;
+    min-height: 0;
+    align-self: start;
+    overflow: hidden;
+  }
+
+  .course-image-wrap img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  /* Leyfum börnum course-content
+     að raðast beint í grid */
+
+  .course-content {
+    display: contents;
+  }
+
+  /* Fyrirsögn og stutt lýsing */
+
+  .course-content h3 {
+    grid-column: 2;
+    grid-row: 1;
+    align-self: start;
+    margin: 18px 14px 0;
+    font-size: clamp(21px, 5vw, 28px);
+    line-height: 1.08;
+    overflow-wrap: anywhere;
+  }
+
+  .course-content > p {
+    grid-column: 2;
+    grid-row: 2;
+    margin: 10px 14px 14px;
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  /* LESA MEIRA nær yfir alla breidd
+     þegar ítarleg lýsing opnast */
+
+  .course-details {
+    grid-column: 1 / -1;
+    grid-row: 4;
+    width: auto;
+    margin: 0;
+    padding: 0 16px;
+  }
+
+  .course-details summary {
+    margin-bottom: 14px;
+    padding: 11px 14px;
+    font-size: 11px;
+  }
+
+  .course-details-content {
+    margin-top: 0;
+    padding: 20px 0;
+  }
+
+  .course-details-content p,
+  .course-details-content li {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  /* Kauphnappur */
+
+  .course-content > a {
+    grid-column: 2;
+    grid-row: 3;
+    width: auto;
+    margin: 0 14px 16px;
+    padding: 12px 8px;
+    font-size: 10px;
+    text-align: center;
+  }
+
+}
