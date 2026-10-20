@@ -28,7 +28,9 @@
   <link rel="stylesheet" href="header.css">
   <link rel="stylesheet" href="footer.css">
 
-  <!-- SAMEIGINLEG VALMYND OG FOOTER -->
+  <!-- JAVASCRIPT -->
+  <script src="translations.js" defer></script>
+  <script src="language.js" defer></script>
   <script src="header.js" defer></script>
   <script src="footer.js" defer></script>
 
@@ -40,15 +42,10 @@
 
   <main>
 
-    <!-- =====================================
-         KYNNING
-    ====================================== -->
-
+    <!-- KYNNING -->
     <section class="course-hero">
 
-      <p class="course-eyebrow">
-        BOX800 · SELFOSS
-      </p>
+      <p class="course-eyebrow">BOX800 · SELFOSS</p>
 
       <h1>NÁMSKEIÐ</h1>
 
@@ -59,11 +56,7 @@
 
     </section>
 
-
-    <!-- =====================================
-         ÖLL NÁMSKEIÐ
-    ====================================== -->
-
+    <!-- ÖLL NÁMSKEIÐ -->
     <section class="courses-section">
 
       <div class="courses-container">
@@ -72,11 +65,7 @@
 
         <div class="courses-grid">
 
-
-          <!-- =====================================
-               KARLAHREYSTI
-          ====================================== -->
-
+          <!-- KARLAHREYSTI -->
           <article class="course-card">
 
             <h3>KARLAHREYSTI</h3>
@@ -164,11 +153,7 @@
 
           </article>
 
-
-          <!-- =====================================
-               KONUHREYSTI
-          ====================================== -->
-
+          <!-- KONUHREYSTI -->
           <article class="course-card">
 
             <h3>KONUHREYSTI</h3>
@@ -255,11 +240,7 @@
 
           </article>
 
-
-          <!-- =====================================
-               HELDRIHREYSTI
-          ====================================== -->
-
+          <!-- HELDRIHREYSTI -->
           <article class="course-card">
 
             <h3>HELDRIHREYSTI</h3>
@@ -337,11 +318,7 @@
 
           </article>
 
-
-          <!-- =====================================
-               MÖMMUHREYSTI
-          ====================================== -->
-
+          <!-- MÖMMUHREYSTI -->
           <article class="course-card">
 
             <h3>MÖMMUHREYSTI</h3>
@@ -402,7 +379,6 @@
                     Mánudaga, miðvikudaga og
                     föstudaga kl. 09:30
                   </li>
-
                   <li>
                     Mánudaga, miðvikudaga og
                     föstudaga kl. 10:30
@@ -419,11 +395,7 @@
 
           </article>
 
-
-          <!-- =====================================
-               MÖMMUGRUNNUR
-          ====================================== -->
-
+          <!-- MÖMMUGRUNNUR -->
           <article class="course-card">
 
             <h3>MÖMMUGRUNNUR</h3>
@@ -494,20 +466,18 @@
                   <li>Þriðjudaga kl. 10:30–11:20</li>
                   <li>Fimmtudaga kl. 10:30–11:20</li>
                 </ul>
+
                 <p class="course-details-note">
                   Meðlimir hafa einnig aðgang að opnum tímum stöðvarinnar.
                 </p>
+
               </div>
 
             </div>
 
           </article>
 
-
-          <!-- =====================================
-               ÞOLÞJÁLFUN
-          ====================================== -->
-
+          <!-- ÞOLÞJÁLFUN -->
           <article class="course-card">
 
             <h3>ÞOLÞJÁLFUN</h3>
@@ -587,11 +557,7 @@
 
           </article>
 
-
-          <!-- =====================================
-               UNGLINGASTYRKUR
-          ====================================== -->
-
+          <!-- UNGLINGASTYRKUR -->
           <article class="course-card">
 
             <h3>UNGLINGASTYRKUR</h3>
@@ -664,7 +630,6 @@
 
           </article>
 
-
         </div>
 
       </div>
@@ -673,15 +638,9 @@
 
   </main>
 
-
-  <!-- SAMEIGINLEGUR FOOTER -->
   <footer id="box800-footer"></footer>
 
-
-  <!-- =====================================
-       LESA MEIRA / LESA MINNA
-  ====================================== -->
-
+  <!-- LESA MEIRA / LESA MINNA -->
   <script>
     document.querySelectorAll(".course-read-btn").forEach(button => {
 
@@ -693,12 +652,18 @@
         if (!details) return;
 
         const isOpening = details.hidden;
-
         details.hidden = !isOpening;
 
+        const language =
+          window.Box800Language?.getLanguage() || "is";
+
+        const labels = language === "en"
+          ? { more: "READ MORE", less: "READ LESS" }
+          : { more: "LESA MEIRA", less: "LESA MINNA" };
+
         this.textContent = isOpening
-          ? "LESA MINNA"
-          : "LESA MEIRA";
+          ? labels.less
+          : labels.more;
 
         this.setAttribute(
           "aria-expanded",
