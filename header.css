@@ -241,3 +241,54 @@
   align-items: center;
   flex-shrink: 0;
 }
+/* ==========================================
+   BOX800 - LANGUAGE SWITCH
+========================================== */
+
+.site-header .language-switch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  flex-shrink: 0;
+  margin-left: 5px;
+}
+
+.site-header .language-switch button {
+  appearance: none;
+  background: transparent;
+  border: 0;
+  padding: 7px 2px;
+  color: #929aa5;
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.site-header .language-switch button:hover,
+.site-header .language-switch button.is-active {
+  color: #ffffff;
+}
+
+.site-header .language-switch span {
+  color: #65707a;
+  font-size: 12px;
+}
+
+@media (max-width: 760px) {
+
+  .site-header .language-switch {
+    justify-content: flex-start;
+    margin: 16px 0 0;
+    padding: 12px 10px;
+    border-top: 1px solid #343b42;
+  }
+
+  .site-header .language-switch button {
+    font-size: 15px;
+    padding: 8px 5px;
+  }
+
+}
