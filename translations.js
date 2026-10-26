@@ -658,7 +658,7 @@ window.box800Translations = {
     ],
 
     "#namskeid.price-section .course-grid .course-card > p": [
-      "Single month · 3 months: 25,200 ISK · 10 classes: 14,900 ISK",
+      "Single month · 3 months: 25,200 ISK (payments can be spread) · 10-class card: 14,900 ISK (valid for one year)",
       "1 month · 3-month commitment: 50,700 ISK",
       "1 month · 3-month commitment: 50,700 ISK",
       "Autumn term, Aug 31 – Dec 9 · Payment plans and youth activity grants available",
