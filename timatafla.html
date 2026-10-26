@@ -13,6 +13,26 @@
 
   <title>Tímatafla | BOX800</title>
 
+  <!-- FAVICON -->
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="images/favicon-512.png">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <meta name="theme-color" content="#090b0d">
+
+  <!-- DEILING Á SAMFÉLAGSMIÐLUM -->
+  <link rel="canonical" href="https://www.box800.is/timatafla.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="BOX800">
+  <meta property="og:locale" content="is_IS">
+  <meta property="og:title" content="Tímatafla | BOX800">
+  <meta property="og:description" content="Skoðaðu tímatafluna hjá BOX800 á Selfossi. Kynntu þér Hreysti, HYROX og Barre og finndu æfingatíma sem hentar þér.">
+  <meta property="og:url" content="https://www.box800.is/timatafla.html">
+  <meta property="og:image" content="https://www.box800.is/images/og-mynd.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Iðkendur á æfingu hjá BOX800 á Selfossi">
+  <meta name="twitter:card" content="summary_large_image">
+
   <!-- LETURGERÐIR -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,6 +53,8 @@
   <script src="language.js" defer></script>
   <script src="header.js" defer></script>
   <script src="footer.js" defer></script>
+  <script src="timatafla-data.js" defer></script>
+  <script src="timatafla.js" defer></script>
 
 </head>
 
@@ -74,21 +96,16 @@
         <h2>ÆFINGATÍMAR OKKAR</h2>
 
         <p class="timetable-description">
-          Hér fyrir neðan sérðu tímatafluna hjá BOX800.
+          Opnir tímar eru innifaldir í kortinu.
+          Smelltu á námskeið til að lesa meira.
         </p>
 
-        <a
-          href="images/timatafla.jpg"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="timetable-image"
-          aria-label="Opna tímatafluna í stærri mynd"
-        >
-          <img
-            src="images/timatafla.jpg"
-            alt="Tímatafla BOX800"
-          >
-        </a>
+        <!-- Tímatafla er teiknuð úr timatafla-data.js -->
+        <div id="timatafla" class="tt">
+          <noscript>
+            <a href="images/timatafla.jpg">Opna tímatöfluna sem mynd</a>
+          </noscript>
+        </div>
 
       </div>
 
@@ -217,7 +234,7 @@
             <div class="open-class-image">
 
               <img
-                src="images/barre.jpeg"
+                src="images/barre.webp"
                 alt="Barre-salurinn hjá BOX800"
                 loading="lazy"
               >

@@ -372,7 +372,7 @@ window.box800Translations = {
     ],
 
     ".timetable-section .timetable-description": [
-      "Take a look at the BOX800 class schedule below."
+      "Group classes are included in your membership. Tap a program to learn more."
     ],
 
     ".open-classes-heading .open-classes-eyebrow": [
@@ -527,8 +527,8 @@ window.box800Translations = {
 
     ".price-tabs > a": [
       "Memberships",
-      "Programs",
-      "Student Memberships"
+      "Student Memberships",
+      "Programs"
     ],
 
     /* REGULAR MEMBERSHIPS */

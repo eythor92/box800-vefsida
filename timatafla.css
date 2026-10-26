@@ -93,20 +93,440 @@
 }
 
 
-/* MYND AF TÍMATÖFLU */
+/* ==========================================
+   TÍMATAFLA (HTML)
+   Gögnin eru í timatafla-data.js
+   ========================================== */
 
-.timetable-image {
-  display: block;
-  width: 100%;
-  overflow: hidden;
-  border: 1px solid #3a434d;
-  background: #171b20;
+.tt {
+  --tt-line: #2b3239;
+  --tt-cell: #11161b;
+  --tt-open-bg: #1d2329;
+  --tt-open-border: #4a535d;
+  --tt-accent: #c6ccd6;
+
+  text-align: left;
 }
 
-.timetable-image img {
-  display: block;
+.tt-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* GILDISTÍMI OG SÍA */
+
+.tt-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px 24px;
+  margin-bottom: 22px;
+}
+
+.tt-valid {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.tt-valid strong {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.tt-valid span {
+  color: #8f99a3;
+  font-size: 13px;
+}
+
+.tt-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tt-filter-btn,
+.tt-day-btn {
+  appearance: none;
+  border: 1px solid var(--tt-open-border);
+  background: transparent;
+  color: #d3d7dd;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.tt-filter-btn {
+  padding: 10px 16px;
+}
+
+.tt-filter-btn:hover,
+.tt-day-btn:hover {
+  border-color: var(--tt-accent);
+  color: #ffffff;
+}
+
+.tt-filter-btn[aria-pressed="true"],
+.tt-day-btn[aria-pressed="true"] {
+  background: var(--tt-accent);
+  border-color: var(--tt-accent);
+  color: #090b0d;
+}
+
+.tt-filter-btn:focus-visible,
+.tt-day-btn:focus-visible,
+.tt-class:focus-visible,
+.tt-row-name a:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+}
+
+/* TAFLA (TÖLVA) */
+
+.tt-table-wrap {
+  border: 1px solid var(--tt-line);
+  background: var(--tt-cell);
+}
+
+.tt-table {
   width: 100%;
-  height: auto;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.tt-table th,
+.tt-table td {
+  border: 1px solid var(--tt-line);
+  padding: 6px;
+  vertical-align: top;
+}
+
+.tt-table thead th {
+  padding: 14px 6px;
+  background: #000000;
+  color: #ffffff;
+  font-family: "Barlow Condensed", Impact, sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.tt-table thead th:first-child {
+  width: 112px;
+}
+
+.tt-table abbr {
+  text-decoration: none;
+}
+
+.tt-table tbody th {
+  padding: 12px 10px;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 800;
+  text-align: left;
+  vertical-align: middle;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.tt-table tbody th span {
+  color: #8f99a3;
+  font-weight: 600;
+}
+
+.tt-table td.tt-today,
+.tt-table thead th.tt-today {
+  background: rgba(198, 204, 214, 0.07);
+}
+
+.tt-table thead th.tt-today {
+  box-shadow: inset 0 -3px 0 var(--tt-accent);
+}
+
+.tt-today-badge {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 2px 6px;
+  background: var(--tt-accent);
+  color: #090b0d;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+.tt-table thead .tt-today-badge {
+  display: block;
+  width: max-content;
+  margin: 4px auto 0;
+}
+
+/* SPJÖLD Í REITUM */
+
+.tt-class {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 46px;
+  padding: 7px 9px;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+  hyphens: auto;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.tt-class + .tt-class {
+  margin-top: 5px;
+}
+
+.tt-class.tt-opinn {
+  background: var(--tt-open-bg);
+  border: 1px solid var(--tt-open-border);
+  color: #e3e6ea;
+}
+
+.tt-namskeid.tt-class {
+  background: var(--tt-litur, #c6ccd6);
+  color: #0b0d10;
+  font-weight: 800;
+}
+
+a.tt-class:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.08);
+}
+
+.tt-class-time {
+  margin-top: 2px;
+  font-size: 12px;
+  font-weight: 600;
+  opacity: 0.85;
+  font-variant-numeric: tabular-nums;
+}
+
+/* SÍA */
+
+.tt[data-sia="opnir"] .tt-class.tt-namskeid,
+.tt[data-sia="namskeid"] .tt-class.tt-opinn {
+  opacity: 0.15;
+}
+
+.tt[data-sia="opnir"] .tt-row.tt-namskeid,
+.tt[data-sia="namskeid"] .tt-row.tt-opinn {
+  display: none;
+}
+
+/* DAGASÝN (SÍMI) - FALIN Á TÖLVU */
+
+.tt-days {
+  display: none;
+}
+
+.tt-day-buttons {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 5px;
+}
+
+.tt-day-btn {
+  position: relative;
+  padding: 12px 0;
+  font-size: 13px;
+}
+
+.tt-day-btn.tt-is-today::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 4px;
+  width: 5px;
+  height: 5px;
+  margin-left: -2.5px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.tt-day-title {
+  margin: 26px 0 12px;
+  color: #ffffff;
+  font-family: "Barlow Condensed", Impact, sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.tt-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--tt-line);
+}
+
+.tt-row {
+  display: grid;
+  grid-template-columns: 104px 1fr auto;
+  align-items: center;
+  gap: 12px;
+  padding: 15px 12px 15px 14px;
+  border-bottom: 1px solid var(--tt-line);
+  border-left: 4px solid var(--tt-open-border);
+}
+
+.tt-row.tt-namskeid {
+  border-left-color: var(--tt-litur, #c6ccd6);
+}
+
+.tt-row-time {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+
+.tt-row-name {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.tt-row-name a {
+  text-decoration: underline;
+  text-decoration-color: var(--tt-litur, #c6ccd6);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+.tt-row-tag {
+  color: #8f99a3;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.tt-empty {
+  padding: 22px 0;
+  color: #a7afb8;
+}
+
+/* SKÝRINGAR */
+
+.tt-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 28px;
+  margin: 20px 0 0;
+  padding: 0;
+  list-style: none;
+  color: #a7afb8;
+  font-size: 13px;
+}
+
+.tt-legend li {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.tt-swatch {
+  width: 18px;
+  height: 18px;
+  flex: none;
+}
+
+.tt-swatch-open {
+  background: var(--tt-open-bg);
+  border: 1px solid var(--tt-open-border);
+}
+
+.tt-swatch-course {
+  background: linear-gradient(
+    90deg,
+    #e07470 0 25%,
+    #f5d33f 25% 50%,
+    #c372ea 50% 75%,
+    #5b93ea 75%
+  );
+}
+
+/* SKIPT YFIR Í DAGASÝN */
+
+@media (max-width: 900px) {
+
+  .tt-table-wrap {
+    display: none;
+  }
+
+  .tt-days {
+    display: block;
+  }
+
+  .tt-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .tt-filters {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 5px;
+  }
+
+  .tt-filter-btn {
+    padding: 11px 4px;
+    font-size: 11px;
+  }
+
+}
+
+@media (max-width: 420px) {
+
+  .tt-row {
+    grid-template-columns: 92px 1fr;
+  }
+
+  .tt-row-tag {
+    grid-column: 2;
+    margin-top: -8px;
+  }
+
+  .tt-day-btn {
+    font-size: 12px;
+  }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .tt-class,
+  .tt-filter-btn,
+  .tt-day-btn {
+    transition: none;
+  }
+
 }
 
 
