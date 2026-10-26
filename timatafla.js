@@ -24,6 +24,7 @@
       skyringNamskeid: "Námskeið – skráning sér",
       engir: "Engir tímar þennan dag.",
       veljaDag: "Veldu dag",
+      vikan: "Öll vikan",
       sia: "Sía tíma",
       fyrirvari: "Birt með fyrirvara um breytingar.",
       tafla: "Vikuleg tímatafla BOX800"
@@ -42,6 +43,7 @@
       skyringNamskeid: "Programs – separate sign-up",
       engir: "No classes on this day.",
       veljaDag: "Choose a day",
+      vikan: "Whole week",
       sia: "Filter classes",
       fyrirvari: "Subject to change.",
       tafla: "BOX800 weekly class schedule"
@@ -183,22 +185,21 @@
      DAGASÝN (SÍMI)
   ====================================== */
 
-  function dagar(lang) {
+  const VIKAN = 7;
+
+  const passarSiu = (t) => {
+    const tegund = flokkur(t.heiti).tegund;
+    if (sia === "opnir") return tegund === "opinn";
+    if (sia === "namskeid") return tegund === "namskeid";
+    return true;
+  };
+
+  function dagListi(dagIndex, lang) {
 
     const T = TEXTI[lang];
 
-    const hnappar = DAGAR.map((d, i) => `
-      <button
-        type="button"
-        class="tt-day-btn${i === idagIndex ? " tt-is-today" : ""}"
-        data-dagur="${i}"
-        aria-pressed="${i === valinnDagur}"
-      >
-        ${T.stuttir[i]}
-      </button>`).join("");
-
     const timar = radad.filter(t =>
-      t.dagur === DAGAR[valinnDagur]);
+      t.dagur === DAGAR[dagIndex] && passarSiu(t));
 
     const listi = timar.length
       ? timar.map(t => {
@@ -222,15 +223,45 @@
       : `<li class="tt-empty">${T.engir}</li>`;
 
     return `
-      <div class="tt-days">
+      <h3 class="tt-day-title">
+        ${T.dagar[dagIndex]}
+        ${dagIndex === idagIndex ? `<span class="tt-today-badge">${T.idag}</span>` : ""}
+      </h3>
+      <ul class="tt-list">${listi}</ul>`;
+  }
+
+  function dagar(lang) {
+
+    const T = TEXTI[lang];
+
+    const hnappar = DAGAR.map((d, i) => `
+      <button
+        type="button"
+        class="tt-day-btn${i === idagIndex ? " tt-is-today" : ""}"
+        data-dagur="${i}"
+        aria-pressed="${i === valinnDagur}"
+      >
+        ${T.stuttir[i]}
+      </button>`).join("") + `
+      <button
+        type="button"
+        class="tt-day-btn tt-week-btn"
+        data-dagur="${VIKAN}"
+        aria-pressed="${valinnDagur === VIKAN}"
+      >
+        ${T.vikan}
+      </button>`;
+
+    const efni = valinnDagur === VIKAN
+      ? DAGAR.map((d, i) => dagListi(i, lang)).join("")
+      : dagListi(valinnDagur, lang);
+
+    return `
+      <div class="tt-days${valinnDagur === VIKAN ? " tt-is-week" : ""}">
         <div class="tt-day-buttons" role="group" aria-label="${T.veljaDag}">
           ${hnappar}
         </div>
-        <h3 class="tt-day-title">
-          ${T.dagar[valinnDagur]}
-          ${valinnDagur === idagIndex ? `<span class="tt-today-badge">${T.idag}</span>` : ""}
-        </h3>
-        <ul class="tt-list">${listi}</ul>
+        ${efni}
       </div>`;
   }
 

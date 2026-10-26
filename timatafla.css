@@ -175,10 +175,14 @@
   padding: 10px 16px;
 }
 
-.tt-filter-btn:hover,
-.tt-day-btn:hover {
-  border-color: var(--tt-accent);
-  color: #ffffff;
+@media (hover: hover) {
+
+  .tt-filter-btn:hover,
+  .tt-day-btn:hover {
+    border-color: var(--tt-accent);
+    color: #ffffff;
+  }
+
 }
 
 .tt-filter-btn[aria-pressed="true"],
@@ -346,8 +350,29 @@ a.tt-class:hover {
 
 .tt-day-buttons {
   display: grid;
-  grid-template-columns: repeat(7, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 5px;
+}
+
+.tt-week-btn {
+  letter-spacing: 0.3px;
+}
+
+/* ÖLL VIKAN: minna bil milli daga */
+
+.tt-is-week .tt-day-title {
+  margin-top: 34px;
+  font-size: 26px;
+}
+
+.tt-is-week .tt-row {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.tt-is-week .tt-row-tag {
+  margin-top: -10px;
+  font-size: 10px;
 }
 
 .tt-day-btn {
