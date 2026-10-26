@@ -364,7 +364,7 @@ h2 span {
 }
 
 .program-content > span {
-  font-size: 10px;
+  font-size: 11px;
   color: var(--blue);
   font-weight: 800;
   letter-spacing: 1px;
@@ -376,13 +376,13 @@ h2 span {
 }
 
 .program-content p {
-  font-size: 12px;
+  font-size: 14px;
   color: #e2e2e2;
   line-height: 1.5;
 }
 
 .program-content a {
-  font-size: 11px;
+  font-size: 12.5px;
   font-weight: 800;
   color: var(--blue);
 }
