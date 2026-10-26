@@ -360,19 +360,89 @@ a.tt-class:hover {
 
 /* ÖLL VIKAN: minna bil milli daga */
 
-.tt-is-week .tt-day-title {
-  margin-top: 34px;
-  font-size: 26px;
+.tt-table-compact {
+  margin-top: 18px;
+  border: 1px solid var(--tt-line);
+  background: var(--tt-cell);
 }
 
-.tt-is-week .tt-row {
-  padding-top: 10px;
-  padding-bottom: 10px;
+.tt-table-compact .tt-table th,
+.tt-table-compact .tt-table td {
+  padding: 2px;
 }
 
-.tt-is-week .tt-row-tag {
-  margin-top: -10px;
+.tt-table-compact .tt-table thead th {
+  padding: 8px 1px;
+  font-size: 13px;
+  letter-spacing: 0;
+}
+
+.tt-table-compact .tt-table thead th:first-child {
+  width: 36px;
+}
+
+.tt-table-compact .tt-table tbody th {
+  padding: 4px 3px;
   font-size: 10px;
+  line-height: 1.2;
+  white-space: normal;
+}
+
+.tt-table-compact .tt-table tbody th span {
+  display: block;
+  font-size: 9px;
+}
+
+.tt-table-compact .tt-class {
+  min-height: 34px;
+  padding: 3px 1px;
+  font-size: 8.5px;
+  letter-spacing: -0.2px;
+  line-height: 1.15;
+  text-align: center;
+  align-items: center;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
+.tt-table-compact .tt-class + .tt-class {
+  margin-top: 2px;
+}
+
+.tt-table-compact .tt-class-time {
+  font-size: 8px;
+}
+
+/* Lárétt (síma snúið): meira pláss */
+@media (min-width: 560px) {
+
+  .tt-table-compact .tt-table thead th {
+    font-size: 16px;
+  }
+
+  .tt-table-compact .tt-table thead th:first-child {
+    width: 64px;
+  }
+
+  .tt-table-compact .tt-table tbody th {
+    font-size: 12px;
+  }
+
+  .tt-table-compact .tt-table tbody th span {
+    font-size: 11px;
+  }
+
+  .tt-table-compact .tt-class {
+    min-height: 38px;
+    padding: 5px 4px;
+    font-size: 11px;
+    letter-spacing: 0;
+  }
+
+  .tt-table-compact .tt-class-time {
+    font-size: 10px;
+  }
+
 }
 
 .tt-day-btn {

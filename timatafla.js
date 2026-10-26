@@ -58,7 +58,8 @@
   /* Mánudagur = 0 ... sunnudagur = 6 */
   const idagIndex = (new Date().getDay() + 6) % 7;
 
-  let valinnDagur = idagIndex;
+  /* Síminn opnast á allri vikunni */
+  let valinnDagur = 7;
   let sia = "allir";
 
   const tungumal = () =>
@@ -113,10 +114,17 @@
      HJÁLPARFÖLL
   ====================================== */
 
-  function spjald(t, lang, syndTima) {
+  /* Leyfir löngum heitum að brotna á milli orðhluta
+     í þéttu töflunni (Mömmu-hreysti, Þol-þjálfun) */
+  const bandstrik = (nafn) =>
+    nafn.replace(/(.{3,})(hreysti|grunnur|styrkur|þjálfun)$/i, "$1&shy;$2");
+
+  function spjald(t, lang, syndTima, thett) {
 
     const f = flokkur(t.heiti);
-    const nafn = esc(heitiA(t.heiti, lang));
+    const nafn = thett
+      ? bandstrik(esc(heitiA(t.heiti, lang)))
+      : esc(heitiA(t.heiti, lang));
     const still = f.litur ? ` style="--tt-litur:${esc(f.litur)}"` : "";
     const timi = syndTima
       ? `<span class="tt-class-time">${esc(timabil(t))}</span>`
@@ -134,14 +142,14 @@
      TÖFLUSÝN (TÖLVA)
   ====================================== */
 
-  function tafla(lang) {
+  function tafla(lang, thett = false) {
 
     const T = TEXTI[lang];
 
     const haus = DAGAR.map((d, i) => `
       <th scope="col" class="${i === idagIndex ? "tt-today" : ""}">
         <abbr title="${T.dagar[i]}">${T.stuttir[i]}</abbr>
-        ${i === idagIndex ? `<span class="tt-today-badge">${T.idag}</span>` : ""}
+        ${i === idagIndex && !thett ? `<span class="tt-today-badge">${T.idag}</span>` : ""}
       </th>`).join("");
 
     const linur = radir.map(rod => {
@@ -152,7 +160,7 @@
           t.dagur === d && rodFyrir(t) === rod);
 
         const innihald = timar.map(t =>
-          spjald(t, lang, t.byrjun !== rod.byrjun)).join("");
+          spjald(t, lang, t.byrjun !== rod.byrjun, thett)).join("");
 
         return `<td class="${i === idagIndex ? "tt-today" : ""}">${innihald}</td>`;
 
@@ -160,14 +168,14 @@
 
       return `
         <tr>
-          <th scope="row">${rod.byrjun}<span>–${rod.lok}</span></th>
+          <th scope="row">${rod.byrjun}<span>${thett ? "" : "–"}${rod.lok}</span></th>
           ${reitir}
         </tr>`;
 
     }).join("");
 
     return `
-      <div class="tt-table-wrap">
+      <div class="${thett ? "tt-table-compact" : "tt-table-wrap"}">
         <table class="tt-table">
           <caption class="tt-sr-only">${T.tafla}</caption>
           <thead>
@@ -253,7 +261,7 @@
       </button>`;
 
     const efni = valinnDagur === VIKAN
-      ? DAGAR.map((d, i) => dagListi(i, lang)).join("")
+      ? tafla(lang, true)
       : dagListi(valinnDagur, lang);
 
     return `
