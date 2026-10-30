@@ -1,0 +1,160 @@
+/* ==========================================
+   BOX800 - JÓLAÞEMA
+   Virkt aðeins þegar jol.js setur
+   class="jol" á <html>.
+========================================== */
+
+html.jol {
+  --blue: #ff6b6b;
+  --jol-raudur: #c8202f;
+  --jol-raudur-hover: #de3443;
+  --jol-ljos: #ff6b6b;
+  --jol-gull: #e8c27a;
+}
+
+
+/* RAUÐAR ÁHERSLUR Í FYRIRSÖGNUM */
+
+html.jol .hero h1 em,
+html.jol h1 span,
+html.jol h2 span {
+  color: var(--jol-ljos);
+}
+
+html.jol .hero .eyebrow {
+  color: var(--jol-gull);
+}
+
+
+/* HNAPPAR OG BORÐAR */
+
+html.jol .btn-primary,
+html.jol .site-header .main-nav .nav-cta,
+html.jol .ticker,
+html.jol .footer-button,
+html.jol .dropin-btn,
+html.jol .course-buy-btn,
+html.jol .open-classes-btn,
+html.jol .price-button,
+html.jol .price-tag,
+html.jol .course-cta,
+html.jol .contact-form .btn,
+html.jol .tt-filter-btn[aria-pressed="true"],
+html.jol .tt-day-btn[aria-pressed="true"] {
+  background: var(--jol-raudur);
+  border-color: var(--jol-raudur);
+  color: #ffffff;
+}
+
+html.jol .btn-primary:hover,
+html.jol .site-header .main-nav .nav-cta:hover,
+html.jol .ticker:hover,
+html.jol .footer-button:hover,
+html.jol .dropin-btn:hover,
+html.jol .course-buy-btn:hover,
+html.jol .open-classes-btn:hover,
+html.jol .price-button:hover,
+html.jol .course-cta:hover,
+html.jol .contact-form .btn:hover {
+  background: var(--jol-raudur-hover);
+  border-color: var(--jol-raudur-hover);
+  color: #ffffff;
+}
+
+html.jol .price-card.featured {
+  border-color: var(--jol-raudur);
+}
+
+html.jol .tt-today-badge {
+  background: var(--jol-raudur);
+  color: #ffffff;
+}
+
+
+/* HLÝR BJARMI NEÐST Á FORSÍÐUMYND */
+
+html.jol .hero::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 50%;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse at 50% 125%,
+    rgba(200, 32, 47, 0.32) 0%,
+    rgba(200, 32, 47, 0.1) 42%,
+    rgba(200, 32, 47, 0) 70%
+  );
+  z-index: 1;
+}
+
+html.jol .hero .hero-content {
+  position: relative;
+  z-index: 3;
+}
+
+
+/* KVEÐJA */
+
+.jol-kvedja {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+  padding: 7px 12px 7px 10px;
+  background: var(--jol-raudur);
+  color: #ffffff;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.jol-kvedja svg {
+  width: 15px;
+  height: 15px;
+  flex: none;
+}
+
+.jol-kvedja + .eyebrow {
+  display: block;
+}
+
+
+/* SNJÓKOMA */
+
+.jol-snjor {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.jol-korn {
+  position: absolute;
+  top: -12px;
+  display: block;
+  border-radius: 50%;
+  background: #ffffff;
+  animation-name: jol-falla, jol-sveifla;
+  animation-timing-function: linear, ease-in-out;
+  animation-iteration-count: infinite, infinite;
+  animation-direction: normal, alternate;
+}
+
+@keyframes jol-falla {
+  from { top: -12px; }
+  to   { top: calc(100% + 12px); }
+}
+
+@keyframes jol-sveifla {
+  from { transform: translateX(-14px); }
+  to   { transform: translateX(14px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .jol-snjor {
+    display: none;
+  }
+}
