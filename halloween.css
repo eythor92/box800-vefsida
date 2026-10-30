@@ -1,0 +1,183 @@
+/* ==========================================
+   BOX800 - HREKKJAVÖKUÞEMA
+   Virkt aðeins þegar halloween.js setur
+   class="halloween" á <html>.
+========================================== */
+
+html.halloween {
+  --blue: #ff8a2b;
+  --hw-orange: #ff8a2b;
+  --hw-orange-hover: #ffa65c;
+}
+
+
+/* APPELSÍNUGULAR ÁHERSLUR Í FYRIRSÖGNUM */
+
+html.halloween .hero h1 em,
+html.halloween h1 span,
+html.halloween h2 span {
+  color: var(--hw-orange);
+}
+
+
+/* HNAPPAR OG BORÐAR */
+
+html.halloween .btn-primary,
+html.halloween .site-header .main-nav .nav-cta,
+html.halloween .ticker,
+html.halloween .footer-button,
+html.halloween .dropin-btn,
+html.halloween .course-buy-btn,
+html.halloween .open-classes-btn,
+html.halloween .price-button,
+html.halloween .price-tag,
+html.halloween .course-cta,
+html.halloween .contact-form .btn,
+html.halloween .about-hero .btn,
+html.halloween .tt-filter-btn[aria-pressed="true"],
+html.halloween .tt-day-btn[aria-pressed="true"] {
+  background: var(--hw-orange);
+  border-color: var(--hw-orange);
+  color: #120a04;
+}
+
+html.halloween .btn-primary:hover,
+html.halloween .site-header .main-nav .nav-cta:hover,
+html.halloween .ticker:hover,
+html.halloween .footer-button:hover,
+html.halloween .dropin-btn:hover,
+html.halloween .course-buy-btn:hover,
+html.halloween .open-classes-btn:hover,
+html.halloween .price-button:hover,
+html.halloween .course-cta:hover,
+html.halloween .contact-form .btn:hover {
+  background: var(--hw-orange-hover);
+  border-color: var(--hw-orange-hover);
+  color: #120a04;
+}
+
+html.halloween .price-card.featured {
+  border-color: var(--hw-orange);
+}
+
+html.halloween .tt-today-badge {
+  background: var(--hw-orange);
+  color: #120a04;
+}
+
+
+/* APPELSÍNUGULUR BJARMI NEÐST Á FORSÍÐUMYND */
+
+html.halloween .hero::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 55%;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse at 50% 120%,
+    rgba(255, 120, 30, 0.38) 0%,
+    rgba(255, 120, 30, 0.12) 40%,
+    rgba(255, 120, 30, 0) 70%
+  );
+  z-index: 1;
+}
+
+html.halloween .hero .hero-content {
+  position: relative;
+  z-index: 3;
+}
+
+
+/* KVEÐJA */
+
+.hw-kvedja {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+  padding: 7px 12px 7px 10px;
+  background: var(--hw-orange);
+  color: #120a04;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.hw-kvedja svg {
+  width: 16px;
+  height: 16px;
+  flex: none;
+}
+
+.hw-kvedja + .eyebrow {
+  display: block;
+}
+
+
+/* LEÐURBLÖKUR */
+
+.hw-ledurblokur {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.hw-blaka {
+  position: absolute;
+  left: -80px;
+  display: block;
+  color: #0b0806;
+  filter: drop-shadow(0 0 6px rgba(255, 138, 43, 0.35));
+  animation: hw-fljuga linear infinite;
+}
+
+.hw-blaka svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  animation: hw-blaka 0.35s ease-in-out infinite alternate;
+  transform-origin: 50% 40%;
+}
+
+.hw-blaka-1 { top: 12%; width: 54px; animation-duration: 16s; animation-delay: -2s; }
+.hw-blaka-2 { top: 26%; width: 38px; animation-duration: 21s; animation-delay: -11s; }
+.hw-blaka-3 { top: 8%;  width: 30px; animation-duration: 25s; animation-delay: -6s; opacity: 0.8; }
+.hw-blaka-4 { top: 40%; width: 46px; animation-duration: 19s; animation-delay: -15s; }
+.hw-blaka-5 { top: 18%; width: 24px; animation-duration: 28s; animation-delay: -20s; opacity: 0.7; }
+
+@keyframes hw-fljuga {
+  0%   { transform: translate(0, 0); }
+  25%  { transform: translate(30vw, -18px); }
+  50%  { transform: translate(60vw, 14px); }
+  75%  { transform: translate(90vw, -10px); }
+  100% { transform: translate(calc(100vw + 160px), 6px); }
+}
+
+@keyframes hw-blaka {
+  from { transform: scaleY(1); }
+  to   { transform: scaleY(0.55); }
+}
+
+@media (max-width: 760px) {
+  .hw-blaka-4,
+  .hw-blaka-5 {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hw-blaka,
+  .hw-blaka svg {
+    animation: none;
+  }
+
+  .hw-blaka-1 { left: 62%; }
+  .hw-blaka-2 { left: 78%; }
+  .hw-blaka-3 { left: 70%; }
+  .hw-blaka-4 { left: 86%; }
+  .hw-blaka-5 { left: 56%; }
+}
