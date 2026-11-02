@@ -46,10 +46,6 @@ window.box800Translations = {
       "EXPLORE PROGRAMS"
     ],
 
-    ".ticker-track span": [
-      "30% OFF MONTHLY MEMBERSHIPS IN OCTOBER - 30% OFF MONTHLY MEMBERSHIPS IN OCTOBER -",
-      "30% OFF MONTHLY MEMBERSHIPS IN OCTOBER - 30% OFF MONTHLY MEMBERSHIPS IN OCTOBER -"
-    ],
 
     ".about-copy h2": [
       "YOUR GOALS.<br><span>OUR PASSION.</span>"
