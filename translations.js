@@ -105,7 +105,7 @@ window.box800Translations = {
     ],
 
     ".coaches-strip .section-heading h2": [
-      "THE PEOPLE ON <span>THE FLOOR.</span>"
+      "COACHES."
     ],
 
     ".coaches-strip .section-heading p": [
