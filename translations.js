@@ -104,6 +104,32 @@ window.box800Translations = {
       "ALL PROGRAMS"
     ],
 
+    ".coaches-strip .section-heading h2": [
+      "COACHES."
+    ],
+
+    ".coaches-strip .section-heading p": [
+      "Experienced coaches who guide you in every class."
+    ],
+
+    ".coach-chip-role": [
+      "COACH",
+      "COACH",
+      "COACH",
+      "COACH",
+      "COACH",
+      "COACH",
+      "COACH",
+      "COACH",
+      "COACH",
+      "COACH",
+      "COACH"
+    ],
+
+    ".coach-all": [
+      "See all coaches →"
+    ],
+
     ".gallery-heading .kicker": [
       "TRAINING AT BOX800"
     ],
