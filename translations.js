@@ -484,11 +484,10 @@ window.box800Translations = {
     ],
 
     ".trainers-grid .trainer-card:nth-child(7) li": [
-      "Diploma in Coaching from the Police Training Centre",
+      "Diploma and experience in coaching police officers",
       "Education in emergency medical services",
       "Experience with running and kettlebell training",
-      "Background in a variety of sports",
-      "Experience training police officers"
+      "Background in a variety of sports"
     ],
 
     ".trainers-grid .trainer-card:nth-child(8) li": [
