@@ -26,6 +26,14 @@ window.box800Translations = {
     ],
 
     /* ======================================
+       404
+    ====================================== */
+
+    ".notfound h1": ["PAGE<br><span>NOT FOUND.</span>"],
+    ".notfound p": ["This page doesn't exist or has been moved. Try one of these:"],
+    ".nf-actions a": ["HOME", "SCHEDULE", "PRICING"],
+
+    /* ======================================
        HOMEPAGE
     ====================================== */
 
