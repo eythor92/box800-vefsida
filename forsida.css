@@ -142,3 +142,55 @@
     animation: none;
   }
 }
+
+/* ---------- MYNDBANDSSPJALD Á TÖLVU ---------- */
+
+.hero-reel {
+  display: none;
+}
+
+@media (min-width: 980px) {
+
+  .hero-reel {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    right: max(32px, calc((100vw - var(--max)) / 2));
+    width: min(300px, 24vw);
+    aspect-ratio: 9 / 16;
+    transform: translateY(-50%);
+    overflow: hidden;
+    border: 1px solid rgba(198, 204, 214, 0.28);
+    background: #0d1013 url("images/forsida-myndband.jpg") center / cover no-repeat;
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.55);
+  }
+
+  .hero-reel-video {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+
+  /* Dekkri bakgrunnsmynd svo spjaldið standi út */
+  .hero:has(.hero-reel) .hero-photo {
+    background-image:
+      linear-gradient(
+        90deg,
+        rgba(4, 6, 8, 0.95) 0%,
+        rgba(4, 6, 8, 0.82) 45%,
+        rgba(4, 6, 8, 0.62) 100%
+      ),
+      url("images/forsida.webp");
+  }
+
+  /* Textinn má ekki fara undir spjaldið */
+  .hero-content h1,
+  .hero-content p {
+    max-width: min(640px, 52vw);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-reel-video { display: none; }
+}

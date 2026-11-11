@@ -75,6 +75,7 @@
       <div class="hero-photo" aria-hidden="true">
         <video
           class="hero-video"
+          data-media="(max-width: 760px) and (orientation: portrait)"
           data-src="images/forsida-myndband.mp4"
           poster="images/forsida-myndband.jpg"
           muted
@@ -119,6 +120,20 @@
 
         </div>
 
+      </div>
+
+      <!-- Lóðrétt myndband sem spjald á tölvu -->
+      <div class="hero-reel" aria-hidden="true">
+        <video
+          class="hero-video hero-reel-video"
+          data-media="(min-width: 980px)"
+          data-src="images/forsida-myndband.mp4"
+          poster="images/forsida-myndband.jpg"
+          muted
+          loop
+          playsinline
+          preload="none"
+        ></video>
       </div>
 
       <div class="hero-scroll container"></div>
