@@ -1,0 +1,119 @@
+/* ==========================================
+   BOX800 - BLACK FRIDAY
+   Virkt aðeins þegar blackfriday.js setur
+   class="bf" á <html>.
+========================================== */
+
+html.bf {
+  --bf-hvitt: #f4f5f7;
+}
+
+/* ---------- PILLA Í FORSÍÐUMYND ---------- */
+
+.bf-pilla {
+  display: inline-block;
+  margin-bottom: 14px;
+  padding: 8px 13px;
+  background: var(--bf-hvitt);
+  color: #08090b;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.bf-pilla:hover {
+  background: #ffffff;
+}
+
+.bf-pilla + .eyebrow {
+  display: block;
+}
+
+/* ---------- RENNANDI BORÐI ---------- */
+
+.bf-ticker {
+  background: #050607;
+  color: var(--bf-hvitt);
+  border-top: 1px solid #2a3037;
+  border-bottom: 1px solid #2a3037;
+}
+
+.bf-ticker:hover {
+  background: #111418;
+}
+
+/* ---------- TILBOÐSSPJALD Á VERÐSKRÁ ---------- */
+
+html.bf .bf-card {
+  order: -1;
+  border: 2px solid var(--bf-hvitt);
+  background: #050607;
+}
+
+.bf-merki {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: var(--bf-hvitt);
+  color: #050607;
+  padding: 6px 10px;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.bf-adur {
+  color: #7d8691;
+  font-size: 17px;
+  font-weight: 700;
+  text-decoration: line-through;
+  margin: -8px 0 2px;
+}
+
+.bf-samtals {
+  margin-top: 8px;
+  color: var(--bf-hvitt);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.bf-samtals s {
+  margin-left: 6px;
+  color: #7d8691;
+  font-weight: 500;
+}
+
+.bf-nidurtalning {
+  margin: 14px 0 22px;
+  padding: 10px 12px;
+  border: 1px solid #2a3037;
+  color: #a7afb8;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.bf-nidurtalning b {
+  display: block;
+  margin-top: 3px;
+  color: var(--bf-hvitt);
+  font-size: 18px;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.5px;
+}
+
+html.bf .bf-card > p {
+  display: none;
+}
+
+html.bf .bf-card .price-button {
+  background: var(--bf-hvitt);
+  color: #050607;
+}
+
+html.bf .bf-card .price-button:hover {
+  background: #ffffff;
+}
