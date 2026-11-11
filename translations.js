@@ -439,6 +439,7 @@ window.box800Translations = {
       "COACH",
       "COACH",
       "COACH",
+      "COACH",
       "COACH"
     ],
 
@@ -470,39 +471,45 @@ window.box800Translations = {
     ],
 
     ".trainers-grid .trainer-card:nth-child(5) li": [
+      "Education",
+      "Background",
+      "Experience"
+    ],
+
+    ".trainers-grid .trainer-card:nth-child(6) li": [
       "BSc and MT in Sports and Health Sciences",
       "Experience with CrossFit and kettlebell training",
       "Background in football and weightlifting",
       "5 years of coaching experience"
     ],
 
-    ".trainers-grid .trainer-card:nth-child(6) li": [
+    ".trainers-grid .trainer-card:nth-child(7) li": [
       "Education in emergency medical services",
       "Experience with running and kettlebell training",
       "Background in a variety of sports",
       "Experience training police officers"
     ],
 
-    ".trainers-grid .trainer-card:nth-child(7) li": [
+    ".trainers-grid .trainer-card:nth-child(8) li": [
       "Registered nurse",
       "Experience with CrossFit and kettlebell training",
       "Background in gymnastics"
     ],
 
-    ".trainers-grid .trainer-card:nth-child(8) li": [
+    ".trainers-grid .trainer-card:nth-child(9) li": [
       "ÍAK Certified Personal Trainer",
       "Physiotherapist",
       "3 years of coaching experience"
     ],
 
-    ".trainers-grid .trainer-card:nth-child(9) li": [
+    ".trainers-grid .trainer-card:nth-child(10) li": [
       "Registered nurse",
       "ÍAK Coaching Certification",
       "Prenatal and postnatal fitness coaching",
       "11 years of coaching experience"
     ],
 
-    ".trainers-grid .trainer-card:nth-child(10) li": [
+    ".trainers-grid .trainer-card:nth-child(11) li": [
       "BSc in Sports and Health Sciences",
       "Education in emergency medical services",
       "CrossFit Level 1",
