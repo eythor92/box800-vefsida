@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="is">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>Síða fannst ekki | BOX800</title>
+
+  <script>
+    /* ==========================================
+       GAMLAR SLÓÐIR → NÝJAR
+       Gamla síðan (Squarespace) notaði aðrar
+       slóðir. Þær eru sendar á rétta síðu.
+    ========================================== */
+    (function () {
+      var path = location.pathname;
+      var base = path.indexOf("/box800-vefsida/") === 0 ? "/box800-vefsida/" : "/";
+      var rest = path.slice(base.length).toLowerCase().replace(/\/+$/, "").replace(/\.html$/, "");
+
+      var MAP = {
+        "hafasamband": "samband.html",
+        "hafa-samband": "samband.html",
+        "samband": "samband.html",
+        "namskei": "namskeid.html",
+        "namskeid": "namskeid.html",
+        "barre": "timatafla.html",
+        "timatafla": "timatafla.html",
+        "stundaskra": "timatafla.html",
+        "verdskra": "verdskra.html",
+        "cart": "verdskra.html",
+        "thjalfarar": "thjalfarar.html",
+        "um-okkur": "um-okkur.html",
+        "umokkur": "um-okkur.html",
+        "drop-in": "dropin.html",
+        "dropin": "dropin.html"
+      };
+
+      if (MAP[rest]) {
+        location.replace(base + MAP[rest] + location.search + location.hash);
+        return;
+      }
+
+      /* Svo myndir, stílar og valmynd virki á hvaða slóð sem er */
+      document.write('<base href="' + base + '">');
+    })();
+  </script>
+
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+  <meta name="theme-color" content="#090b0d">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="header.css">
+  <link rel="stylesheet" href="footer.css">
+
+  <style>
+    .notfound {
+      min-height: calc(100svh - 80px);
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(90deg, rgba(4, 6, 8, 0.95) 0%, rgba(4, 6, 8, 0.82) 50%, rgba(4, 6, 8, 0.6) 100%),
+        url("images/forsida.webp") 65% center / cover no-repeat;
+    }
+
+    .notfound .code {
+      display: block;
+      color: #a7afb8;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 2px;
+    }
+
+    .notfound h1 {
+      margin: 20px 0;
+      font-size: clamp(48px, 8vw, 104px);
+      line-height: 0.95;
+    }
+
+    .notfound h1 span {
+      color: var(--blue);
+    }
+
+    .notfound p {
+      max-width: 460px;
+      color: #d3d7dd;
+      font-size: 17px;
+    }
+
+    .nf-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+    }
+  </style>
+
+  <script src="translations.js" defer></script>
+  <script src="language.js" defer></script>
+  <script src="header.js" defer></script>
+  <script src="footer.js" defer></script>
+</head>
+
+<body>
+
+  <header id="box800-header"></header>
+
+  <main>
+    <section class="notfound">
+      <div class="container">
+        <span class="code">404</span>
+        <h1>SÍÐAN<br><span>FANNST EKKI.</span></h1>
+        <p>Þessi síða er ekki til, eða hefur verið færð. Prófaðu eitthvað af þessu:</p>
+        <div class="nf-actions">
+          <a class="btn btn-primary" href="index.html">FORSÍÐA</a>
+          <a class="btn btn-outline" href="timatafla.html">TÍMATAFLA</a>
+          <a class="btn btn-outline" href="verdskra.html">VERÐSKRÁ</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="box800-footer"></footer>
+
+</body>
+</html>

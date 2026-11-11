@@ -1,0 +1,196 @@
+/* ==========================================
+   BOX800 - FORSÍÐA: myndband og þjálfararöð
+========================================== */
+
+/* ---------- MYNDBAND (aðeins sími) ---------- */
+
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+  z-index: -1;
+}
+
+.hero-video.is-playing {
+  opacity: 1;
+}
+
+.hero-photo {
+  isolation: isolate;
+}
+
+@media (max-width: 760px) and (orientation: portrait) {
+
+  /* Myndbandið fyllir, dökk slæða yfir svo textinn sé læsilegur */
+  .hero-photo:has(.hero-video.is-playing) {
+    background-image: none;
+  }
+
+  .hero-photo::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(4, 6, 8, 0.55) 0%,
+      rgba(4, 6, 8, 0.70) 45%,
+      rgba(4, 6, 8, 0.92) 100%
+    );
+    pointer-events: none;
+  }
+}
+
+/* ---------- ÞJÁLFARARÖÐ ---------- */
+
+.coaches-strip {
+  overflow: hidden;
+}
+
+.coach-row {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 220px;
+  gap: 13px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-padding-left: 0;
+  padding-bottom: 14px;
+  scrollbar-width: thin;
+  scrollbar-color: #3a434d transparent;
+}
+
+.coach-row:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 4px;
+}
+
+.coach-chip {
+  display: block;
+  scroll-snap-align: start;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.coach-chip img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  background: #23282d;
+  transition: transform 0.35s ease, filter 0.35s ease;
+}
+
+.coach-chip:hover img {
+  transform: translateY(-3px);
+  filter: brightness(1.05);
+}
+
+.coach-chip-name {
+  display: block;
+  margin-top: 12px;
+  font-family: "Barlow Condensed", Impact, sans-serif;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.15;
+  text-transform: uppercase;
+}
+
+.coach-chip-role {
+  display: block;
+  margin-top: 4px;
+  color: #a7afb8;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.coach-all {
+  display: inline-block;
+  margin-top: 22px;
+  color: var(--blue);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.coach-all:hover {
+  color: #ffffff;
+}
+
+@media (max-width: 760px) {
+
+  .coach-row {
+    grid-auto-columns: 62%;
+    margin-right: -16px;
+    padding-right: 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .hero-video,
+  .coach-chip img {
+    transition: none;
+    animation: none;
+  }
+}
+
+/* ---------- MYNDBANDSSPJALD Á TÖLVU ---------- */
+
+.hero-reel {
+  display: none;
+}
+
+@media (min-width: 980px) {
+
+  .hero-reel {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    right: max(32px, calc((100vw - var(--max)) / 2));
+    width: min(300px, 24vw);
+    aspect-ratio: 9 / 16;
+    transform: translateY(-50%);
+    overflow: hidden;
+    border: 1px solid rgba(198, 204, 214, 0.28);
+    background: #0d1013 url("images/forsida-myndband.jpg") center / cover no-repeat;
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.55);
+  }
+
+  .hero-reel-video {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+
+  /* Dekkri bakgrunnsmynd svo spjaldið standi út */
+  .hero:has(.hero-reel) .hero-photo {
+    background-image:
+      linear-gradient(
+        90deg,
+        rgba(4, 6, 8, 0.95) 0%,
+        rgba(4, 6, 8, 0.82) 45%,
+        rgba(4, 6, 8, 0.62) 100%
+      ),
+      url("images/forsida.webp");
+  }
+
+  /* Textinn má ekki fara undir spjaldið */
+  .hero-content h1,
+  .hero-content p {
+    max-width: min(640px, 52vw);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-reel-video { display: none; }
+}
