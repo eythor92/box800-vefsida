@@ -42,7 +42,7 @@ window.box800Translations = {
     ],
 
     ".hero h1": [
-      "BE PART OF AN<br><em>AMAZING<br>COMMUNITY.</em>"
+      "<span class=\"h1-l1\">BE PART OF AN</span><br><em>AMAZING<br>COMMUNITY.</em>"
     ],
 
     ".hero .hero-content > p": [

@@ -185,10 +185,13 @@
   }
 
   /* Textinn má ekki fara undir spjaldið */
-  .hero-content h1,
   .hero-content p {
     max-width: min(640px, 52vw);
   }
+
+  /* „Vertu hluti af“ í einni línu í tölvu (síminn óbreyttur) */
+  .hero-content h1 { max-width: none; }
+  .hero-content h1 .h1-l1 { white-space: nowrap; }
 }
 
 @media (prefers-reduced-motion: reduce) {
